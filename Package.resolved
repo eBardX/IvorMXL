@@ -1,0 +1,42 @@
+{
+  "originHash" : "4bb8629cbc2faddb4e3373e33483e6bbaa33d3db69418c4c2037df68892915c4",
+  "pins" : [
+    {
+      "identity" : "xestiarchive",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/eBardX/XestiArchive.git",
+      "state" : {
+        "revision" : "6358ab1b0c8f04b7b77b3fa8caf6eb96e779581c",
+        "version" : "1.1.1"
+      }
+    },
+    {
+      "identity" : "xestitools",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/eBardX/XestiTools.git",
+      "state" : {
+        "revision" : "35a4c43dde224aadcadad66dac7a35104537694d",
+        "version" : "10.0.0"
+      }
+    },
+    {
+      "identity" : "xestixml",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/eBardX/XestiXML.git",
+      "state" : {
+        "revision" : "926bf94eefd0bb0499bb8c5ff08828b56711073b",
+        "version" : "5.0.1"
+      }
+    },
+    {
+      "identity" : "zipfoundation",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/weichsel/ZIPFoundation.git",
+      "state" : {
+        "revision" : "22787ffb59de99e5dc1fbfe80b19c97a904ad48d",
+        "version" : "0.9.20"
+      }
+    }
+  ],
+  "version" : 3
+}
