@@ -8,13 +8,15 @@ A MusicXML parser, normalizer, validator, and formatter.
 
 ## Overview
 
-The IvorMXL framework provides a [MusicXML](https://www.musicxml.com)
-parser written in Swift, with a strict-concurrency-ready, value-type API. Both
-compressed (`.mxl`) and uncompressed MusicXML files are supported.
+The IvorMXL framework provides a [MusicXML](https://www.musicxml.com) parser,
+normalizer, validator, and formatter written in Swift. It targets [MusicXML
+4.0](https://www.w3.org/2021/06/musicxml40/), reading every earlier version
+back to 1.0, with a strict-concurrency-ready, value-type API. Both compressed
+(`.mxl`) and uncompressed MusicXML files are supported.
 
-IvorMXL's syntactic core turns MusicXML bytes into a typed,
-round-trippable abstract syntax tree (``MXLDocument`` → ``MXLScorePartwise``
-→ ``MXLScorePartwise/Part`` → ``MXLMusicItem``) and back to bytes, without
+IvorMXL’s syntactic core turns MusicXML bytes into a typed, round-trippable
+abstract syntax tree (``MXLDocument`` → ``MXLScorePartwise`` →
+``MXLScorePartwise/Part`` → ``MXLMusicItem``) and back to bytes, without
 interpreting the music.
 
 ### The pipeline
@@ -47,12 +49,12 @@ let (validated, issues)   = try MXLValidator().validate(normalized)
 guard issues.isEmpty
 else { issues.forEach { print($0.message) }; return }
 
-let output = try MXLFormatter().format(validated,     // back to MusicXML
-                                       compressed: false)
+let output = try MXLFormatter().format(validated,
+                                       compressed: false)  // back to MusicXML
 ```
 
-See <doc:UsingIvorMXL> for a full guide to each stage, the models, and
-error handling.
+See <doc:UsingIvorMXL> for a full guide to each stage, the models, and error
+handling.
 
 ## Topics
 
@@ -75,11 +77,13 @@ error handling.
 - ``MXLOpus``
 - ``MXLPartList``
 - ``MXLScorePart``
+- ``MXLPartName``
 
 ### Music
 
 - ``MXLMusicItem``
 - ``MXLNote``
+- ``MXLFullNote``
 - ``MXLRest``
 - ``MXLPitch``
 - ``MXLAttributes``

@@ -1,12 +1,12 @@
 # Using IvorMXL
 
-Take a MusicXML document from bytes to a validated, round-trippable syntax
-tree.
+Take a MusicXML document from `Data` to a validated syntax tree, and back to
+`Data`.
 
 ## Overview
 
-IvorMXL exposes four processing types. Each is a `Sendable` value type
-with a no-argument initializer and a single primary method:
+IvorMXL exposes four processing types. Each is a `Sendable` value type with a
+no-argument initializer and a single primary method:
 
  Type               | Method                | Result
 :----               |:------                |:------
@@ -31,7 +31,7 @@ let (validated, issues)   = try MXLValidator().validate(normalized)
 guard issues.isEmpty
 else { /* handle issues */ return }
 
-let xml = try MXLFormatter().format(validated, compressed: false)
+let output = try MXLFormatter().format(validated, compressed: false)
 ```
 
 Both `normalize(_:)` and `validate(_:)` are idempotent — calling them on a
@@ -127,7 +127,7 @@ exhaustive to be safe — which costs more than the pass it would skip.
 
 ## Validating
 
-``MXLValidator`` checks a **normalized** score:
+``MXLValidator`` checks a **normalized** document:
 
 ```swift
 let (validated, issues) = try MXLValidator().validate(normalized)
@@ -145,13 +145,14 @@ if issues.isEmpty {
   is four elements and the parser already enforces nearly everything they
   constrain, so there is nothing left to check.
 - If any issues are found, the returned document is the **input unchanged**
-  (its `isValidated` flag stays `false`). Fix the issues and validate again.
+  (its `isValidated` flag stays `false`). Fix the issues — or run it through
+  the normalizer again after editing — and validate again.
 - Only when the issues array is empty does the returned document have
-  `isValidated == true` — the prerequisite for formatting and resolving.
+  `isValidated == true` — the prerequisite for formatting.
 
 A time-wise score is validated in its part-wise encoding. The
 ``MXLValidator/Issue`` catalogue covers the
-cross-references the schema cannot express on its own: an `<part>` whose `id`
+cross-references the schema cannot express on its own: a `<part>` whose `id`
 names no `<score-part>` (`danglingPartID(_:)`), a `<score-part>` no `<part>`
 realizes (`unusedScorePart(_:)`), a durational element before the first
 `<divisions>` (`durationBeforeDivisions(part:measure:)`), an unmatched
@@ -162,7 +163,7 @@ that is not one of the 894 standard sounds defined by MusicXML 4.0
 
 ## Formatting
 
-``MXLFormatter`` serializes a **validated** score back to MusicXML `Data`,
+``MXLFormatter`` serializes a **validated** document back to MusicXML `Data`,
 optionally as a compressed `.mxl` archive:
 
 ```swift
@@ -179,7 +180,7 @@ let mxl = try MXLFormatter().format(validated, compressed: true)
   time-wise to part-wise, a normally-processed document never hits that case.
 
 Because the AST is lossless, `parse → normalize → validate → format` reproduces
-the original score (modulo the version migration the normalizer applies and
+the original document (modulo the version migration the normalizer applies and
 settled whitespace canonicalization).
 
 ## The AST model
@@ -202,8 +203,8 @@ lossless — it records exactly what was written so it can round-trip through
 ``MXLFormatter`` — and every leaf value is wrapped in a small validating type.
 All AST types are `Equatable`, `Hashable`, and `Sendable`.
 
-``MXLDocument`` equality compares `content` only; the `isNormalized` and
-`isValidated` flags are metadata and are excluded.
+``MXLDocument`` equality and hashing compare `content` only; the
+`isNormalized` and `isValidated` flags are metadata and are excluded.
 
 ## Building a document programmatically
 
@@ -227,8 +228,8 @@ let document = MXLDocument(content: .scorePartwise(score))
 ```
 
 A directly-constructed document has `isNormalized == false` and
-`isValidated == false`, so you must run it through the normalizer and validator
-before formatting.
+`isValidated == false` — exactly like one fresh out of the parser — so you must
+run it through the normalizer and validator before formatting.
 
 ## Error handling
 
@@ -242,8 +243,8 @@ Thrown errors conform to `EnhancedError` (from
  ``MXLValidator/Error``   | `MXLValidator.validate(_:)`
  ``MXLFormatter/Error``   | `MXLFormatter.format(_:compressed:)`
 
-`MXLNormalizer.normalize(_:)` never throws — every version is migratable, so
-normalization has no failure mode.
+`MXLNormalizer.normalize(_:)` never throws — normalization has no failure mode,
+since every version is migratable.
 
 Non-fatal results are returned rather than thrown, and each also provides a
 `message`:
