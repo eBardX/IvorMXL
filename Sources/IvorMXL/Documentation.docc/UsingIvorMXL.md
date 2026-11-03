@@ -118,12 +118,13 @@ invalidate a prior validation, normalizing clears `isValidated`.
 
 IvorMXL has **no born-normalized fast path**: the parser never pre-sets
 `isNormalized`, so every document goes through the normalizer at least once.
-Detecting an already-canonical document would mean proving no migration-triggering
-construct appears anywhere in it — the declared `version` is asserted by the file,
-never verified, so a document may claim `4.0` and still contain a 2.0-era
-deprecated element. Over-reporting is harmless (a pass that makes no changes)
-while under-reporting silently skips a migration, so the check would have to be
-exhaustive to be safe — which costs more than the pass it would skip.
+Detecting an already-canonical document would mean proving no
+migration-triggering construct appears anywhere in it — the declared `version`
+is asserted by the file, never verified, so a document may claim `4.0` and still
+contain a 2.0-era deprecated element. Over-reporting is harmless (a pass that
+makes no changes) while under-reporting silently skips a migration, so the check
+would have to be exhaustive to be safe — which costs more than the pass it would
+skip.
 
 ## Validating
 
