@@ -63,7 +63,8 @@ or work around — a `version` attribute it had to default or repair
 (`defaultedVersion`, `malformedVersion(_:)`), an element or attribute the
 schema deprecated (`deprecatedElement(_:)`, `deprecatedAttribute(_:)`), or one
 it did not recognize and skipped (`ignoredElement(_:)`,
-`ignoredAttribute(_:)`). Diagnostics are always returned, never thrown; each
+`ignoredAttribute(_:)`), or a zero-length `<forward>` or `<backup>` it dropped
+(`droppedZeroDuration(_:)`). Diagnostics are always returned, never thrown; each
 has a human-readable `message`:
 
 ```swift
@@ -156,8 +157,9 @@ A time-wise score is validated in its part-wise encoding. The
 cross-references the schema cannot express on its own: a `<part>` whose `id`
 names no `<score-part>` (`danglingPartID(_:)`), a `<score-part>` no `<part>`
 realizes (`unusedScorePart(_:)`), a durational element before the first
-`<divisions>` (`durationBeforeDivisions(part:measure:)`), an unmatched
-`<ending>` (`unpairedEnding(number:part:measure:)`), an unbalanced
+`<divisions>` (`durationBeforeDivisions(part:measure:)`), an `<ending>` start
+with no stop (`unmatchedEndingStart(number:part:measure:)`) or a stop with no
+start (`unmatchedEndingStop(number:part:measure:)`), an unbalanced
 `<part-group>` (`unbalancedPartGroup(number:)`), and an `<instrument-sound>`
 that is not one of the 894 standard sounds defined by MusicXML 4.0
 (`unknownInstrumentSound(_:)`).

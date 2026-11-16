@@ -15,6 +15,7 @@ extension MXLParserDiagnosticTests {
         let allCases: [MXLParser.Diagnostic] = [.defaultedVersion,
                                                 .deprecatedAttribute("staff-spacing"),
                                                 .deprecatedElement("directive"),
+                                                .droppedZeroDuration("forward"),
                                                 .ignoredAttribute("bogus"),
                                                 .ignoredElement("bogus"),
                                                 .malformedVersion("4")]

@@ -22,22 +22,28 @@ extension MXLParser {
                                     defaults: node.optionalChildElement(.defaults, parseDefaults),
                                     credit: node.optionalChildElements(.credit, parseCredit),
                                     partList: node.requiredChildElement(.partList, parsePartList),
-                                    parts: node.requiredChildElements(.part, parseScorePartwisePart))
+                                    parts: node.requiredChildElements(.part) {
+                                        try parseScorePartwisePart($0, &diagnostics)
+                                    })
     }
 
-    internal static func parseScorePartwisePart(_ node: Node) throws -> MXLScorePartwise.Part {
+    internal static func parseScorePartwisePart(_ node: Node,
+                                                _ diagnostics: inout [Diagnostic]) throws -> MXLScorePartwise.Part {
         try MXLScorePartwise.Part(id: node.valueOfRequiredAttribute(.id),
-                                  measures: node.requiredChildElements(.measure, parseScorePartwisePartMeasure))
+                                  measures: node.requiredChildElements(.measure) {
+                                      try parseScorePartwisePartMeasure($0, &diagnostics)
+                                  })
     }
 
-    internal static func parseScorePartwisePartMeasure(_ node: Node) throws -> MXLScorePartwise.Part.Measure {
+    internal static func parseScorePartwisePartMeasure(_ node: Node,
+                                                       _ diagnostics: inout [Diagnostic]) throws -> MXLScorePartwise.Part.Measure {
         try MXLScorePartwise.Part.Measure(id: node.valueOfOptionalAttribute(.id),
                                           number: node.valueOfRequiredAttribute(.number),
                                           isImplicit: node.valueOfOptionalAttribute(.implicit, parseYesNo),
                                           isNonControlling: node.valueOfOptionalAttribute(.nonControlling, parseYesNo),
                                           text: node.valueOfOptionalAttribute(.text, parseMeasureText),
                                           width: node.valueOfOptionalAttribute(.width, parseTenths),
-                                          items: parseMusicItems(node))
+                                          items: parseMusicItems(node, &diagnostics))
     }
 
     internal static func parseScoreTimewise(_ node: Node,
@@ -52,21 +58,27 @@ extension MXLParser {
                                     defaults: node.optionalChildElement(.defaults, parseDefaults),
                                     credit: node.optionalChildElements(.credit, parseCredit),
                                     partList: node.requiredChildElement(.partList, parsePartList),
-                                    measures: node.requiredChildElements(.measure, parseScoreTimewiseMeasure))
+                                    measures: node.requiredChildElements(.measure) {
+                                        try parseScoreTimewiseMeasure($0, &diagnostics)
+                                    })
     }
 
-    internal static func parseScoreTimewiseMeasure(_ node: Node) throws -> MXLScoreTimewise.Measure {
+    internal static func parseScoreTimewiseMeasure(_ node: Node,
+                                                   _ diagnostics: inout [Diagnostic]) throws -> MXLScoreTimewise.Measure {
         try MXLScoreTimewise.Measure(id: node.valueOfOptionalAttribute(.id),
                                      number: node.valueOfRequiredAttribute(.number),
                                      isImplicit: node.valueOfOptionalAttribute(.implicit, parseYesNo),
                                      isNonControlling: node.valueOfOptionalAttribute(.nonControlling, parseYesNo),
                                      text: node.valueOfOptionalAttribute(.text, parseMeasureText),
                                      width: node.valueOfOptionalAttribute(.width, parseTenths),
-                                     parts: node.requiredChildElements(.part, parseScoreTimewiseMeasurePart))
+                                     parts: node.requiredChildElements(.part) {
+                                         try parseScoreTimewiseMeasurePart($0, &diagnostics)
+                                     })
     }
 
-    internal static func parseScoreTimewiseMeasurePart(_ node: Node) throws -> MXLScoreTimewise.Measure.Part {
+    internal static func parseScoreTimewiseMeasurePart(_ node: Node,
+                                                       _ diagnostics: inout [Diagnostic]) throws -> MXLScoreTimewise.Measure.Part {
         try MXLScoreTimewise.Measure.Part(id: node.valueOfRequiredAttribute(.id),
-                                          items: parseMusicItems(node))
+                                          items: parseMusicItems(node, &diagnostics))
     }
 }

@@ -60,9 +60,9 @@ extension MXLValidator.Checker {
             if openEndings[number] != nil {
                 openEndings[number] = nil
             } else {
-                issues.append(.unpairedEnding(number: number,
-                                              part: part,
-                                              measure: measure))
+                issues.append(.unmatchedEndingStop(number: number,
+                                                   part: part,
+                                                   measure: measure))
             }
         }
     }
@@ -125,9 +125,9 @@ extension MXLValidator.Checker {
         }
 
         for (number, measure) in openEndings.sorted(by: { $0.value < $1.value }) {
-            issues.append(.unpairedEnding(number: number,
-                                          part: part.id,
-                                          measure: measure))
+            issues.append(.unmatchedEndingStart(number: number,
+                                                part: part.id,
+                                                measure: measure))
         }
     }
 

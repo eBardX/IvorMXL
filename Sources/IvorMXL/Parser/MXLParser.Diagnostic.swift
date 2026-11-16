@@ -40,6 +40,15 @@ extension MXLParser {
         /// see `Design/MigrationTable.md` §4.
         case deprecatedElement(String)
 
+        /// A `<forward>` or `<backup>` element with a duration of 0 was
+        /// dropped. The associated value is the element name.
+        ///
+        /// MusicXML types the duration as `positive-divisions`, so 0 is
+        /// invalid, but old Finale exports (MusicXML 0.6a) write zero-length
+        /// forwards after a voice’s last note. Such an element moves nothing,
+        /// so dropping it changes no timing.
+        case droppedZeroDuration(String)
+
         /// An attribute present in the source is not modeled by the AST and
         /// was dropped. The associated value is the attribute name.
         case ignoredAttribute(String)
@@ -72,6 +81,9 @@ extension MXLParser.Diagnostic {
 
         case let .deprecatedElement(name):
             "Deprecated element ‘\(name)’ accepted unchanged"
+
+        case let .droppedZeroDuration(name):
+            "Element ‘\(name)’ with a duration of 0 was dropped"
 
         case let .ignoredAttribute(name):
             "Attribute ‘\(name)’ is not modelled and was ignored"

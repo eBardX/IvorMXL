@@ -109,21 +109,38 @@ extension MXLParser {
         }
     }
 
-    internal static func parseMusicItems(_ node: Node) throws -> [MXLMusicItem] {
-        try node.optionalChildElements([.attributes,
-                                        .backup,
-                                        .barline,
-                                        .bookmark,
-                                        .direction,
-                                        .figuredBass,
-                                        .forward,
-                                        .grouping,
-                                        .harmony,
-                                        .link,
-                                        .listening,
-                                        .note,
-                                        .print,
-                                        .sound], parseMusicItem)
+    internal static func parseMusicItems(_ node: Node,
+                                         _ diagnostics: inout [Diagnostic]) throws -> [MXLMusicItem] {
+        let nodes = node.allChildElements([.attributes,
+                                           .backup,
+                                           .barline,
+                                           .bookmark,
+                                           .direction,
+                                           .figuredBass,
+                                           .forward,
+                                           .grouping,
+                                           .harmony,
+                                           .link,
+                                           .listening,
+                                           .note,
+                                           .print,
+                                           .sound])
+
+        var items: [MXLMusicItem] = []
+
+        for node in nodes {
+            //
+            // A zero-length forward or backup moves nothing, so drop it rather
+            // than fail the whole document over an invalid duration.
+            //
+            if _isZeroDuration(node) {
+                diagnostics.append(.droppedZeroDuration(node.element?.stringValue ?? ""))
+            } else {
+                try items.append(parseMusicItem(node))
+            }
+        }
+
+        return items
     }
 
     internal static func parseStaff(_ node: Node) throws -> MXLStaff {
@@ -136,5 +153,14 @@ extension MXLParser {
 
     internal static func parseVoice(_ node: Node) throws -> MXLVoice {
         MXLVoice(voice: node.value ?? "")
+    }
+
+    // MARK: Private Type Methods
+
+    private static func _isZeroDuration(_ node: Node) -> Bool {
+        guard node.isElement([.backup, .forward])
+        else { return false }
+
+        return (try? node.valueOfOptionalChildElement(.duration, parseInt)) == 0
     }
 }

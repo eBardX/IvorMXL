@@ -18,7 +18,8 @@ extension MXLValidatorCheckerTests {
                                               .durationBeforeDivisions(part: "P1", measure: "1"),
                                               .unbalancedPartGroup(number: "1"),
                                               .unknownInstrumentSound("keyboard.pianoforte"),
-                                              .unpairedEnding(number: 1, part: "P1", measure: "1"),
+                                              .unmatchedEndingStart(number: 1, part: "P1", measure: "1"),
+                                              .unmatchedEndingStop(number: 1, part: "P1", measure: "1"),
                                               .unusedScorePart("P1")]
 
         for issue in allCases {
@@ -131,24 +132,24 @@ extension MXLValidatorCheckerTests {
     }
 
     @Test
-    func validate_reportsUnpairedEndingStart() {
+    func validate_reportsUnmatchedEndingStartStart() {
         let barline = MXLBarline(ending: MXLEnding(value: "1.",
                                                    number: [1],
                                                    kind: .start),
                                  location: .left)
         let (_, issues) = validate(items: [.barline(barline)])
 
-        #expect(issues == [.unpairedEnding(number: 1, part: "P1", measure: "1")])
+        #expect(issues == [.unmatchedEndingStart(number: 1, part: "P1", measure: "1")])
     }
 
     @Test
-    func validate_reportsUnpairedEndingStop() {
+    func validate_reportsUnmatchedEndingStopStop() {
         let barline = MXLBarline(ending: MXLEnding(value: "1.",
                                                    number: [1],
                                                    kind: .stop),
                                  location: .right)
         let (_, issues) = validate(items: [.barline(barline)])
 
-        #expect(issues == [.unpairedEnding(number: 1, part: "P1", measure: "1")])
+        #expect(issues == [.unmatchedEndingStop(number: 1, part: "P1", measure: "1")])
     }
 }

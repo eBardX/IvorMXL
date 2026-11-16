@@ -345,4 +345,71 @@ extension MXLParserTests {
             try MXLParser().parse(Data(xml.utf8), compressed: false)
         }
     }
+
+    @Test
+    func parse_zeroDurationForwardAndBackupAreDropped() throws {
+        //
+        // Old Finale exports (MusicXML 0.6a) write a zero-length forward after a voice's last
+        // note. `duration` is `positive-divisions`, but one such element shouldn't fail the whole
+        // document, and moves nothing, so the parser drops it.
+        //
+        let xml = measureXML("""
+        <note>
+          <pitch>
+            <step>C</step>
+            <octave>4</octave>
+          </pitch>
+          <duration>1</duration>
+          <voice>2</voice>
+        </note>
+        <forward>
+          <duration>0</duration>
+          <voice>2</voice>
+        </forward>
+        <backup>
+          <duration>0</duration>
+        </backup>
+        """)
+
+        let (entity, diagnostics) = try MXLParser().parse(Data(xml.utf8),
+                                                          compressed: false)
+
+        guard case let .scorePartwise(score) = entity.content
+        else {
+            Issue.record("Expected a partwise score")
+
+            return
+        }
+
+        let items = musicItems(score)
+
+        #expect(items.contains {
+            if case .note = $0 { true } else { false }
+        })
+        #expect(!items.contains {
+            switch $0 {
+            case .backup,
+                 .forward:
+                true
+
+            default:
+                false
+            }
+        })
+        #expect(diagnostics == [.droppedZeroDuration("forward"),
+                                .droppedZeroDuration("backup")])
+    }
+
+    @Test
+    func parse_negativeDurationForwardStillFails() {
+        let xml = measureXML("""
+        <forward>
+          <duration>-1</duration>
+        </forward>
+        """)
+
+        #expect(throws: (any Error).self) {
+            try MXLParser().parse(Data(xml.utf8), compressed: false)
+        }
+    }
 }

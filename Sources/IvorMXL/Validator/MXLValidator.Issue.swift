@@ -52,9 +52,16 @@ extension MXLValidator {
         /// parse error.
         case unknownInstrumentSound(String)
 
-        /// An `<ending>` start with no matching stop or discontinue, or a stop or
-        /// discontinue with no matching start.
-        case unpairedEnding(number: Int, part: String, measure: String)
+        /// An `<ending>` start with no matching stop or discontinue.
+        case unmatchedEndingStart(number: Int, part: String, measure: String)
+
+        /// An `<ending>` stop or discontinue with no matching start.
+        ///
+        /// Old Finale exports (MusicXML 0.6a) write these, closing a first
+        /// ending that was never opened, or stopping an ending already
+        /// discontinued. A consumer that only plays the score back can safely
+        /// ignore the stray stop.
+        case unmatchedEndingStop(number: Int, part: String, measure: String)
 
         /// A `<score-part>` whose `id` is referenced by no `<part>`.
         case unusedScorePart(String)
@@ -82,8 +89,11 @@ extension MXLValidator.Issue {
         case let .unknownInstrumentSound(value):
             "Instrument-sound \(value) is not a standard MusicXML sound"
 
-        case let .unpairedEnding(number, part, measure):
-            "Part \(part) measure \(measure) has an unpaired ending \(number)"
+        case let .unmatchedEndingStart(number, part, measure):
+            "Part \(part) measure \(measure) starts ending \(number), which is never stopped"
+
+        case let .unmatchedEndingStop(number, part, measure):
+            "Part \(part) measure \(measure) stops ending \(number), which was never started"
 
         case let .unusedScorePart(id):
             "Score-part \(id) is referenced by no part"
