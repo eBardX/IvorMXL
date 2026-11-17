@@ -4,9 +4,9 @@ extension MXLKey {
 
     /// One of the alternatives for Key.
     public enum Content {
-        /// The non-traditional-key group represents a single alteration within a non-traditional key signature. A
-        /// sequence of these groups makes up a non-traditional key signature
-        case nonTraditionalKey(MXLNonTraditionalKey)
+        /// A non-traditional key signature: a sequence of non-traditional-key groups, each a single
+        /// alteration, in the order they appear.
+        case nonTraditionalKey([MXLNonTraditionalKey])
 
         /// The traditional-key group represents a traditional key signature using the cycle of fifths.
         case traditionalKey(MXLTraditionalKey)

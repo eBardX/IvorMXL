@@ -413,3 +413,51 @@ extension MXLParserTests {
         }
     }
 }
+
+// MARK: -
+
+extension MXLParserTests {
+    @Test
+    func parse_nonTraditionalKeyKeepsEveryGroup() throws {
+        let xml = measureXML("""
+            <attributes>
+              <key>
+                <key-step>B</key-step>
+                <key-alter>-1</key-alter>
+                <key-step>F</key-step>
+                <key-alter>1</key-alter>
+                <key-accidental>sharp</key-accidental>
+                <key-step>G</key-step>
+                <key-alter>1.5</key-alter>
+              </key>
+            </attributes>
+            """)
+        let (entity, _) = try MXLParser().parse(Data(xml.utf8),
+                                                compressed: false)
+
+        guard case let .scorePartwise(score) = entity.content,
+              case let .attributes(attributes) = score.parts[0].measures[0].items[1],
+              case let .nonTraditionalKey(groups) = attributes.key.first?.content
+        else {
+            Issue.record("Expected a non-traditional key")
+
+            return
+        }
+
+        #expect(groups.map(\.step) == [.b, .f, .g])
+        #expect(groups.map(\.alter) == [-1, 1, 1.5])
+        #expect(groups.map { $0.accidental?.value } == [nil, .sharp, nil])
+    }
+
+    @Test(arguments: ["<key-step>B</key-step><key-step>F</key-step><key-alter>1</key-alter>",    // step without alter
+                      "<key-step>B</key-step><key-alter>-1</key-alter><key-alter>1</key-alter>", // two alters
+                      "<key-step>B</key-step>"])                                                   // last step without alter
+    func parse_nonTraditionalKeyWithBrokenGroupThrows(_ groups: String) {
+        let xml = measureXML("<attributes><key>\(groups)</key></attributes>")
+
+        #expect(throws: (any Error).self) {
+            try MXLParser().parse(Data(xml.utf8),
+                                  compressed: false)
+        }
+    }
+}

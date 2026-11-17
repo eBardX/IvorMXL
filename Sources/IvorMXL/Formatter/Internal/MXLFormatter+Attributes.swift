@@ -264,8 +264,10 @@ extension MXLFormatter.Writer {
 
     internal mutating func writeKeyContent(_ content: MXLKey.Content) {
         switch content {
-        case let .nonTraditionalKey(nonTraditionalKey):
-            writeNonTraditionalKey(nonTraditionalKey)
+        case let .nonTraditionalKey(nonTraditionalKeys):
+            for nonTraditionalKey in nonTraditionalKeys {
+                writeNonTraditionalKey(nonTraditionalKey)
+            }
 
         case let .traditionalKey(traditionalKey):
             if let cancel = traditionalKey.cancel {

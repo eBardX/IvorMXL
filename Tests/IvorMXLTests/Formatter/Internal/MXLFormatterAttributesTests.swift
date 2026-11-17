@@ -37,10 +37,14 @@ extension MXLFormatterAttributesTests {
 
     @Test
     func format_roundTripsNonTraditionalKey() throws {
-        let key = try MXLKey(content: .nonTraditionalKey(MXLNonTraditionalKey(step: .g,
-                                                                              alter: 0.5,
-                                                                              accidental: MXLKeyAccidental(value: .sharp,
-                                                                                                           smufl: "accidentalSharp"))),
+        let key = try MXLKey(content: .nonTraditionalKey([MXLNonTraditionalKey(step: .b,
+                                                                               alter: -1),
+                                                          MXLNonTraditionalKey(step: .g,
+                                                                               alter: 0.5,
+                                                                               accidental: MXLKeyAccidental(value: .sharp,
+                                                                                                            smufl: "accidentalSharp")),
+                                                          MXLNonTraditionalKey(step: .f,
+                                                                               alter: 1)]),
                              number: staffNumber(1))
         let attributes = MXLAttributes(key: [key],
                                        content: .transpose([]))

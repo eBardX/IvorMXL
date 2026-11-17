@@ -157,7 +157,7 @@ extension MXLParser {
 
     internal static func parseKeyContent(_ node: Node) throws -> MXLKey.Content {
         if node.hasChildElement(.keyStep) {
-            return try .nonTraditionalKey(parseNonTraditionalKey(node))
+            return try .nonTraditionalKey(parseNonTraditionalKeys(node))
         }
 
         return try .traditionalKey(parseTraditionalKey(node))
@@ -207,10 +207,51 @@ extension MXLParser {
                             usesSymbols: node.valueOfOptionalAttribute(.useSymbols, parseYesNo))
     }
 
-    internal static func parseNonTraditionalKey(_ node: Node) throws -> MXLNonTraditionalKey {
-        try MXLNonTraditionalKey(step: node.valueOfRequiredChildElement(.keyStep, parseStep),
-                                 alter: node.valueOfRequiredChildElement(.keyAlter, parseSemitones),
-                                 accidental: node.optionalChildElement(.keyAccidental, parseKeyAccidental))
+    //
+    // A non-traditional key's groups follow one another in order: each a `key-step`, then its
+    // `key-alter`, then an optional `key-accidental`.
+    //
+    internal static func parseNonTraditionalKeys(_ node: Node) throws -> [MXLNonTraditionalKey] {
+        var groups: [(step: MXLStep, alter: MXLSemitones?, accidental: MXLKeyAccidental?)] = []
+
+        for child in node.children ?? [] {
+            switch child.element {
+            case .keyStep:
+                if let last = groups.last,
+                   last.alter == nil {
+                    try child.unexpectedElement(.keyAlter)
+                }
+
+                try groups.append((child.requiredValue(parseStep), nil, nil))
+
+            case .keyAlter:
+                guard let last = groups.last,
+                      last.alter == nil
+                else { try child.unexpectedElement(.keyStep) }
+
+                try groups[groups.count - 1].alter = child.requiredValue(parseSemitones)
+
+            case .keyAccidental:
+                guard let last = groups.last,
+                      last.alter != nil,
+                      last.accidental == nil
+                else { try child.unexpectedElement(.keyStep) }
+
+                try groups[groups.count - 1].accidental = parseKeyAccidental(child)
+
+            default:
+                continue
+            }
+        }
+
+        return try groups.map { group in
+            guard let alter = group.alter
+            else { throw Node.Error.missingRequiredChildElement(node.name ?? "key", [MXLElementName.keyAlter.name]) }
+
+            return MXLNonTraditionalKey(step: group.step,
+                                        alter: alter,
+                                        accidental: group.accidental)
+        }
     }
 
     internal static func parseOctaveChange(_ text: String) -> MXLOctaveChange? {
