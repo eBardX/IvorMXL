@@ -5,7 +5,7 @@ public import XestiTools
 extension MXLNumeral {
 
     /// The numeral-value type represents a Roman numeral or Nashville number value as a positive integer from 1 to 7.
-    public struct Value: UIntRepresentable {
+    public struct Value {
 
         // MARK: Public Initializers
 
@@ -13,7 +13,7 @@ extension MXLNumeral {
         ///
         /// If the provided unsigned integer value is determined to be invalid, this initializer returns `nil`.
         ///
-        /// - Parameter uintValue: A Roman numeral or Nashville number value from 1 to 7.
+        /// - Parameter uintValue:  A Roman numeral or Nashville number value from 1 to 7.
         public init?(uintValue: UInt) {
             guard Self.isValid(uintValue)
             else { return nil }
@@ -36,11 +36,16 @@ extension MXLNumeral.Value {
 
     /// Determines if the provided unsigned integer value is a valid representation for a `MXLNumeral.Value`.
     ///
-    /// - Parameter uintValue: The unsigned integer value to check for validity.
+    /// - Parameter uintValue:  The unsigned integer value to check for validity.
     ///
-    /// - Returns: `true` when the provided unsigned integer value is between `1` and `7`, inclusive; `false`
-    ///            otherwise.
+    /// - Returns:  `true` when the provided unsigned integer value is between `1` and `7`, inclusive; `false`
+    ///             otherwise.
     public static func isValid(_ uintValue: UInt) -> Bool {
         (1...7).contains(uintValue)
     }
+}
+
+// MARK: - UIntRepresentable
+
+extension MXLNumeral.Value: UIntRepresentable {
 }

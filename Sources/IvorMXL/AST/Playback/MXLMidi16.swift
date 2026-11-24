@@ -5,7 +5,7 @@ public import XestiTools
 /// The midi-16 type is used to express MIDI 1.0 values that range from 1 to 16.
 ///
 /// Maps the MusicXML `<midi-channel>` element.
-public struct MXLMidi16: UIntRepresentable {
+public struct MXLMidi16 {
 
     // MARK: Public Initializers
 
@@ -38,9 +38,14 @@ extension MXLMidi16 {
     ///
     /// - Parameter uintValue:  The unsigned integer value to check for validity.
     ///
-    /// - Returns: `true` when the provided unsigned integer value is between `1` and `16`, inclusive; `false`
-    ///            otherwise.
+    /// - Returns:  `true` when the provided unsigned integer value is between `1` and `16`, inclusive; `false`
+    ///             otherwise.
     public static func isValid(_ uintValue: UInt) -> Bool {
         (1...16).contains(uintValue)
     }
+}
+
+// MARK: - UIntRepresentable
+
+extension MXLMidi16: UIntRepresentable {
 }

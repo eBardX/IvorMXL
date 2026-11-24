@@ -10,14 +10,26 @@ public struct MXLAccidentalMark {
 
     /// Creates a new `MXLAccidentalMark`.
     ///
-    /// - Parameter id: The optional-unique-id attribute group allows an element to optionally specify an ID that is unique to the entire document. This attribute group is not used for a required id attribute, or for an id attribute that specifies an id reference.
-    /// - Parameter value: The value of this element.
-    /// - Parameter levelDisplay: The level-display attribute group specifies three common ways to indicate editorial indications: putting parentheses or square brackets around a symbol, or making the symbol a different size. If not specified, they are left to application defaults. It is used by the level and accidental elements.
-    /// - Parameter position: For most elements, any program will compute a default x and y position. The position attributes let this be changed two ways.
-    /// - Parameter font: The font attribute group gathers together attributes for determining the font within a credit or direction. They are based on the text styles for Cascading Style Sheets. The font-family is a comma-separated list of font names.The font-style can be normal or italic. The font-size can be one of the CSS sizes or a numeric point size. The font-weight can be normal or bold. The default is application-dependent, but is a text font vs. a music font.
-    /// - Parameter color: The color attribute group indicates the color of an element.
-    /// - Parameter placement: The placement attribute indicates whether something is above or below another element, such as a note or a notation.
-    /// - Parameter smufl:  The SMuFL canonical glyph name used to specify a particular accidental character.
+    /// - Parameter id:            The optional-unique-id attribute group allows an element to optionally specify an ID
+    ///                            that is unique to the entire document. This attribute group is not used for a
+    ///                            required id attribute, or for an id attribute that specifies an id reference.
+    /// - Parameter value:         The value of this element.
+    /// - Parameter levelDisplay:  The level-display attribute group specifies three common ways to indicate editorial
+    ///                            indications: putting parentheses or square brackets around a symbol, or making the
+    ///                            symbol a different size. If not specified, they are left to application defaults. It
+    ///                            is used by the level and accidental elements.
+    /// - Parameter position:      For most elements, any program will compute a default x and y position. The position
+    ///                            attributes let this be changed two ways.
+    /// - Parameter font:          The font attribute group gathers together attributes for determining the font within
+    ///                            a credit or direction. They are based on the text styles for Cascading Style Sheets.
+    ///                            The font-family is a comma-separated list of font names. The font-style can be normal
+    ///                            or italic. The font-size can be one of the CSS sizes or a numeric point size. The
+    ///                            font-weight can be normal or bold. The default is application-dependent, but is a
+    ///                            text font vs. a music font.
+    /// - Parameter color:         The color attribute group indicates the color of an element.
+    /// - Parameter placement:     The placement attribute indicates whether something is above or below another
+    ///                            element, such as a note or a notation.
+    /// - Parameter smufl:         The SMuFL canonical glyph name used to specify a particular accidental character.
     public init(id: String? = nil,
                 value: MXLAccidentalValue,
                 levelDisplay: MXLLevel.Display = MXLLevel.Display(),
@@ -41,11 +53,11 @@ public struct MXLAccidentalMark {
     /// The color attribute group indicates the color of an element.
     public let color: MXLColor?
 
-    /// The font attribute group gathers together attributes for determining the font within a credit or direction.
-    /// They are based on the text styles for Cascading Style Sheets. The font-family is a comma-separated list of
-    /// font names.The font-style can be normal or italic. The font-size can be one of the CSS sizes or a numeric
-    /// point size. The font-weight can be normal or bold. The default is application-dependent, but is a text font
-    /// vs. a music font.
+    /// The font attribute group gathers together attributes for determining the font within a credit or direction. They
+    /// are based on the text styles for Cascading Style Sheets. The font-family is a comma-separated list of font
+    /// names. The font-style can be normal or italic. The font-size can be one of the CSS sizes or a numeric point
+    /// size. The font-weight can be normal or bold. The default is application-dependent, but is a text font vs. a
+    /// music font.
     public let font: MXLFont
 
     /// The optional-unique-id attribute group allows an element to optionally specify an ID that is unique to the

@@ -10,7 +10,8 @@ public struct MXLAccord {
 
     /// Creates a new `MXLAccord`.
     ///
-    /// - Parameter tuning: The tuning group contains the sequence of elements common to the staff-tuning and accord elements.
+    /// - Parameter tuning:  The tuning group contains the sequence of elements common to the staff-tuning and accord
+    ///                      elements.
     /// - Parameter string:  The number of the string being tuned, numbered from high to low.
     public init(tuning: MXLTuning,
                 string: MXLStringNumber? = nil) {

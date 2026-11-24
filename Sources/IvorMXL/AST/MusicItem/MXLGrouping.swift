@@ -16,10 +16,12 @@ public struct MXLGrouping {
 
     /// Creates a new `MXLGrouping`.
     ///
-    /// - Parameter id: The optional-unique-id attribute group allows an element to optionally specify an ID that is unique to the entire document. This attribute group is not used for a required id attribute, or for an id attribute that specifies an id reference.
-    /// - Parameter feature:  The feature elements contained within this grouping.
-    /// - Parameter kind:  Whether this grouping is a start, stop, or single (self-contained) grouping.
-    /// - Parameter number: Defaults to `1`.
+    /// - Parameter id:        The optional-unique-id attribute group allows an element to optionally specify an ID that
+    ///                        is unique to the entire document. This attribute group is not used for a required id
+    ///                        attribute, or for an id attribute that specifies an id reference.
+    /// - Parameter feature:   The feature elements contained within this grouping.
+    /// - Parameter kind:      Whether this grouping is a start, stop, or single (self-contained) grouping.
+    /// - Parameter number:    Defaults to `1`.
     /// - Parameter memberOf:  Distinguishes what hierarchy this grouping element belongs to.
     public init(id: String? = nil,
                 feature: [MXLFeature] = [],

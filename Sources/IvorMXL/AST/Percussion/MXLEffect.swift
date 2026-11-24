@@ -10,7 +10,7 @@ public struct MXLEffect {
 
     /// Creates a new `MXLEffect`.
     ///
-    /// - Parameter value: The value of this element.
+    /// - Parameter value:  The value of this element.
     /// - Parameter smufl:  Distinguishes different SMuFL stylistic alternates for this effect pictogram.
     public init(value: Value,
                 smufl: MXLSmuflPictogramGlyphName? = nil) {

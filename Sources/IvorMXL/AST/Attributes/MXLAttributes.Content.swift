@@ -9,8 +9,8 @@ extension MXLAttributes {
         /// allows concert scores with transposed parts to be represented in a single uncompressed MusicXML file.
         case forPart([MXLForPart])
 
-        /// If the part is being encoded for a transposing instrument in written vs. concert pitch, the transposition must
-        /// be encoded in the transpose element using the transpose type.
+        /// If the part is being encoded for a transposing instrument in written vs. concert pitch, the transposition
+        /// must be encoded in the transpose element using the transpose type.
         case transpose([MXLTranspose])
     }
 }

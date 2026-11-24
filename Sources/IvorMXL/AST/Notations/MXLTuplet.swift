@@ -22,17 +22,27 @@ public struct MXLTuplet {
 
     /// Creates a new `MXLTuplet`.
     ///
-    /// - Parameter id: The optional-unique-id attribute group allows an element to optionally specify an ID that is unique to the entire document. This attribute group is not used for a required id attribute, or for an id attribute that specifies an id reference.
-    /// - Parameter actual: The tuplet-actual element provide optional full control over how the actual part of the tuplet is displayed, including number and note type (with dots). If any of these elements are absent, their values are based on the time-modification element.
-    /// - Parameter normal: The tuplet-normal element provide optional full control over how the normal part of the tuplet is displayed, including number and note type (with dots). If any of these elements are absent, their values are based on the time-modification element.
-    /// - Parameter kind: Whether this element marks the start or the stop of the tuplet.
-    /// - Parameter number: Distinguishes nested tuplets from each other.
-    /// - Parameter hasBracket: A Boolean value indicating whether a bracket is present for the tuplet.
-    /// - Parameter showNumber: Whether to display the number of actual notes, the number of both actual and normal notes, or neither. Defaults to `actual` if not specified.
-    /// - Parameter showType: Whether to display the actual note type, both the actual and normal note types, or neither. Defaults to `neither` if not specified.
-    /// - Parameter lineShape: The line-shape attribute distinguishes between straight and curved lines.
-    /// - Parameter position: For most elements, any program will compute a default x and y position. The position attributes let this be changed two ways.
-    /// - Parameter placement: The placement attribute indicates whether something is above or below another element, such as a note or a notation.
+    /// - Parameter id:          The optional-unique-id attribute group allows an element to optionally specify an ID
+    ///                          that is unique to the entire document. This attribute group is not used for a required
+    ///                          id attribute, or for an id attribute that specifies an id reference.
+    /// - Parameter actual:      The tuplet-actual element provide optional full control over how the actual part of the
+    ///                          tuplet is displayed, including number and note type (with dots). If any of these
+    ///                          elements are absent, their values are based on the time-modification element.
+    /// - Parameter normal:      The tuplet-normal element provide optional full control over how the normal part of the
+    ///                          tuplet is displayed, including number and note type (with dots). If any of these
+    ///                          elements are absent, their values are based on the time-modification element.
+    /// - Parameter kind:        Whether this element marks the start or the stop of the tuplet.
+    /// - Parameter number:      Distinguishes nested tuplets from each other.
+    /// - Parameter hasBracket:  A Boolean value indicating whether a bracket is present for the tuplet.
+    /// - Parameter showNumber:  Whether to display the number of actual notes, the number of both actual and normal
+    ///                          notes, or neither. Defaults to `actual` if not specified.
+    /// - Parameter showType:    Whether to display the actual note type, both the actual and normal note types, or
+    ///                          neither. Defaults to `neither` if not specified.
+    /// - Parameter lineShape:   The line-shape attribute distinguishes between straight and curved lines.
+    /// - Parameter position:    For most elements, any program will compute a default x and y position. The position
+    ///                          attributes let this be changed two ways.
+    /// - Parameter placement:   The placement attribute indicates whether something is above or below another element,
+    ///                          such as a note or a notation.
     public init(id: String? = nil,
                 actual: Portion? = nil,
                 normal: Portion? = nil,

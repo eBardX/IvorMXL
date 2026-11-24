@@ -13,8 +13,10 @@ extension MXLDirection {
 
         /// Creates a new `MXLDirection.Kind`.
         ///
-        /// - Parameter id: The optional-unique-id attribute group allows an element to optionally specify an ID that is unique to the entire document. This attribute group is not used for a required id attribute, or for an id attribute that specifies an id reference.
-        /// - Parameter content: One of the alternatives for DirectionType.
+        /// - Parameter id:       The optional-unique-id attribute group allows an element to optionally specify an ID
+        ///                       that is unique to the entire document. This attribute group is not used for a required
+        ///                       id attribute, or for an id attribute that specifies an id reference.
+        /// - Parameter content:  One of the alternatives for DirectionType.
         public init(id: String? = nil,
                     content: Content) {
             self.content = content

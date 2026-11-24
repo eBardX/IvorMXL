@@ -9,8 +9,10 @@ public struct MXLLayout {
     /// Creates a new `MXLLayout`.
     ///
     /// - Parameter pageLayout:    The score-wide default page layout, including page size and margins.
-    /// - Parameter systemLayout:  The score-wide default system layout, including margins and the distance between systems.
-    /// - Parameter staffLayout:   The default staff layout for staves after the first one in each part, specifying the vertical distance from the staff above.
+    /// - Parameter systemLayout:  The score-wide default system layout, including margins and the distance between
+    ///                            systems.
+    /// - Parameter staffLayout:   The default staff layout for staves after the first one in each part, specifying the
+    ///                            vertical distance from the staff above.
     public init(pageLayout: MXLPageLayout? = nil,
                 systemLayout: MXLSystemLayout? = nil,
                 staffLayout: [MXLStaffLayout] = []) {

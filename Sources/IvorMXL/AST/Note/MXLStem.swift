@@ -13,7 +13,8 @@ public struct MXLStem {
     /// Creates a new `MXLStem`.
     ///
     /// - Parameter value:      The value of this element.
-    /// - Parameter yPosition:  The y-position attribute group is used for elements like stems where specifying y position is common, but specifying x position is rare.
+    /// - Parameter yPosition:  The y-position attribute group is used for elements like stems where specifying y
+    ///                         position is common, but specifying x position is rare.
     /// - Parameter color:      The color attribute group indicates the color of an element.
     public init(value: Value,
                 yPosition: MXLYPosition = MXLYPosition(),

@@ -78,8 +78,8 @@ extension MXLDirection.Kind {
         /// A crescendo or diminuendo wedge symbol.
         case wedge(MXLWedge)
 
-        /// The words element specifies a standard text direction. The enclosure is none if not specified. The language is
-        /// Italian (“it”) if not specified. Left justification is used if not specified.
+        /// The words element specifies a standard text direction. The enclosure is none if not specified. The language
+        /// is Italian (“it”) if not specified. Left justification is used if not specified.
         case words(MXLFormattedTextID)
     }
 }

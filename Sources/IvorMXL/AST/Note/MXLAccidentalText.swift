@@ -10,22 +10,44 @@ public struct MXLAccidentalText {
     /// Creates a new `MXLAccidentalText`.
     ///
     /// - Parameter value:          The value of this element.
-    /// - Parameter justify:        The justify attribute is used to indicate left, center, or right justification. The default value varies for different elements. For elements where the justify attribute is present but the halign attribute is not, the justify attribute indicates horizontal alignment as well as justification.
-    /// - Parameter position:       For most elements, any program will compute a default x and y position. The position attributes let this be changed two ways.
-    /// - Parameter font:           The font attribute group gathers together attributes for determining the font within a credit or direction. They are based on the text styles for Cascading Style Sheets. The font-family is a comma-separated list of font names.The font-style can be normal or italic. The font-size can be one of the CSS sizes or a numeric point size. The font-weight can be normal or bold. The default is application-dependent, but is a text font vs. a music font.
+    /// - Parameter justify:        The justify attribute is used to indicate left, center, or right justification. The
+    ///                             default value varies for different elements. For elements where the justify
+    ///                             attribute is present but the halign attribute is not, the justify attribute
+    ///                             indicates horizontal alignment as well as justification.
+    /// - Parameter position:       For most elements, any program will compute a default x and y position. The position
+    ///                             attributes let this be changed two ways.
+    /// - Parameter font:           The font attribute group gathers together attributes for determining the font within
+    ///                             a credit or direction. They are based on the text styles for Cascading Style Sheets.
+    ///                             The font-family is a comma-separated list of font names. The font-style can be
+    ///                             normal or italic. The font-size can be one of the CSS sizes or a numeric point size.
+    ///                             The font-weight can be normal or bold. The default is application-dependent, but is
+    ///                             a text font vs. a music font.
     /// - Parameter color:          The color attribute group indicates the color of an element.
-    /// - Parameter halign:         In cases where text extends over more than one line, horizontal alignment and justify values can be different. The most typical case is for credits, such as:
-    /// - Parameter valign:         The valign attribute is used to indicate vertical alignment to the top, middle, bottom, or baseline of the text. Defaults are implementation-dependent.
+    /// - Parameter halign:         In cases where text extends over more than one line, horizontal alignment and
+    ///                             justify values can be different.
+    /// - Parameter valign:         The valign attribute is used to indicate vertical alignment to the top, middle,
+    ///                             bottom, or baseline of the text. Defaults are implementation-dependent.
     /// - Parameter underline:      The number of lines used to underline the text: `0` (none), `1`, `2`, or `3`.
     /// - Parameter overline:       The number of lines used to overline the text: `0` (none), `1`, `2`, or `3`.
     /// - Parameter lineThrough:    The number of lines used to strike through the text: `0` (none), `1`, `2`, or `3`.
-    /// - Parameter rotation:       The rotation attribute is used to rotate text around the alignment point specified by the halign and valign attributes. Positive values are clockwise rotations, while negative values are counter-clockwise rotations.
-    /// - Parameter letterSpacing:  The letter-spacing attribute specifies text tracking. Values are either “normal” or a number representing the number of ems to add between each letter. The number may be negative in order to subtract space. The default is normal, which allows flexibility of letter-spacing for purposes of text justification.
-    /// - Parameter lineHeight:     The line-height attribute specifies text leading. Values are either “normal” or a number representing the percentage of the current font height to use for leading. The default is “normal”. The exact normal value is implementation-dependent, but values between 100 and 120 are recommended.
+    /// - Parameter rotation:       The rotation attribute is used to rotate text around the alignment point specified
+    ///                             by the halign and valign attributes. Positive values are clockwise rotations, while
+    ///                             negative values are counter-clockwise rotations.
+    /// - Parameter letterSpacing:  The letter-spacing attribute specifies text tracking. Values are either “normal” or
+    ///                             a number representing the number of ems to add between each letter. The number may
+    ///                             be negative in order to subtract space. The default is normal, which allows
+    ///                             flexibility of letter-spacing for purposes of text justification.
+    /// - Parameter lineHeight:     The line-height attribute specifies text leading. Values are either “normal” or a
+    ///                             number representing the percentage of the current font height to use for leading.
+    ///                             The default is “normal”. The exact normal value is implementation-dependent, but
+    ///                             values between 100 and 120 are recommended.
     /// - Parameter xmlLang:        The xml:lang attribute value.
     /// - Parameter xmlSpace:       The xml:space attribute value.
-    /// - Parameter dir:            The text-direction attribute is used to adjust and override the Unicode bidirectional text algorithm, similar to the Directionality data category in the W3C Internationalization Tag Set recommendation.
-    /// - Parameter enclosure:      The enclosure attribute group is used to specify the formatting of an enclosure around text or symbols.
+    /// - Parameter dir:            The text-direction attribute is used to adjust and override the Unicode
+    ///                             bidirectional text algorithm, similar to the Directionality data category in the W3C
+    ///                             Internationalization Tag Set recommendation.
+    /// - Parameter enclosure:      The enclosure attribute group is used to specify the formatting of an enclosure
+    ///                             around text or symbols.
     /// - Parameter smufl:          The SMuFL canonical glyph name used to specify a particular accidental character.
     public init(value: MXLAccidentalValue,
                 justify: MXLLeftCenterRight? = nil,
@@ -81,11 +103,11 @@ public struct MXLAccidentalText {
     /// Maps to the MusicXML `enclosure` attribute.
     public let enclosure: MXLEnclosureShape?
 
-    /// The font attribute group gathers together attributes for determining the font within a credit or direction.
-    /// They are based on the text styles for Cascading Style Sheets. The font-family is a comma-separated list of
-    /// font names.The font-style can be normal or italic. The font-size can be one of the CSS sizes or a numeric
-    /// point size. The font-weight can be normal or bold. The default is application-dependent, but is a text font
-    /// vs. a music font.
+    /// The font attribute group gathers together attributes for determining the font within a credit or direction. They
+    /// are based on the text styles for Cascading Style Sheets. The font-family is a comma-separated list of font
+    /// names. The font-style can be normal or italic. The font-size can be one of the CSS sizes or a numeric point
+    /// size. The font-weight can be normal or bold. The default is application-dependent, but is a text font vs. a
+    /// music font.
     public let font: MXLFont
 
     /// In cases where text extends over more than one line, horizontal alignment and justify values can be different.

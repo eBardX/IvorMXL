@@ -24,7 +24,7 @@ extension MXLNote {
 
         // MARK: Public Instance Properties
 
-        /// Indicates full, cue, grace-cue, or large size.
+        /// The size of the note: full, cue, grace-cue, or large.
         ///
         /// Maps to the MusicXML `size` attribute.
         public let size: MXLSymbolSize?

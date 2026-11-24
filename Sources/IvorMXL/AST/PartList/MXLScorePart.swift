@@ -13,17 +13,21 @@ public struct MXLScorePart {
 
     /// Creates a new `MXLScorePart`.
     ///
-    /// - Parameter id: A unique identifier for this part, referenced by the id attribute of the corresponding part element.
-    /// - Parameter identification: Identification information specific to this part.
-    /// - Parameter link: Links this score-part to MusicXML documents that contain parts data.
-    /// - Parameter name: The name of this part.
-    /// - Parameter nameDisplay: Formatting for the display of the part name.
-    /// - Parameter abbreviation: The abbreviation of this part’s name.
-    /// - Parameter abbreviationDisplay: Formatting for the display of the part abbreviation.
-    /// - Parameter group: The group element allows the use of different versions of the part for different purposes. Typical values include score, parts, sound, and data. Ordering information can be derived from the ordering within a MusicXML score or opus.
-    /// - Parameter instrument: The instruments used by this part.
-    /// - Parameter player: The players who perform this part.
-    /// - Parameter group2: The MIDI device and instrument assignments for this part.
+    /// - Parameter id:                   A unique identifier for this part, referenced by the id attribute of the
+    ///                                   corresponding part element.
+    /// - Parameter identification:       Identification information specific to this part.
+    /// - Parameter link:                 Links this score-part to MusicXML documents that contain parts data.
+    /// - Parameter name:                 The name of this part.
+    /// - Parameter nameDisplay:          Formatting for the display of the part name.
+    /// - Parameter abbreviation:         The abbreviation of this part’s name.
+    /// - Parameter abbreviationDisplay:  Formatting for the display of the part abbreviation.
+    /// - Parameter group:                The group element allows the use of different versions of the part for
+    ///                                   different purposes. Typical values include score, parts, sound, and data.
+    ///                                   Ordering information can be derived from the ordering within a MusicXML score
+    ///                                   or opus.
+    /// - Parameter instrument:           The instruments used by this part.
+    /// - Parameter player:               The players who perform this part.
+    /// - Parameter group2:               The MIDI device and instrument assignments for this part.
     public init(id: String,
                 identification: MXLIdentification? = nil,
                 link: [MXLPartLink] = [],

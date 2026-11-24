@@ -26,7 +26,7 @@ public struct MXLTie {
     /// Maps to the MusicXML `type` attribute.
     public let kind: MXLStartStop
 
-    /// Indicates which times through a repeat this tie is played, if only particular times.
+    /// The times through a repeat this tie is played, if only particular times.
     ///
     /// Maps to the MusicXML `time-only` attribute.
     public let timeOnly: MXLTimeOnly?

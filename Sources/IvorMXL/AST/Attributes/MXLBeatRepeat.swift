@@ -18,10 +18,14 @@ public struct MXLBeatRepeat {
 
     /// Creates a new `MXLBeatRepeat`.
     ///
-    /// - Parameter slashContent: The slash group combines elements used for more complete specification of the slash and beat-repeat measure-style elements. They have the same values as the type and dot elements, and define what the beat is for the display of repetition marks. If not present, the beat is based on the current time signature.
-    /// - Parameter kind:  Whether this indicates the start or stop of the beat being repeated.
-    /// - Parameter slashes:  The number of slashes to use in the symbol. `1` if not specified.
-    /// - Parameter usesDots:  A Boolean value indicating whether to use dots as well as slashes, for instance with mixed rhythm patterns. `false` if not specified.
+    /// - Parameter slashContent:  The slash group combines elements used for more complete specification of the slash
+    ///                            and beat-repeat measure-style elements. They have the same values as the type and dot
+    ///                            elements, and define what the beat is for the display of repetition marks. If not
+    ///                            present, the beat is based on the current time signature.
+    /// - Parameter kind:          Whether this indicates the start or stop of the beat being repeated.
+    /// - Parameter slashes:       The number of slashes to use in the symbol. `1` if not specified.
+    /// - Parameter usesDots:      A Boolean value indicating whether to use dots as well as slashes, for instance with
+    ///                            mixed rhythm patterns. `false` if not specified.
     public init(slashContent: MXLSlashContent? = nil,
                 kind: MXLStartStop,
                 slashes: Int? = nil,

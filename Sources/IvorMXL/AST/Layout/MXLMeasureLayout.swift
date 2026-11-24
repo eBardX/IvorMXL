@@ -10,7 +10,10 @@ public struct MXLMeasureLayout {
 
     /// Creates a new `MXLMeasureLayout`.
     ///
-    /// - Parameter measureDistance:  The measure-distance element specifies the horizontal distance from the previous measure. This value is only used for systems where there is horizontal whitespace in the middle of a system, as in systems with codas. To specify the measure width, use the width attribute of the measure element.
+    /// - Parameter measureDistance:  The measure-distance element specifies the horizontal distance from the previous
+    ///                               measure. This value is only used for systems where there is horizontal whitespace
+    ///                               in the middle of a system, as in systems with codas. To specify the measure width,
+    ///                               use the width attribute of the measure element.
     public init(measureDistance: MXLTenths? = nil) {
         self.measureDistance = measureDistance
     }

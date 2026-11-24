@@ -20,8 +20,10 @@ public struct MXLStaffSize {
 
     /// Creates a new `MXLStaffSize`.
     ///
-    /// - Parameter value: The value of this element.
-    /// - Parameter scaling: The percentage scaling that applies to the notation on this staff, distinct from the staff space scaling. Values less than 100 make the notation smaller while values over 100 make the notation larger.
+    /// - Parameter value:    The value of this element.
+    /// - Parameter scaling:  The percentage scaling that applies to the notation on this staff, distinct from the staff
+    ///                       space scaling. Values less than 100 make the notation smaller while values over 100 make
+    ///                       the notation larger.
     public init(value: Double,
                 scaling: MXLNonNegativeDecimal? = nil) {
         self.scaling = scaling

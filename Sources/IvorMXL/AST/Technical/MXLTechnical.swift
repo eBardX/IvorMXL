@@ -9,7 +9,9 @@ public struct MXLTechnical {
 
     /// Creates a new `MXLTechnical`.
     ///
-    /// - Parameter id:     The optional-unique-id attribute group allows an element to optionally specify an ID that is unique to the entire document. This attribute group is not used for a required id attribute, or for an id attribute that specifies an id reference.
+    /// - Parameter id:     The optional-unique-id attribute group allows an element to optionally specify an ID that is
+    ///                     unique to the entire document. This attribute group is not used for a required id attribute,
+    ///                     or for an id attribute that specifies an id reference.
     /// - Parameter items:  One of the alternatives for Technical.
     public init(id: String? = nil,
                 items: [Item] = []) {

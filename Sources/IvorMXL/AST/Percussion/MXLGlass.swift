@@ -11,8 +11,9 @@ public struct MXLGlass {
 
     /// Creates a new `MXLGlass`.
     ///
-    /// - Parameter value: The value of this element.
-    /// - Parameter smufl:  Distinguishes different SMuFL glyphs for wind chimes in the Chimes pictograms range, including those made of materials other than glass.
+    /// - Parameter value:  The value of this element.
+    /// - Parameter smufl:  Distinguishes different SMuFL glyphs for wind chimes in the Chimes pictograms range,
+    ///                     including those made of materials other than glass.
     public init(value: Value,
                 smufl: MXLSmuflPictogramGlyphName? = nil) {
         self.smufl = smufl

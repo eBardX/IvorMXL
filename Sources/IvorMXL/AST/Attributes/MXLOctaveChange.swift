@@ -13,7 +13,7 @@ public struct MXLOctaveChange {
 
     /// Creates a new `MXLOctaveChange` with the provided integer value.
     ///
-    /// - Parameter intValue: The number of octaves to shift a written pitch or clef.
+    /// - Parameter intValue:  The number of octaves to shift a written pitch or clef.
     public init?(intValue: Int) {
         self.intValue = intValue
     }

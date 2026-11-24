@@ -12,8 +12,7 @@ public struct MXLStaffLine {
     ///
     /// If the provided unsigned integer value is determined to be invalid, this initializer returns `nil`.
     ///
-    /// - Parameter uintValue: Staff lines are numbered from bottom to top, with 1 being the bottom line on a
-    ///                        staff.
+    /// - Parameter uintValue:  Staff lines are numbered from bottom to top, with 1 being the bottom line on a staff.
     public init?(uintValue: UInt) {
         guard Self.isValid(uintValue)
         else { return nil }
@@ -35,9 +34,9 @@ extension MXLStaffLine {
 
     /// Determines if the provided unsigned integer value is a valid representation for a `MXLStaffLine`.
     ///
-    /// - Parameter uintValue: The unsigned integer value to check for validity.
+    /// - Parameter uintValue:  The unsigned integer value to check for validity.
     ///
-    /// - Returns: `true` when the provided unsigned integer value is greater than zero; `false` otherwise.
+    /// - Returns:  `true` when the provided unsigned integer value is greater than zero; `false` otherwise.
     public static func isValid(_ uintValue: UInt) -> Bool {
         uintValue > 0
     }

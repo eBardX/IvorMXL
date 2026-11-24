@@ -14,10 +14,13 @@ public struct MXLDegree {
 
     /// Creates a new `MXLDegree`.
     ///
-    /// - Parameter value:  The degree of the chord being added, altered, or subtracted (1 for the root, 3 for third, etc.).
-    /// - Parameter alter:  The chromatic alteration for this degree.
-    /// - Parameter kind:  Whether this degree is an addition, alteration, or subtraction relative to the kind of the current chord.
-    /// - Parameter printsObject: A Boolean value indicating whether to print an object (e.g. a note or a rest). Defaults to `true` if not specified.
+    /// - Parameter value:         The degree of the chord being added, altered, or subtracted (1 for the root, 3 for
+    ///                            third, etc.).
+    /// - Parameter alter:         The chromatic alteration for this degree.
+    /// - Parameter kind:          Whether this degree is an addition, alteration, or subtraction relative to the kind
+    ///                            of the current chord.
+    /// - Parameter printsObject:  A Boolean value indicating whether to print an object (e.g. a note or a rest).
+    ///                            Defaults to `true` if not specified.
     public init(value: Value,
                 alter: Alter,
                 kind: Kind,

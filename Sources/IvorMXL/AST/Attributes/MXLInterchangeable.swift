@@ -11,10 +11,13 @@ public struct MXLInterchangeable {
 
     /// Creates a new `MXLInterchangeable`.
     ///
-    /// - Parameter timeRelation: The symbol used to represent the interchangeable aspect of the dual time signatures.
-    /// - Parameter timeSignature: Time signatures are represented by the beats element for the numerator and the beat-type element for the denominator.
-    /// - Parameter symbol: The symbol used to display this time signature, distinct from the symbol used for the first of the dual time signatures.
-    /// - Parameter separator: How the beats and beat-type values are arranged relative to one another. `.stacked` if not specified.
+    /// - Parameter timeRelation:   The symbol used to represent the interchangeable aspect of the dual time signatures.
+    /// - Parameter timeSignature:  Time signatures are represented by the beats element for the numerator and the
+    ///                             beat-type element for the denominator.
+    /// - Parameter symbol:         The symbol used to display this time signature, distinct from the symbol used for
+    ///                             the first of the dual time signatures.
+    /// - Parameter separator:      How the beats and beat-type values are arranged relative to one another. `.stacked`
+    ///                             if not specified.
     public init(timeRelation: MXLTimeRelation? = nil,
                 timeSignature: [MXLTimeSignature] = [],
                 symbol: MXLTimeSymbol? = nil,

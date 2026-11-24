@@ -10,7 +10,8 @@ public struct MXLFullNote {
 
     /// Creates a new `MXLFullNote`.
     ///
-    /// - Parameter isChord:  A Boolean value indicating whether this note is an additional chord tone with the preceding note.
+    /// - Parameter isChord:  A Boolean value indicating whether this note is an additional chord tone with the
+    ///                       preceding note.
     /// - Parameter content:  One of the alternatives for FullNote.
     public init(isChord: Bool,
                 content: Content) {

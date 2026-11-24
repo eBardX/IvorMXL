@@ -11,8 +11,8 @@ extension MXLBarline {
 
         /// Creates a new `MXLBarline.StyleColor`.
         ///
-        /// - Parameter value: The value of this element.
-        /// - Parameter color: The color attribute group indicates the color of an element.
+        /// - Parameter value:  The value of this element.
+        /// - Parameter color:  The color attribute group indicates the color of an element.
         public init(value: Style,
                     color: MXLColor? = nil) {
             self.color = color

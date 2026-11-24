@@ -9,8 +9,8 @@ public struct MXLPedalTuning {
 
     /// Creates a new `MXLPedalTuning`.
     ///
-    /// - Parameter pedalStep: The pedal-step element defines the pitch step for a single harp pedal.
-    /// - Parameter pedalAlter: The pedal-alter element defines the chromatic alteration for a single harp pedal.
+    /// - Parameter pedalStep:   The pedal-step element defines the pitch step for a single harp pedal.
+    /// - Parameter pedalAlter:  The pedal-alter element defines the chromatic alteration for a single harp pedal.
     public init(pedalStep: MXLStep,
                 pedalAlter: MXLSemitones) {
         self.pedalAlter = pedalAlter

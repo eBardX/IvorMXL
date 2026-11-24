@@ -9,12 +9,24 @@ public struct MXLFigure {
 
     /// Creates a new `MXLFigure`.
     ///
-    /// - Parameter prefix: Values for the prefix element include plus and the accidental values sharp, flat, natural, double-sharp, flat-flat, and sharp-sharp. The prefix element may contain additional values for symbols specific to particular figured bass styles.
-    /// - Parameter number: A figure-number is a number. Overstrikes of the figure number are represented in the suffix element.
-    /// - Parameter suffix: Values for the suffix element include plus and the accidental values sharp, flat, natural, double-sharp, flat-flat, and sharp-sharp. Suffixes include both symbols that come after the figure number and those that overstrike the figure number. The suffix values slash, back-slash, and vertical are used for slashed numbers indicating chromatic alteration. The orientation and display of the slash usually depends on the figure number. The suffix element may contain additional values for symbols specific to particular figured bass styles.
-    /// - Parameter extend:  A figured bass extension line following this figure.
-    /// - Parameter footnote: The footnote element specifies editorial information that appears in footnotes in the printed score. It is defined within a group due to its multiple uses within the MusicXML schema.
-    /// - Parameter level: The level element specifies editorial information for different MusicXML elements. It is defined within a group due to its multiple uses within the MusicXML schema.
+    /// - Parameter prefix:    Values for the prefix element include plus and the accidental values sharp, flat,
+    ///                        natural, double-sharp, flat-flat, and sharp-sharp. The prefix element may contain
+    ///                        additional values for symbols specific to particular figured bass styles.
+    /// - Parameter number:    A figure-number is a number. Overstrikes of the figure number are represented in the
+    ///                        suffix element.
+    /// - Parameter suffix:    Values for the suffix element include plus and the accidental values sharp, flat,
+    ///                        natural, double-sharp, flat-flat, and sharp-sharp. Suffixes include both symbols that
+    ///                        come after the figure number and those that overstrike the figure number. The suffix
+    ///                        values slash, back-slash, and vertical are used for slashed numbers indicating chromatic
+    ///                        alteration. The orientation and display of the slash usually depends on the figure
+    ///                        number. The suffix element may contain additional values for symbols specific to
+    ///                        particular figured bass styles.
+    /// - Parameter extend:    A figured bass extension line following this figure.
+    /// - Parameter footnote:  The footnote element specifies editorial information that appears in footnotes in the
+    ///                        printed score. It is defined within a group due to its multiple uses within the MusicXML
+    ///                        schema.
+    /// - Parameter level:     The level element specifies editorial information for different MusicXML elements. It is
+    ///                        defined within a group due to its multiple uses within the MusicXML schema.
     public init(prefix: MXLStyleText? = nil,
                 number: MXLStyleText? = nil,
                 suffix: MXLStyleText? = nil,

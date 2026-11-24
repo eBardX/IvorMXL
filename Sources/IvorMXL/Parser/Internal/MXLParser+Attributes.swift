@@ -216,13 +216,13 @@ extension MXLParser {
 
         for child in node.children ?? [] {
             switch child.element {
-            case .keyStep:
-                if let last = groups.last,
-                   last.alter == nil {
-                    try child.unexpectedElement(.keyAlter)
-                }
+            case .keyAccidental:
+                guard let last = groups.last,
+                      last.alter != nil,
+                      last.accidental == nil
+                else { try child.unexpectedElement(.keyStep) }
 
-                try groups.append((child.requiredValue(parseStep), nil, nil))
+                try groups[groups.count - 1].accidental = parseKeyAccidental(child)
 
             case .keyAlter:
                 guard let last = groups.last,
@@ -231,13 +231,13 @@ extension MXLParser {
 
                 try groups[groups.count - 1].alter = child.requiredValue(parseSemitones)
 
-            case .keyAccidental:
-                guard let last = groups.last,
-                      last.alter != nil,
-                      last.accidental == nil
-                else { try child.unexpectedElement(.keyStep) }
+            case .keyStep:
+                if let last = groups.last,
+                   last.alter == nil {
+                    try child.unexpectedElement(.keyAlter)
+                }
 
-                try groups[groups.count - 1].accidental = parseKeyAccidental(child)
+                try groups.append((child.requiredValue(parseStep), nil, nil))
 
             default:
                 continue
@@ -262,7 +262,7 @@ extension MXLParser {
         Int(text).flatMap(MXLPositiveDivisions.init(intValue:))
     }
 
-internal static func parseShowTuplet(_ text: String) -> MXLShowTuplet? {
+    internal static func parseShowTuplet(_ text: String) -> MXLShowTuplet? {
         switch text {
         case "actual":
             .actual

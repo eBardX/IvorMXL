@@ -9,8 +9,12 @@ public struct MXLSlashContent {
 
     /// Creates a new `MXLSlashContent`.
     ///
-    /// - Parameter group:        The note type and augmentation dots defining the beat used for the display of repetition marks. If not present, the beat is based on the current time signature.
-    /// - Parameter exceptVoice:  The except-voice element is used to specify a combination of slash notation and regular notation. Any note elements that are in voices specified by the except-voice elements are displayed in normal notation, in addition to the slash notation that is always displayed.
+    /// - Parameter group:        The note type and augmentation dots defining the beat used for the display of
+    ///                           repetition marks. If not present, the beat is based on the current time signature.
+    /// - Parameter exceptVoice:  The except-voice element is used to specify a combination of slash notation and
+    ///                           regular notation. Any note elements that are in voices specified by the except-voice
+    ///                           elements are displayed in normal notation, in addition to the slash notation that is
+    ///                           always displayed.
     public init(group: Group? = nil,
                 exceptVoice: [String] = []) {
         self.exceptVoice = exceptVoice

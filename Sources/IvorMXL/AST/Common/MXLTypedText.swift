@@ -9,8 +9,8 @@ public struct MXLTypedText {
 
     /// Creates a new `MXLTypedText`.
     ///
-    /// - Parameter value: The value of this element.
-    /// - Parameter kind: The type attribute of this element.
+    /// - Parameter value:  The value of this element.
+    /// - Parameter kind:   The type attribute of this element.
     public init(value: String,
                 kind: String? = nil) {
         self.kind = kind

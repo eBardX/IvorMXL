@@ -10,8 +10,8 @@ public struct MXLMetal {
 
     /// Creates a new `MXLMetal`.
     ///
-    /// - Parameter value: The value of this element.
-    /// - Parameter smufl: Distinguishes different SMuFL stylistic alternates for this metal pictogram.
+    /// - Parameter value:  The value of this element.
+    /// - Parameter smufl:  Distinguishes different SMuFL stylistic alternates for this metal pictogram.
     public init(value: Value,
                 smufl: MXLSmuflPictogramGlyphName? = nil) {
         self.smufl = smufl

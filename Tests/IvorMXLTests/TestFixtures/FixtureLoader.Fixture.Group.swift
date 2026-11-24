@@ -4,7 +4,7 @@ extension FixtureLoader.Fixture {
 
     // MARK: Internal Nested Types
 
-    // The subdirectory of `Fixtures/` a fixture belongs to.
+    // The subdirectory of `TestFixtures/` a fixture belongs to.
     internal enum Group {
 
         // A file collected from the wild, committed verbatim.

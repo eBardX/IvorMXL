@@ -29,7 +29,7 @@ public import XestiTools
 /// start and stop in an arbitrary order. Because the start and stop values refer to musical score order, a
 /// program may find the stopping point of an object earlier in the MusicXML document than it will find its
 /// starting point.
-public struct MXLNumberLevel: UIntRepresentable {
+public struct MXLNumberLevel {
 
     // MARK: Public Initializers
 
@@ -37,8 +37,8 @@ public struct MXLNumberLevel: UIntRepresentable {
     ///
     /// If the provided unsigned integer value is determined to be invalid, this initializer returns `nil`.
     ///
-    /// - Parameter uintValue: Distinguishes up to 16 concurrent objects of the same type when the objects overlap
-    ///                        in MusicXML document order.
+    /// - Parameter uintValue:  Distinguishes up to 16 concurrent objects of the same type when the objects overlap in
+    ///                         MusicXML document order.
     public init?(uintValue: UInt) {
         guard Self.isValid(uintValue)
         else { return nil }
@@ -61,11 +61,16 @@ extension MXLNumberLevel {
 
     /// Determines if the provided unsigned integer value is a valid representation for a `MXLNumberLevel`.
     ///
-    /// - Parameter uintValue: The unsigned integer value to check for validity.
+    /// - Parameter uintValue:  The unsigned integer value to check for validity.
     ///
-    /// - Returns: `true` when the provided unsigned integer value is between `1` and `16`, inclusive; `false`
-    ///            otherwise.
+    /// - Returns:  `true` when the provided unsigned integer value is between `1` and `16`, inclusive; `false`
+    ///             otherwise.
     public static func isValid(_ uintValue: UInt) -> Bool {
         (1...16).contains(uintValue)
     }
+}
+
+// MARK: - UIntRepresentable
+
+extension MXLNumberLevel: UIntRepresentable {
 }

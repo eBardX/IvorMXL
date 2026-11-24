@@ -36,17 +36,14 @@ extension MXLFormatter {
     /// read path in ``MXLParser/parse(_:compressed:)``.
     ///
     /// - Parameter document:    The document to format.
-    /// - Parameter compressed:  A Boolean value indicating whether to produce
-    ///                           compressed (`.mxl`) output.
+    /// - Parameter compressed:  A Boolean value indicating whether to produce compressed (`.mxl`) output.
     ///
     /// - Returns:  The MusicXML representation of the document.
     ///
-    /// - Throws:   ``Error/notValidated`` if ``MXLDocument/isValidated`` is
-    ///             `false`; call ``MXLValidator/validate(_:)`` first.
-    ///             ``Error/unsupportedTimewise`` if the document content is a
-    ///             time-wise score. ``Error/writeFailure(_:)`` if the document
-    ///             cannot be serialized, or if compressed output is requested
-    ///             but the archive cannot be created.
+    /// - Throws:   ``Error/notValidated`` if ``MXLDocument/isValidated`` is `false`; call ``MXLValidator/validate(_:)``
+    ///             first. ``Error/unsupportedTimewise`` if the document content is a time-wise score.
+    ///             ``Error/writeFailure(_:)`` if the document cannot be serialized, or if compressed output is
+    ///             requested but the archive cannot be created.
     public func format(_ document: MXLDocument,
                        compressed: Bool) throws(Error) -> Data {
         guard document.isValidated

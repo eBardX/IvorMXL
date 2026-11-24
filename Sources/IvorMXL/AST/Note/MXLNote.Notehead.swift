@@ -23,11 +23,20 @@ extension MXLNote {
         /// Creates a new `MXLNote.Notehead`.
         ///
         /// - Parameter value:           The value of this element.
-        /// - Parameter isFilled:        A Boolean value indicating whether the notehead is filled. Defaults to hollow for half notes and longer, and filled otherwise.
-        /// - Parameter hasParentheses:  A Boolean value indicating whether the notehead is parenthesized. Defaults to `false` if not specified.
-        /// - Parameter font:            The font attribute group gathers together attributes for determining the font within a credit or direction. They are based on the text styles for Cascading Style Sheets. The font-family is a comma-separated list of font names.The font-style can be normal or italic. The font-size can be one of the CSS sizes or a numeric point size. The font-weight can be normal or bold. The default is application-dependent, but is a text font vs. a music font.
+        /// - Parameter isFilled:        A Boolean value indicating whether the notehead is filled. Defaults to hollow
+        ///                              for half notes and longer, and filled otherwise.
+        /// - Parameter hasParentheses:  A Boolean value indicating whether the notehead is parenthesized. Defaults to
+        ///                              `false` if not specified.
+        /// - Parameter font:            The font attribute group gathers together attributes for determining the font
+        ///                              within a credit or direction. They are based on the text styles for Cascading
+        ///                              Style Sheets. The font-family is a comma-separated list of font names. The
+        ///                              font-style can be normal or italic. The font-size can be one of the CSS sizes
+        ///                              or a numeric point size. The font-weight can be normal or bold. The default is
+        ///                              application-dependent, but is a text font vs. a music font.
         /// - Parameter color:           The color attribute group indicates the color of an element.
-        /// - Parameter smufl:           The smufl attribute group is used to indicate a particular Standard Music Font Layout (SMuFL) character. Sometimes this is a formatting choice, and sometimes this is a refinement of the semantic meaning of an element.
+        /// - Parameter smufl:           The smufl attribute group is used to indicate a particular Standard Music Font
+        ///                              Layout (SMuFL) character. Sometimes this is a formatting choice, and sometimes
+        ///                              this is a refinement of the semantic meaning of an element.
         public init(value: Value,
                     isFilled: Bool? = nil,
                     hasParentheses: Bool? = nil,
@@ -49,7 +58,7 @@ extension MXLNote {
 
         /// The font attribute group gathers together attributes for determining the font within a credit or direction.
         /// They are based on the text styles for Cascading Style Sheets. The font-family is a comma-separated list of
-        /// font names.The font-style can be normal or italic. The font-size can be one of the CSS sizes or a numeric
+        /// font names. The font-style can be normal or italic. The font-size can be one of the CSS sizes or a numeric
         /// point size. The font-weight can be normal or bold. The default is application-dependent, but is a text font
         /// vs. a music font.
         public let font: MXLFont

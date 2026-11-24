@@ -1,5 +1,5 @@
 {
-  "originHash" : "508719074a038b14bda8e46025fedc12a8253924082f359e1091d84abef78eda",
+  "originHash" : "3de7840adaf2fdd0b5c18787986f0d97b62c1b2b5908a380fc716f42ca4ae2e4",
   "pins" : [
     {
       "identity" : "xestiarchive",
@@ -33,8 +33,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/weichsel/ZIPFoundation.git",
       "state" : {
-        "revision" : "22787ffb59de99e5dc1fbfe80b19c97a904ad48d",
-        "version" : "0.9.20"
+        "revision" : "e7048f0569f0ba37df26f8357f560b9d25e9a284",
+        "version" : "0.9.21"
       }
     }
   ],

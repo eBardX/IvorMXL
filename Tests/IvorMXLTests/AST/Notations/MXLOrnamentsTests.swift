@@ -11,44 +11,45 @@ struct MXLOrnamentsTests {
 extension MXLOrnamentsTests {
     @Test
     func equality() {
-        let content = MXLOrnaments.Content.trillMark(MXLEmptyTrillSound())
+        let entry = MXLOrnaments.Entry(content: .trillMark(MXLEmptyTrillSound()))
 
-        #expect(MXLOrnaments(content: content) == MXLOrnaments(content: content))    // swiftlint:disable:this identical_operands
+        #expect(MXLOrnaments(entries: [entry]) == MXLOrnaments(entries: [entry]))    // swiftlint:disable:this identical_operands
     }
 
     @Test
     func hashable() {
-        let content = MXLOrnaments.Content.trillMark(MXLEmptyTrillSound())
-        let values: Set<MXLOrnaments> = [MXLOrnaments(content: content), MXLOrnaments(content: content), MXLOrnaments(id: "o2", content: content)]
+        let entry = MXLOrnaments.Entry(content: .trillMark(MXLEmptyTrillSound()))
+        let values: Set<MXLOrnaments> = [MXLOrnaments(entries: [entry]),
+                                         MXLOrnaments(entries: [entry]),
+                                         MXLOrnaments(id: "o2", entries: [entry])]
 
         #expect(values.count == 2)
     }
 
     @Test
     func inequality() {
-        let content = MXLOrnaments.Content.trillMark(MXLEmptyTrillSound())
+        let entry = MXLOrnaments.Entry(content: .trillMark(MXLEmptyTrillSound()))
 
-        #expect(MXLOrnaments(content: content) != MXLOrnaments(id: "o2", content: content))
+        #expect(MXLOrnaments(entries: [entry]) != MXLOrnaments(id: "o2", entries: [entry]))
+        #expect(MXLOrnaments(entries: [entry]) != MXLOrnaments(entries: [entry, entry]))
     }
 
     @Test
     func init_defaultValues() {
-        let content = MXLOrnaments.Content.trillMark(MXLEmptyTrillSound())
-        let value = MXLOrnaments(content: content)
+        let value = MXLOrnaments()
 
-        #expect(value.accidentalMark.isEmpty)
-        #expect(value.content == content)
+        #expect(value.entries.isEmpty)
         #expect(value.id == nil)
     }
 
     @Test
     func init_explicitValues() {
-        let content = MXLOrnaments.Content.trillMark(MXLEmptyTrillSound())
-        let accidentalMark = [MXLAccidentalMark(value: .sharp)]
-        let value = MXLOrnaments(id: "o1", content: content, accidentalMark: accidentalMark)
+        let entries = [MXLOrnaments.Entry(content: .trillMark(MXLEmptyTrillSound()),
+                                          accidentalMarks: [MXLAccidentalMark(value: .sharp)]),
+                       MXLOrnaments.Entry(content: .wavyLine(MXLWavyLine(kind: .start)))]
+        let value = MXLOrnaments(id: "o1", entries: entries)
 
-        #expect(value.accidentalMark == accidentalMark)
-        #expect(value.content == content)
+        #expect(value.entries == entries)
         #expect(value.id == "o1")
     }
 }

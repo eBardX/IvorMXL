@@ -11,8 +11,10 @@ public struct MXLGroupName {
 
     /// Creates a new `MXLGroupName`.
     ///
-    /// - Parameter value: The value of this element.
-    /// - Parameter text: The group-name-text attribute group is used by the group-name and group-abbreviation elements. The print-style and justify attribute groups are deprecated in MusicXML 2.0 in favor of the new group-name-display and group-abbreviation-display elements.
+    /// - Parameter value:  The value of this element.
+    /// - Parameter text:   The group-name-text attribute group is used by the group-name and group-abbreviation
+    ///                     elements. The print-style and justify attribute groups are deprecated in MusicXML 2.0 in
+    ///                     favor of the new group-name-display and group-abbreviation-display elements.
     public init(value: String,
                 text: Text) {
         self.text = text

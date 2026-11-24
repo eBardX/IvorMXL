@@ -22,7 +22,7 @@ public struct MXLPlay {
 
     // MARK: Public Instance Properties
 
-    /// Specifies the affected instrument when used within multi-instrument parts.
+    /// The affected instrument when used within multi-instrument parts.
     ///
     /// Maps to the MusicXML `id` attribute.
     public let id: String?

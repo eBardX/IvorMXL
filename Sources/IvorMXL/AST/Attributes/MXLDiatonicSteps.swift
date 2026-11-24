@@ -13,7 +13,7 @@ public struct MXLDiatonicSteps {
 
     /// Creates a new `MXLDiatonicSteps` with the provided integer value.
     ///
-    /// - Parameter intValue: The number of diatonic pitch steps needed to go from a written to a sounding pitch.
+    /// - Parameter intValue:  The number of diatonic pitch steps needed to go from a written to a sounding pitch.
     public init?(intValue: Int) {
         self.intValue = intValue
     }

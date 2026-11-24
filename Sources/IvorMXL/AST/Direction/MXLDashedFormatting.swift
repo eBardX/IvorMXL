@@ -9,8 +9,10 @@ public struct MXLDashedFormatting {
 
     /// Creates a new `MXLDashedFormatting`.
     ///
-    /// - Parameter dashLength:   The length, in tenths, of the dashes in a dashed line. Ignored if the corresponding line-type attribute is not dashed.
-    /// - Parameter spaceLength:  The length, in tenths, of the spaces in a dashed line. Ignored if the corresponding line-type attribute is not dashed.
+    /// - Parameter dashLength:   The length, in tenths, of the dashes in a dashed line. Ignored if the corresponding
+    ///                           line-type attribute is not dashed.
+    /// - Parameter spaceLength:  The length, in tenths, of the spaces in a dashed line. Ignored if the corresponding
+    ///                           line-type attribute is not dashed.
     public init(dashLength: MXLTenths? = nil,
                 spaceLength: MXLTenths? = nil) {
         self.dashLength = dashLength

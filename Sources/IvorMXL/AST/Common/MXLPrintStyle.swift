@@ -8,9 +8,15 @@ public struct MXLPrintStyle {
 
     /// Creates a new `MXLPrintStyle`.
     ///
-    /// - Parameter position: For most elements, any program will compute a default x and y position. The position attributes let this be changed two ways.
-    /// - Parameter font: The font attribute group gathers together attributes for determining the font within a credit or direction. They are based on the text styles for Cascading Style Sheets. The font-family is a comma-separated list of font names. The font-style can be normal or italic. The font-size can be one of the CSS sizes or a numeric point size. The font-weight can be normal or bold. The default is application-dependent, but is a text font vs. a music font.
-    /// - Parameter color: The color attribute group indicates the color of an element.
+    /// - Parameter position:  For most elements, any program will compute a default x and y position. The position
+    ///                        attributes let this be changed two ways.
+    /// - Parameter font:      The font attribute group gathers together attributes for determining the font within a
+    ///                        credit or direction. They are based on the text styles for Cascading Style Sheets. The
+    ///                        font-family is a comma-separated list of font names. The font-style can be normal or
+    ///                        italic. The font-size can be one of the CSS sizes or a numeric point size. The
+    ///                        font-weight can be normal or bold. The default is application-dependent, but is a text
+    ///                        font vs. a music font.
+    /// - Parameter color:     The color attribute group indicates the color of an element.
     public init(position: MXLPosition = MXLPosition(),
                 font: MXLFont = MXLFont(),
                 color: MXLColor? = nil) {

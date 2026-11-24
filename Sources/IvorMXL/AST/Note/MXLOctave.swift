@@ -5,7 +5,7 @@ public import XestiTools
 /// Octaves are represented by the numbers 0 to 9, where 4 indicates the octave started by middle C.
 ///
 /// Maps the MusicXML `<octave>` element.
-public struct MXLOctave: UIntRepresentable {
+public struct MXLOctave {
 
     // MARK: Public Initializers
 
@@ -37,9 +37,14 @@ extension MXLOctave {
     ///
     /// - Parameter uintValue:  The unsigned integer value to check for validity.
     ///
-    /// - Returns: `true` when the provided unsigned integer value is between `0` and `9`, inclusive; `false`
-    ///            otherwise.
+    /// - Returns:  `true` when the provided unsigned integer value is between `0` and `9`, inclusive; `false`
+    ///             otherwise.
     public static func isValid(_ uintValue: UInt) -> Bool {
         (0...9).contains(uintValue)
     }
+}
+
+// MARK: - UIntRepresentable
+
+extension MXLOctave: UIntRepresentable {
 }

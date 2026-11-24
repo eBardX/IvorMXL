@@ -6,7 +6,7 @@ public import XestiTools
 /// line character. The value is a SMuFL canonical glyph name that either starts with wiggle, or begins with
 /// guitar and ends with VibratoStroke. This includes all the glyphs in the Multi-segment lines range, excluding
 /// the beam glyphs.
-public struct MXLSmuflWavyLineGlyphName: StringRepresentable {
+public struct MXLSmuflWavyLineGlyphName {
 
     // MARK: Public Initializers
 
@@ -14,7 +14,7 @@ public struct MXLSmuflWavyLineGlyphName: StringRepresentable {
     ///
     /// If the provided string value is determined to be invalid, this initializer returns `nil`.
     ///
-    /// - Parameter stringValue: A SMuFL canonical glyph name for a wavy line character.
+    /// - Parameter stringValue:  A SMuFL canonical glyph name for a wavy line character.
     public init?(stringValue: String) {
         guard Self.isValid(stringValue)
         else { return nil }
@@ -36,10 +36,10 @@ extension MXLSmuflWavyLineGlyphName {
 
     /// Determines if the provided string value is a valid representation for a `MXLSmuflWavyLineGlyphName`.
     ///
-    /// - Parameter stringValue: The string value to check for validity.
+    /// - Parameter stringValue:  The string value to check for validity.
     ///
-    /// - Returns: `true` when the provided string value starts with `wiggle` followed by one or more further
-    ///            glyph name characters, or starts with `guitar` and ends with `VibratoStroke`; `false` otherwise.
+    /// - Returns:  `true` when the provided string value starts with `wiggle` followed by one or more further glyph
+    ///             name characters, or starts with `guitar` and ends with `VibratoStroke`; `false` otherwise.
     public static func isValid(_ stringValue: String) -> Bool {
         if stringValue.hasPrefix("wiggle") {
             let suffix = stringValue.dropFirst(6)
@@ -62,4 +62,9 @@ extension MXLSmuflWavyLineGlyphName {
 
         return false
     }
+}
+
+// MARK: - StringRepresentable
+
+extension MXLSmuflWavyLineGlyphName: StringRepresentable {
 }

@@ -9,8 +9,10 @@ public struct MXLEmptyPlacement {
 
     /// Creates a new `MXLEmptyPlacement`.
     ///
-    /// - Parameter printStyle: The print-style attribute group collects the most popular combination of printing attributes: position, font, and color.
-    /// - Parameter placement: The placement attribute indicates whether something is above or below another element, such as a note or a notation.
+    /// - Parameter printStyle:  The print-style attribute group collects the most popular combination of printing
+    ///                          attributes: position, font, and color.
+    /// - Parameter placement:   The placement attribute indicates whether something is above or below another element,
+    ///                          such as a note or a notation.
     public init(printStyle: MXLPrintStyle,
                 placement: MXLAboveBelow? = nil) {
         self.placement = placement

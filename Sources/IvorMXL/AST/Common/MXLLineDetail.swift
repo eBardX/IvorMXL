@@ -14,11 +14,12 @@ public struct MXLLineDetail {
 
     /// Creates a new `MXLLineDetail`.
     ///
-    /// - Parameter line: The staff line being configured, counted from the bottom of the staff.
-    /// - Parameter width: The width of the line, in tenths, if different from the default.
-    /// - Parameter color: The color attribute group indicates the color of an element.
-    /// - Parameter lineKind: The line-type attribute distinguishes between solid, dashed, dotted, and wavy lines.
-    /// - Parameter printsObject: A Boolean value indicating whether to print an object (e.g. a note or a rest). Defaults to `true` if not specified.
+    /// - Parameter line:          The staff line being configured, counted from the bottom of the staff.
+    /// - Parameter width:         The width of the line, in tenths, if different from the default.
+    /// - Parameter color:         The color attribute group indicates the color of an element.
+    /// - Parameter lineKind:      The line-type attribute distinguishes between solid, dashed, dotted, and wavy lines.
+    /// - Parameter printsObject:  A Boolean value indicating whether to print an object (e.g. a note or a rest).
+    ///                            Defaults to `true` if not specified.
     public init(line: MXLStaffLine,
                 width: MXLTenths? = nil,
                 color: MXLColor? = nil,

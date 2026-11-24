@@ -13,10 +13,12 @@ public struct MXLSupports {
 
     /// Creates a new `MXLSupports`.
     ///
-    /// - Parameter isSupported: A Boolean value indicating whether the encoding does (`true`) or does not (`false`) support the element.
-    /// - Parameter element: The name of the MusicXML element for which support is being indicated.
-    /// - Parameter attribute: The name of the specific attribute of the element for which support is being indicated.
-    /// - Parameter value: The specific value of the attribute for which support is being indicated.
+    /// - Parameter isSupported:  A Boolean value indicating whether the encoding does (`true`) or does not (`false`)
+    ///                           support the element.
+    /// - Parameter element:      The name of the MusicXML element for which support is being indicated.
+    /// - Parameter attribute:    The name of the specific attribute of the element for which support is being
+    ///                           indicated.
+    /// - Parameter value:        The specific value of the attribute for which support is being indicated.
     public init(isSupported: Bool,
                 element: String,
                 attribute: String? = nil,

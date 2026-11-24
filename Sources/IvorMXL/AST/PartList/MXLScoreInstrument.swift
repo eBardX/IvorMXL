@@ -18,10 +18,13 @@ public struct MXLScoreInstrument {
 
     /// Creates a new `MXLScoreInstrument`.
     ///
-    /// - Parameter id: A required identifier for this instrument, unique within the score-part.
-    /// - Parameter name: The instrument-name element is typically used within a software application, rather than appearing on the printed page of a score.
-    /// - Parameter abbreviation: The optional instrument-abbreviation element is typically used within a software application, rather than appearing on the printed page of a score.
-    /// - Parameter virtualInstrumentData: Virtual instrument data can be part of either the score-instrument element at the start of a part, or an instrument-change element within a part.
+    /// - Parameter id:                     A required identifier for this instrument, unique within the score-part.
+    /// - Parameter name:                   The instrument-name element is typically used within a software application,
+    ///                                     rather than appearing on the printed page of a score.
+    /// - Parameter abbreviation:           The optional instrument-abbreviation element is typically used within a
+    ///                                     software application, rather than appearing on the printed page of a score.
+    /// - Parameter virtualInstrumentData:  Virtual instrument data can be part of either the score-instrument element
+    ///                                     at the start of a part, or an instrument-change element within a part.
     public init(id: String,
                 name: String,
                 abbreviation: String? = nil,

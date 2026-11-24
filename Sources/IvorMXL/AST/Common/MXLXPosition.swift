@@ -8,10 +8,14 @@ public struct MXLXPosition {
 
     /// Creates a new `MXLXPosition`.
     ///
-    /// - Parameter defaultX:   The default horizontal position, in tenths, overriding the application’s computed default position.
-    /// - Parameter defaultY:   The default vertical position, in tenths, overriding the application’s computed default position.
-    /// - Parameter relativeX:  The horizontal position, in tenths, relative to the default position. Positive values are to the right, negative values to the left.
-    /// - Parameter relativeY:  The vertical position, in tenths, relative to the default position. Positive values are up, negative values down.
+    /// - Parameter defaultX:   The default horizontal position, in tenths, overriding the application’s computed
+    ///                         default position.
+    /// - Parameter defaultY:   The default vertical position, in tenths, overriding the application’s computed default
+    ///                         position.
+    /// - Parameter relativeX:  The horizontal position, in tenths, relative to the default position. Positive values
+    ///                         are to the right, negative values to the left.
+    /// - Parameter relativeY:  The vertical position, in tenths, relative to the default position. Positive values are
+    ///                         up, negative values down.
     public init(defaultX: MXLTenths? = nil,
                 defaultY: MXLTenths? = nil,
                 relativeX: MXLTenths? = nil,

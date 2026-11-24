@@ -10,7 +10,10 @@ extension MXLTimeModification {
 
         /// Creates a new `MXLTimeModification.Group`.
         ///
-        /// - Parameter normalKind:  If the type associated with the number in the normal-notes element is different than the current note type (e.g., a quarter note within an eighth note triplet), then the normal-notes type (e.g. eighth) is specified in the normal-type and normal-dot elements.
+        /// - Parameter normalKind:  If the type associated with the number in the normal-notes element is different
+        ///                          than the current note type (e.g., a quarter note within an eighth note triplet),
+        ///                          then the normal-notes type (e.g. eighth) is specified in the normal-type and
+        ///                          normal-dot elements.
         /// - Parameter normalDot:   The number of augmentation dots that specify dotted normal tuplet types.
         public init(normalKind: MXLNoteKindValue,
                     normalDot: Int) {
@@ -26,8 +29,8 @@ extension MXLTimeModification {
         public let normalDot: Int
 
         /// If the type associated with the number in the normal-notes element is different than the current note type
-        /// (e.g., a quarter note within an eighth note triplet), then the normal-notes type (e.g. eighth) is specified in
-        /// the normal-type and normal-dot elements.
+        /// (e.g., a quarter note within an eighth note triplet), then the normal-notes type (e.g. eighth) is specified
+        /// in the normal-type and normal-dot elements.
         ///
         /// Maps to a nested MusicXML `<normal-type>` element.
         public let normalKind: MXLNoteKindValue

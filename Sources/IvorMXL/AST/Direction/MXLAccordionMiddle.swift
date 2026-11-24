@@ -6,7 +6,7 @@ public import XestiTools
 /// section of the accordion registration symbol. This type is not used if no dots are present.
 ///
 /// Maps the MusicXML `<accordion-middle>` element.
-public struct MXLAccordionMiddle: UIntRepresentable {
+public struct MXLAccordionMiddle {
 
     // MARK: Public Initializers
 
@@ -14,8 +14,7 @@ public struct MXLAccordionMiddle: UIntRepresentable {
     ///
     /// If the provided unsigned integer value is determined to be invalid, this initializer returns `nil`.
     ///
-    /// - Parameter uintValue: The number of dots (1 to 3) in the middle section of the accordion registration
-    ///                        symbol.
+    /// - Parameter uintValue:  The number of dots (1 to 3) in the middle section of the accordion registration symbol.
     public init?(uintValue: UInt) {
         guard Self.isValid(uintValue)
         else { return nil }
@@ -37,11 +36,16 @@ extension MXLAccordionMiddle {
 
     /// Returns a Boolean value indicating whether the given unsigned integer value is a valid `MXLAccordionMiddle`.
     ///
-    /// - Parameter uintValue: The unsigned integer value to check for validity.
+    /// - Parameter uintValue:  The unsigned integer value to check for validity.
     ///
-    /// - Returns: `true` when the provided unsigned integer value is between `1` and `3`, inclusive; `false`
-    ///            otherwise.
+    /// - Returns:  `true` when the provided unsigned integer value is between `1` and `3`, inclusive; `false`
+    ///             otherwise.
     public static func isValid(_ uintValue: UInt) -> Bool {
         (1...3).contains(uintValue)
     }
+}
+
+// MARK: - UIntRepresentable
+
+extension MXLAccordionMiddle: UIntRepresentable {
 }

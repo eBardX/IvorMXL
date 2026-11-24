@@ -14,10 +14,16 @@ public struct MXLForPart {
 
     /// Creates a new `MXLForPart`.
     ///
-    /// - Parameter id: The optional-unique-id attribute group allows an element to optionally specify an ID that is unique to the entire document. This attribute group is not used for a required id attribute, or for an id attribute that specifies an id reference.
-    /// - Parameter clef: The part-clef element is used for transpositions that also include a change of clef, as for instruments such as bass clarinet.
-    /// - Parameter transpose: The chromatic element in a part-transpose element will usually have a non-zero value, since octave transpositions can be represented in concert scores using the transpose element.
-    /// - Parameter number:  The staff number, from top to bottom on the system, that this element applies to. If absent, the child elements apply to all staves in the created part.
+    /// - Parameter id:         The optional-unique-id attribute group allows an element to optionally specify an ID
+    ///                         that is unique to the entire document. This attribute group is not used for a required
+    ///                         id attribute, or for an id attribute that specifies an id reference.
+    /// - Parameter clef:       The part-clef element is used for transpositions that also include a change of clef, as
+    ///                         for instruments such as bass clarinet.
+    /// - Parameter transpose:  The chromatic element in a part-transpose element will usually have a non-zero value,
+    ///                         since octave transpositions can be represented in concert scores using the transpose
+    ///                         element.
+    /// - Parameter number:     The staff number, from top to bottom on the system, that this element applies to. If
+    ///                         absent, the child elements apply to all staves in the created part.
     public init(id: String? = nil,
                 clef: MXLClef.Content? = nil,
                 transpose: MXLTranspose.Content,

@@ -13,7 +13,7 @@ public struct MXLPartList {
 
     /// Creates a new `MXLPartList`.
     ///
-    /// - Parameter items: The ordered sequence of part-group and score-part elements making up this part-list.
+    /// - Parameter items:  The ordered sequence of part-group and score-part elements making up this part-list.
     public init(items: [Item] = []) {
         self.items = items
     }

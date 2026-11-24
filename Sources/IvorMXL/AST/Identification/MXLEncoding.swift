@@ -11,7 +11,7 @@ public struct MXLEncoding {
 
     /// Creates a new `MXLEncoding`.
     ///
-    /// - Parameter items: One of the alternatives for Encoding.
+    /// - Parameter items:  One of the alternatives for Encoding.
     public init(items: [Item] = []) {
         self.items = items
     }

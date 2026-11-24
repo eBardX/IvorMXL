@@ -10,8 +10,8 @@ public struct MXLKeyAccidental {
 
     /// Creates a new `MXLKeyAccidental`.
     ///
-    /// - Parameter value: The value of this element.
-    /// - Parameter smufl: The SMuFL canonical glyph name used to specify a particular accidental character.
+    /// - Parameter value:  The value of this element.
+    /// - Parameter smufl:  The SMuFL canonical glyph name used to specify a particular accidental character.
     public init(value: MXLAccidentalValue,
                 smufl: MXLSmuflAccidentalGlyphName? = nil) {
         self.smufl = smufl

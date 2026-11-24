@@ -16,16 +16,31 @@ public struct MXLMetronome {
 
     /// Creates a new `MXLMetronome`.
     ///
-    /// - Parameter id: The optional-unique-id attribute group allows an element to optionally specify an ID that is unique to the entire document. This attribute group is not used for a required id attribute, or for an id attribute that specifies an id reference.
-    /// - Parameter content: One of the alternatives for Metronome.
-    /// - Parameter position: For most elements, any program will compute a default x and y position. The position attributes let this be changed two ways.
-    /// - Parameter font: The font attribute group gathers together attributes for determining the font within a credit or direction. They are based on the text styles for Cascading Style Sheets. The font-family is a comma-separated list of font names.The font-style can be normal or italic. The font-size can be one of the CSS sizes or a numeric point size. The font-weight can be normal or bold. The default is application-dependent, but is a text font vs. a music font.
-    /// - Parameter color: The color attribute group indicates the color of an element.
-    /// - Parameter halign: In cases where text extends over more than one line, horizontal alignment and justify values can be different. The most typical case is for credits, such as:
-    /// - Parameter valign: The valign attribute is used to indicate vertical alignment to the top, middle, bottom, or baseline of the text. Defaults are implementation-dependent.
-    /// - Parameter printsObject: A Boolean value indicating whether to print an object (e.g. a note or a rest). Defaults to `true` if not specified.
-    /// - Parameter justify: The justify attribute is used to indicate left, center, or right justification. The default value varies for different elements. For elements where the justify attribute is present but the halign attribute is not, the justify attribute indicates horizontal alignment as well as justification.
-    /// - Parameter hasParentheses: A Boolean value indicating whether to enclose the metronome mark in parentheses. Defaults to `false` if not specified.
+    /// - Parameter id:              The optional-unique-id attribute group allows an element to optionally specify an
+    ///                              ID that is unique to the entire document. This attribute group is not used for a
+    ///                              required id attribute, or for an id attribute that specifies an id reference.
+    /// - Parameter content:         One of the alternatives for Metronome.
+    /// - Parameter position:        For most elements, any program will compute a default x and y position. The
+    ///                              position attributes let this be changed two ways.
+    /// - Parameter font:            The font attribute group gathers together attributes for determining the font
+    ///                              within a credit or direction. They are based on the text styles for Cascading Style
+    ///                              Sheets. The font-family is a comma-separated list of font names. The font-style can
+    ///                              be normal or italic. The font-size can be one of the CSS sizes or a numeric point
+    ///                              size. The font-weight can be normal or bold. The default is application-dependent,
+    ///                              but is a text font vs. a music font.
+    /// - Parameter color:           The color attribute group indicates the color of an element.
+    /// - Parameter halign:          In cases where text extends over more than one line, horizontal alignment and
+    ///                              justify values can be different.
+    /// - Parameter valign:          The valign attribute is used to indicate vertical alignment to the top, middle,
+    ///                              bottom, or baseline of the text. Defaults are implementation-dependent.
+    /// - Parameter printsObject:    A Boolean value indicating whether to print an object (e.g. a note or a rest).
+    ///                              Defaults to `true` if not specified.
+    /// - Parameter justify:         The justify attribute is used to indicate left, center, or right justification. The
+    ///                              default value varies for different elements. For elements where the justify
+    ///                              attribute is present but the halign attribute is not, the justify attribute
+    ///                              indicates horizontal alignment as well as justification.
+    /// - Parameter hasParentheses:  A Boolean value indicating whether to enclose the metronome mark in parentheses.
+    ///                              Defaults to `false` if not specified.
     public init(id: String? = nil,
                 content: Content,
                 position: MXLPosition = MXLPosition(),
@@ -56,11 +71,11 @@ public struct MXLMetronome {
     /// One of the alternatives for Metronome.
     public let content: Content
 
-    /// The font attribute group gathers together attributes for determining the font within a credit or direction.
-    /// They are based on the text styles for Cascading Style Sheets. The font-family is a comma-separated list of
-    /// font names.The font-style can be normal or italic. The font-size can be one of the CSS sizes or a numeric
-    /// point size. The font-weight can be normal or bold. The default is application-dependent, but is a text font
-    /// vs. a music font.
+    /// The font attribute group gathers together attributes for determining the font within a credit or direction. They
+    /// are based on the text styles for Cascading Style Sheets. The font-family is a comma-separated list of font
+    /// names. The font-style can be normal or italic. The font-size can be one of the CSS sizes or a numeric point
+    /// size. The font-weight can be normal or bold. The default is application-dependent, but is a text font vs. a
+    /// music font.
     public let font: MXLFont
 
     /// In cases where text extends over more than one line, horizontal alignment and justify values can be different.

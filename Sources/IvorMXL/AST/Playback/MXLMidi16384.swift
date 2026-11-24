@@ -5,7 +5,7 @@ public import XestiTools
 /// The midi-16384 type is used to express MIDI 1.0 values that range from 1 to 16,384.
 ///
 /// Maps the MusicXML `<midi-bank>` element.
-public struct MXLMidi16384: UIntRepresentable {
+public struct MXLMidi16384 {
 
     // MARK: Public Initializers
 
@@ -38,9 +38,14 @@ extension MXLMidi16384 {
     ///
     /// - Parameter uintValue:  The unsigned integer value to check for validity.
     ///
-    /// - Returns: `true` when the provided unsigned integer value is between `1` and `16,384`, inclusive; `false`
-    ///            otherwise.
+    /// - Returns:  `true` when the provided unsigned integer value is between `1` and `16,384`, inclusive; `false`
+    ///             otherwise.
     public static func isValid(_ uintValue: UInt) -> Bool {
         (1...16_384).contains(uintValue)
     }
+}
+
+// MARK: - UIntRepresentable
+
+extension MXLMidi16384: UIntRepresentable {
 }

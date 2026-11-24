@@ -3,7 +3,7 @@
 public import XestiTools
 
 /// The number-of-lines type is used to specify the number of lines in text decoration attributes.
-public struct MXLNumberOfLines: UIntRepresentable {
+public struct MXLNumberOfLines {
 
     // MARK: Public Initializers
 
@@ -11,7 +11,7 @@ public struct MXLNumberOfLines: UIntRepresentable {
     ///
     /// If the provided unsigned integer value is determined to be invalid, this initializer returns `nil`.
     ///
-    /// - Parameter uintValue: The number of lines used in a text decoration attribute: `0` (none), `1`, `2`, or `3`.
+    /// - Parameter uintValue:  The number of lines used in a text decoration attribute: `0` (none), `1`, `2`, or `3`.
     public init?(uintValue: UInt) {
         guard Self.isValid(uintValue)
         else { return nil }
@@ -33,11 +33,16 @@ extension MXLNumberOfLines {
 
     /// Determines if the provided unsigned integer value is a valid representation for a `MXLNumberOfLines`.
     ///
-    /// - Parameter uintValue: The unsigned integer value to check for validity.
+    /// - Parameter uintValue:  The unsigned integer value to check for validity.
     ///
-    /// - Returns: `true` when the provided unsigned integer value is between `0` and `3`, inclusive; `false`
-    ///            otherwise.
+    /// - Returns:  `true` when the provided unsigned integer value is between `0` and `3`, inclusive; `false`
+    ///             otherwise.
     public static func isValid(_ uintValue: UInt) -> Bool {
         (0...3).contains(uintValue)
     }
+}
+
+// MARK: - UIntRepresentable
+
+extension MXLNumberOfLines: UIntRepresentable {
 }

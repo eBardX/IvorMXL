@@ -11,8 +11,8 @@ public struct MXLFeature {
 
     /// Creates a new `MXLFeature`.
     ///
-    /// - Parameter value: The value of this element.
-    /// - Parameter kind:  The type of the feature being represented.
+    /// - Parameter value:  The value of this element.
+    /// - Parameter kind:   The type of the feature being represented.
     public init(value: String,
                 kind: String? = nil) {
         self.kind = kind

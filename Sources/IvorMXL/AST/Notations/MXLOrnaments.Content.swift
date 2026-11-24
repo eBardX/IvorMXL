@@ -15,7 +15,7 @@ extension MXLOrnaments {
         case haydn(MXLEmptyTrillSound)
 
         /// The inverted-mordent element represents the sign without the vertical line. The choice of which mordent is
-        /// inverted differs between MusicXML and SMuFL. The long attribute is "no" by default.
+        /// inverted differs between MusicXML and SMuFL. The long attribute is “no” by default.
         case invertedMordent(MXLMordent)
 
         /// The inverted-turn element has the shape which goes down and then up.
@@ -26,13 +26,13 @@ extension MXLOrnaments {
         case invertedVerticalTurn(MXLEmptyTrillSound)
 
         /// The mordent element represents the sign with the vertical line. The choice of which mordent sign is inverted
-        /// differs between MusicXML and SMuFL. The long attribute is "no" by default.
+        /// differs between MusicXML and SMuFL. The long attribute is “no” by default.
         case mordent(MXLMordent)
 
-        /// The other-ornament element is used to define any ornaments not yet in the MusicXML format. The smufl attribute
-        /// can be used to specify a particular ornament, allowing application interoperability without requiring every
-        /// SMuFL ornament to have a MusicXML element equivalent. Using the other-ornament element without the smufl
-        /// attribute allows for extended representation, though without application interoperability.
+        /// The other-ornament element is used to define any ornaments not yet in the MusicXML format. The smufl
+        /// attribute can be used to specify a particular ornament, allowing application interoperability without
+        /// requiring every SMuFL ornament to have a MusicXML element equivalent. Using the other-ornament element
+        /// without the smufl attribute allows for extended representation, though without application interoperability.
         case otherOrnament(MXLOtherPlacementText)
 
         /// The name for this ornament is based on the German, to avoid confusion with the more common slide element
@@ -52,7 +52,8 @@ extension MXLOrnaments {
         /// The turn element is the normal turn shape which goes up then down.
         case turn(MXLHorizontalTurn)
 
-        /// The vertical-turn element has the turn symbol shape arranged vertically going from upper left to lower right.
+        /// The vertical-turn element has the turn symbol shape arranged vertically going from upper left to lower
+        /// right.
         case verticalTurn(MXLEmptyTrillSound)
 
         /// The wavy-line element represents a wavy line that is used to indicate a trill.

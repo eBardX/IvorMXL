@@ -15,8 +15,10 @@ public struct MXLSync {
 
     /// Creates a new `MXLSync`.
     ///
-    /// - Parameter kind:      The style that a score following application should use to synchronize an accompaniment with a performer.
-    /// - Parameter latency:   The time, in milliseconds, that the listening application should expect from the performer.
+    /// - Parameter kind:      The style that a score following application should use to synchronize an accompaniment
+    ///                        with a performer.
+    /// - Parameter latency:   The time, in milliseconds, that the listening application should expect from the
+    ///                        performer.
     /// - Parameter player:    Restricts the element to apply to a single player.
     /// - Parameter timeOnly:  Restricts the element to apply to a specific set of times through a repeated section.
     public init(kind: Kind,

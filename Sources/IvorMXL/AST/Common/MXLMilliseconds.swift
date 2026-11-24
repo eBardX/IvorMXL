@@ -3,13 +3,13 @@
 public import XestiTools
 
 /// The milliseconds type represents an integral number of milliseconds.
-public struct MXLMilliseconds: UIntRepresentable {
+public struct MXLMilliseconds {
 
     // MARK: Public Initializers
 
     /// Creates a new `MXLMilliseconds` with the provided unsigned integer value.
     ///
-    /// - Parameter uintValue: An integral number of milliseconds.
+    /// - Parameter uintValue:  An integral number of milliseconds.
     public init?(uintValue: UInt) {
         self.uintValue = uintValue
     }
@@ -18,4 +18,9 @@ public struct MXLMilliseconds: UIntRepresentable {
 
     /// An integral number of milliseconds.
     public let uintValue: UInt
+}
+
+// MARK: - UIntRepresentable
+
+extension MXLMilliseconds: UIntRepresentable {
 }

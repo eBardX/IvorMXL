@@ -8,9 +8,12 @@ public struct MXLPrintStyleAlign {
 
     /// Creates a new `MXLPrintStyleAlign`.
     ///
-    /// - Parameter printStyle: The print-style attribute group collects the most popular combination of printing attributes: position, font, and color.
-    /// - Parameter halign: In cases where text extends over more than one line, horizontal alignment and justify values can be different. The most typical case is for credits, such as:
-    /// - Parameter valign: The valign attribute is used to indicate vertical alignment to the top, middle, bottom, or baseline of the text. Defaults are implementation-dependent.
+    /// - Parameter printStyle:  The print-style attribute group collects the most popular combination of printing
+    ///                          attributes: position, font, and color.
+    /// - Parameter halign:      In cases where text extends over more than one line, horizontal alignment and justify
+    ///                          values can be different.
+    /// - Parameter valign:      The valign attribute is used to indicate vertical alignment to the top, middle, bottom,
+    ///                          or baseline of the text. Defaults are implementation-dependent.
     public init(printStyle: MXLPrintStyle,
                 halign: MXLLeftCenterRight? = nil,
                 valign: MXLValign? = nil) {

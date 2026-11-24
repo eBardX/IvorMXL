@@ -33,7 +33,7 @@ extension FixtureLoader {
         // to validate clean.
         internal let expectsValidationIssues: Bool
 
-        // The subdirectory of `Fixtures/` holding this fixture.
+        // The subdirectory of `TestFixtures/` holding this fixture.
         internal let group: Group
 
         // This cannot be inferred from the bundle, and `parse(_:compressed:)`

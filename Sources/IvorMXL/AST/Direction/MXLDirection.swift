@@ -16,18 +16,34 @@ public struct MXLDirection {
 
     /// Creates a new `MXLDirection`.
     ///
-    /// - Parameter id: The optional-unique-id attribute group allows an element to optionally specify an ID that is unique to the entire document. This attribute group is not used for a required id attribute, or for an id attribute that specifies an id reference.
-    /// - Parameter kind:  The direction-type elements that make up this direction.
-    /// - Parameter offset:  Indicates where the direction will appear relative to the current musical location, in divisions.
-    /// - Parameter footnote: The footnote element specifies editorial information that appears in footnotes in the printed score. It is defined within a group due to its multiple uses within the MusicXML schema.
-    /// - Parameter level: The level element specifies editorial information for different MusicXML elements. It is defined within a group due to its multiple uses within the MusicXML schema.
-    /// - Parameter voice: A voice is a sequence of musical events (e.g. notes, chords, rests) that proceeds linearly in time. The voice element is used to distinguish between multiple voices in individual parts. It is defined within a group due to its multiple uses within the MusicXML schema.
-    /// - Parameter staff: The staff element is defined within a group due to its use by both notes and direction elements.
-    /// - Parameter sound:  General playback parameters associated with this direction.
-    /// - Parameter listening:  Specifies how a score-following or machine-listening application should interact with a performer, from this point in the performance onward.
-    /// - Parameter placement: The placement attribute indicates whether something is above or below another element, such as a note or a notation.
-    /// - Parameter isDirective: A Boolean value indicating whether this direction is a directive, changing its default horizontal position so its left-hand side aligns with the left-hand side of the time signature (or, if no time signature is present, the first music notational element in the measure). A default-x, justify, or halign attribute, if present, overrides this.
-    /// - Parameter system: The system-relation attribute group distinguishes elements that are associated with a system rather than the particular part where the element appears.
+    /// - Parameter id:           The optional-unique-id attribute group allows an element to optionally specify an ID
+    ///                           that is unique to the entire document. This attribute group is not used for a required
+    ///                           id attribute, or for an id attribute that specifies an id reference.
+    /// - Parameter kind:         The direction-type elements that make up this direction.
+    /// - Parameter offset:       Indicates where the direction will appear relative to the current musical location, in
+    ///                           divisions.
+    /// - Parameter footnote:     The footnote element specifies editorial information that appears in footnotes in the
+    ///                           printed score. It is defined within a group due to its multiple uses within the
+    ///                           MusicXML schema.
+    /// - Parameter level:        The level element specifies editorial information for different MusicXML elements. It
+    ///                           is defined within a group due to its multiple uses within the MusicXML schema.
+    /// - Parameter voice:        A voice is a sequence of musical events (e.g. notes, chords, rests) that proceeds
+    ///                           linearly in time. The voice element is used to distinguish between multiple voices in
+    ///                           individual parts. It is defined within a group due to its multiple uses within the
+    ///                           MusicXML schema.
+    /// - Parameter staff:        The staff element is defined within a group due to its use by both notes and direction
+    ///                           elements.
+    /// - Parameter sound:        General playback parameters associated with this direction.
+    /// - Parameter listening:    Specifies how a score-following or machine-listening application should interact with
+    ///                           a performer, from this point in the performance onward.
+    /// - Parameter placement:    The placement attribute indicates whether something is above or below another element,
+    ///                           such as a note or a notation.
+    /// - Parameter isDirective:  A Boolean value indicating whether this direction is a directive, changing its default
+    ///                           horizontal position so its left-hand side aligns with the left-hand side of the time
+    ///                           signature (or, if no time signature is present, the first music notational element in
+    ///                           the measure). A default-x, justify, or halign attribute, if present, overrides this.
+    /// - Parameter system:       The system-relation attribute group distinguishes elements that are associated with a
+    ///                           system rather than the particular part where the element appears.
     public init(id: String? = nil,
                 kind: [Kind] = [],
                 offset: MXLOffset? = nil,
@@ -88,13 +104,13 @@ public struct MXLDirection {
     /// Maps to a nested MusicXML `<level>` element.
     public let level: MXLLevel?
 
-    /// Specifies how a score-following or machine-listening application should interact with a performer, from this
-    /// point in the performance onward.
+    /// How a score-following or machine-listening application should interact with a performer, from this point in the
+    /// performance onward.
     ///
     /// Maps to a nested MusicXML `<listening>` element.
     public let listening: MXLListening?
 
-    /// Indicates where the direction will appear relative to the current musical location, in divisions.
+    /// The position of the direction relative to the current musical location, in divisions.
     ///
     /// Maps to a nested MusicXML `<offset>` element.
     public let offset: MXLOffset?

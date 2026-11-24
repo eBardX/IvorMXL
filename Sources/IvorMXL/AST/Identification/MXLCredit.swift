@@ -27,12 +27,17 @@ public struct MXLCredit {
 
     /// Creates a new `MXLCredit`.
     ///
-    /// - Parameter id: The optional-unique-id attribute group allows an element to optionally specify an ID that is unique to the entire document. This attribute group is not used for a required id attribute, or for an id attribute that specifies an id reference.
-    /// - Parameter kind:  Indicates the purpose behind this credit, such as page number, title, subtitle, composer, arranger, lyricist, rights, or part name. Multiple values may be used if multiple purposes are combined in a single credit.
-    /// - Parameter link:  The link elements interspersed with this credit’s content.
+    /// - Parameter id:        The optional-unique-id attribute group allows an element to optionally specify an ID that
+    ///                        is unique to the entire document. This attribute group is not used for a required id
+    ///                        attribute, or for an id attribute that specifies an id reference.
+    /// - Parameter kind:      Indicates the purpose behind this credit, such as page number, title, subtitle, composer,
+    ///                        arranger, lyricist, rights, or part name. Multiple values may be used if multiple
+    ///                        purposes are combined in a single credit.
+    /// - Parameter link:      The link elements interspersed with this credit’s content.
     /// - Parameter bookmark:  The bookmark elements interspersed with this credit’s content.
-    /// - Parameter content: One of the alternatives for Credit.
-    /// - Parameter page:  The page number where the credit should appear, starting with 1 for the first page. `1` by default.
+    /// - Parameter content:   One of the alternatives for Credit.
+    /// - Parameter page:      The page number where the credit should appear, starting with 1 for the first page. `1`
+    ///                        by default.
     public init(id: String? = nil,
                 kind: [String] = [],
                 link: [MXLLink] = [],
@@ -64,8 +69,8 @@ public struct MXLCredit {
     /// Maps to the MusicXML `id` attribute.
     public let id: String?
 
-    /// Indicates the purpose behind this credit, such as page number, title, subtitle, composer, arranger, lyricist,
-    /// rights, or part name. Multiple values may be used if multiple purposes are combined in a single credit.
+    /// The purpose behind this credit, such as page number, title, subtitle, composer, arranger, lyricist, rights, or
+    /// part name. Multiple values may be used if multiple purposes are combined in a single credit.
     ///
     /// Maps to nested MusicXML `<credit-type>` elements.
     public let kind: [String]

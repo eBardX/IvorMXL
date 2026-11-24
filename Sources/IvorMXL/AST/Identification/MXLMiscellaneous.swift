@@ -10,7 +10,7 @@ public struct MXLMiscellaneous {
 
     /// Creates a new `MXLMiscellaneous`.
     ///
-    /// - Parameter field: The individual pieces of metadata, each with its own name and value.
+    /// - Parameter field:  The individual pieces of metadata, each with its own name and value.
     public init(field: [Field] = []) {
         self.field = field
     }

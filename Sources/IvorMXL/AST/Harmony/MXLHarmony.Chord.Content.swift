@@ -4,9 +4,9 @@ extension MXLHarmony.Chord {
 
     /// One of the alternatives for HarmonyChord.
     public enum Content {
-        /// The function element represents classical functional harmony with an indication like I, II, III rather than C,
-        /// D, E. It represents the Roman numeral part of a functional harmony rather than the complete function itself.
-        /// It has been deprecated as of MusicXML 4.0 in favor of the numeral element.
+        /// The function element represents classical functional harmony with an indication like I, II, III rather than
+        /// C, D, E. It represents the Roman numeral part of a functional harmony rather than the complete function
+        /// itself. It has been deprecated as of MusicXML 4.0 in favor of the numeral element.
         case function(MXLStyleText)
 
         /// The Roman numeral or Nashville number part of a classical functional harmony analysis.

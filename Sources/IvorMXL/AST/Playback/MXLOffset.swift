@@ -18,7 +18,8 @@ public struct MXLOffset {
     /// Creates a new `MXLOffset`.
     ///
     /// - Parameter value:            The value of this element.
-    /// - Parameter affectsPlayback:  A Boolean value indicating whether the offset affects playback and listening in addition to visual appearance. Defaults to `false` if not specified.
+    /// - Parameter affectsPlayback:  A Boolean value indicating whether the offset affects playback and listening in
+    ///                               addition to visual appearance. Defaults to `false` if not specified.
     public init(value: Double,
                 affectsPlayback: Bool? = nil) {
         self.affectsPlayback = affectsPlayback ?? false

@@ -33,7 +33,7 @@ extension MXLValidator {
     /// schema is four elements and the parser already enforces nearly everything
     /// they constrain, so there is nothing left for the checker to decide.
     ///
-    /// - Parameter document:   The document to validate.
+    /// - Parameter document:  The document to validate.
     ///
     /// - Returns:  A tuple of the validated document and an array of ``Issue``
     ///             values. The document in the tuple is a copy of `document`
@@ -42,9 +42,8 @@ extension MXLValidator {
     ///             (re-validating after fixing issues is required). An empty
     ///             issues array means the document is fully conformant.
     ///
-    /// - Throws:   ``Error/notNormalized`` if ``MXLDocument/isNormalized`` is
-    ///             `false`. Call ``MXLNormalizer/normalize(_:)`` before calling
-    ///             this method.
+    /// - Throws:   ``Error/notNormalized`` if ``MXLDocument/isNormalized`` is `false`. Call
+    ///             ``MXLNormalizer/normalize(_:)`` before calling this method.
     public func validate(_ document: MXLDocument) throws(Error) -> (MXLDocument, [Issue]) {
         guard !document.isValidated
         else { return (document, []) }

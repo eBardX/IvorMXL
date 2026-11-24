@@ -9,8 +9,8 @@ public struct MXLGroupBarline {
 
     /// Creates a new `MXLGroupBarline`.
     ///
-    /// - Parameter value: The value of this element.
-    /// - Parameter color: The color attribute group indicates the color of an element.
+    /// - Parameter value:  The value of this element.
+    /// - Parameter color:  The color attribute group indicates the color of an element.
     public init(value: Value,
                 color: MXLColor? = nil) {
         self.color = color

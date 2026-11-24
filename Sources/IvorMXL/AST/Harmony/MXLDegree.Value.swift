@@ -14,12 +14,19 @@ extension MXLDegree {
 
         /// Creates a new `MXLDegree.Value`.
         ///
-        /// - Parameter value: The value of this element.
-        /// - Parameter symbol:  Indicates that a symbol should be used in specifying the degree. If present, the value of `text` follows the symbol.
-        /// - Parameter text:  Specifies how the value of the degree should be displayed.
-        /// - Parameter position: For most elements, any program will compute a default x and y position. The position attributes let this be changed two ways.
-        /// - Parameter font: The font attribute group gathers together attributes for determining the font within a credit or direction. They are based on the text styles for Cascading Style Sheets. The font-family is a comma-separated list of font names.The font-style can be normal or italic. The font-size can be one of the CSS sizes or a numeric point size. The font-weight can be normal or bold. The default is application-dependent, but is a text font vs. a music font.
-        /// - Parameter color: The color attribute group indicates the color of an element.
+        /// - Parameter value:     The value of this element.
+        /// - Parameter symbol:    Indicates that a symbol should be used in specifying the degree. If present, the
+        ///                        value of `text` follows the symbol.
+        /// - Parameter text:      Specifies how the value of the degree should be displayed.
+        /// - Parameter position:  For most elements, any program will compute a default x and y position. The position
+        ///                        attributes let this be changed two ways.
+        /// - Parameter font:      The font attribute group gathers together attributes for determining the font within
+        ///                        a credit or direction. They are based on the text styles for Cascading Style Sheets.
+        ///                        The font-family is a comma-separated list of font names. The font-style can be normal
+        ///                        or italic. The font-size can be one of the CSS sizes or a numeric point size. The
+        ///                        font-weight can be normal or bold. The default is application-dependent, but is a
+        ///                        text font vs. a music font.
+        /// - Parameter color:     The color attribute group indicates the color of an element.
         public init(value: Int,
                     symbol: SymbolValue? = nil,
                     text: String? = nil,
@@ -41,7 +48,7 @@ extension MXLDegree {
 
         /// The font attribute group gathers together attributes for determining the font within a credit or direction.
         /// They are based on the text styles for Cascading Style Sheets. The font-family is a comma-separated list of
-        /// font names.The font-style can be normal or italic. The font-size can be one of the CSS sizes or a numeric
+        /// font names. The font-style can be normal or italic. The font-size can be one of the CSS sizes or a numeric
         /// point size. The font-weight can be normal or bold. The default is application-dependent, but is a text font
         /// vs. a music font.
         public let font: MXLFont
@@ -49,9 +56,9 @@ extension MXLDegree {
         /// For most elements, any program will compute a default x and y position. The position attributes let this be
         /// changed two ways.
         ///
-        /// The default-x and default-y attributes change the computation of the default position. For most elements, the
-        /// origin is changed relative to the left-hand side of the note or the musical position within the bar (x) and
-        /// the top line of the staff (y).
+        /// The default-x and default-y attributes change the computation of the default position. For most elements,
+        /// the origin is changed relative to the left-hand side of the note or the musical position within the bar (x)
+        /// and the top line of the staff (y).
         ///
         /// For the following elements, the default-x value changes the origin relative to the start of the current
         /// measure:
@@ -79,23 +86,22 @@ extension MXLDegree {
         /// interline space. For stems, positive relative-y lengthens a stem while negative relative-y shortens it.
         ///
         /// The default-x and default-y position attributes provide higher-resolution positioning data than related
-        /// features such as the placement attribute and the offset element. Applications reading a MusicXML file that can
-        /// understand both features should generally rely on the default-x and default-y attributes for their greater
-        /// accuracy. For the relative-x and relative-y attributes, the offset element, placement attribute, and directive
-        /// attribute provide context for the relative position information, so the two features should be interpreted
-        /// together.
+        /// features such as the placement attribute and the offset element. Applications reading a MusicXML file that
+        /// can understand both features should generally rely on the default-x and default-y attributes for their
+        /// greater accuracy. For the relative-x and relative-y attributes, the offset element, placement attribute, and
+        /// directive attribute provide context for the relative position information, so the two features should be
+        /// interpreted together.
         ///
         /// As elsewhere in the MusicXML format, tenths are the global tenths defined by the scaling element, not the
         /// local tenths of a staff resized by the staff-size element.
         public let position: MXLPosition
 
-        /// Indicates that a symbol should be used in specifying the degree. If present, the value of `text` follows
-        /// the symbol.
+        /// The symbol to use in specifying the degree. If present, the value of `text` follows the symbol.
         ///
         /// Maps to the MusicXML `symbol` attribute.
         public let symbol: SymbolValue?
 
-        /// Specifies how the value of the degree should be displayed.
+        /// How the value of the degree should be displayed.
         ///
         /// Maps to the MusicXML `text` attribute.
         public let text: String?

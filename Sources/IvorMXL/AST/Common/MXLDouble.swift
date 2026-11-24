@@ -12,7 +12,8 @@ public struct MXLDouble {
 
     /// Creates a new `MXLDouble`.
     ///
-    /// - Parameter isAbove:  A Boolean value indicating whether the doubling is one octave above (`true`) or one octave below (`false`, the default) what is written.
+    /// - Parameter isAbove:  A Boolean value indicating whether the doubling is one octave above (`true`) or one octave
+    ///                       below (`false`, the default) what is written.
     public init(isAbove: Bool? = nil) {
         self.isAbove = isAbove
     }

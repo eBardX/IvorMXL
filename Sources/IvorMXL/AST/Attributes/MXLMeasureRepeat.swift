@@ -19,9 +19,10 @@ public struct MXLMeasureRepeat {
 
     /// Creates a new `MXLMeasureRepeat`.
     ///
-    /// - Parameter value: The number of measures to be repeated in a single pattern, or `nil` when the value is empty (as when the type is stop).
-    /// - Parameter kind: Whether this element marks the start or the stop of the measure repeat.
-    /// - Parameter slashes: The number of slashes to use in the repeat sign. `1` if not specified.
+    /// - Parameter value:    The number of measures to be repeated in a single pattern, or `nil` when the value is
+    ///                       empty (as when the type is stop).
+    /// - Parameter kind:     Whether this element marks the start or the stop of the measure repeat.
+    /// - Parameter slashes:  The number of slashes to use in the repeat sign. `1` if not specified.
     public init(value: Int? = nil,
                 kind: MXLStartStop,
                 slashes: Int? = nil) {

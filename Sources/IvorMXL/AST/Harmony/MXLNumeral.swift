@@ -10,9 +10,13 @@ public struct MXLNumeral {
 
     /// Creates a new `MXLNumeral`.
     ///
-    /// - Parameter root: The Roman numeral or Nashville number part of the harmony.
-    /// - Parameter alter: The numeral-alter element represents an alteration to the numeral-root, similar to the alter element for a pitch. The print-object attribute can be used to hide an alteration in cases such as when the MusicXML encoding of a 6 or 7 numeral-root in a minor key requires an alteration that is not displayed. The location attribute indicates whether the alteration should appear to the left or the right of the numeral-root. It is left by default.
-    /// - Parameter key: The key for the numeral, when it differs from the key specified by the key signature.
+    /// - Parameter root:   The Roman numeral or Nashville number part of the harmony.
+    /// - Parameter alter:  The numeral-alter element represents an alteration to the numeral-root, similar to the alter
+    ///                     element for a pitch. The print-object attribute can be used to hide an alteration in cases
+    ///                     such as when the MusicXML encoding of a 6 or 7 numeral-root in a minor key requires an
+    ///                     alteration that is not displayed. The location attribute indicates whether the alteration
+    ///                     should appear to the left or the right of the numeral-root. It is left by default.
+    /// - Parameter key:    The key for the numeral, when it differs from the key specified by the key signature.
     public init(root: Root,
                 alter: MXLHarmonyAlter? = nil,
                 key: Key? = nil) {

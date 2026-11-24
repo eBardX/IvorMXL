@@ -15,16 +15,28 @@ public struct MXLOtherNotation {
 
     /// Creates a new `MXLOtherNotation`.
     ///
-    /// - Parameter id: The optional-unique-id attribute group allows an element to optionally specify an ID that is unique to the entire document. This attribute group is not used for a required id attribute, or for an id attribute that specifies an id reference.
-    /// - Parameter value: The value of this element.
-    /// - Parameter kind: Whether this element starts, stops, or is a single occurrence of the notation.
-    /// - Parameter number: Defaults to `1`.
-    /// - Parameter printsObject: A Boolean value indicating whether to print an object (e.g. a note or a rest). Defaults to `true` if not specified.
-    /// - Parameter position: For most elements, any program will compute a default x and y position. The position attributes let this be changed two ways.
-    /// - Parameter font: The font attribute group gathers together attributes for determining the font within a credit or direction. They are based on the text styles for Cascading Style Sheets. The font-family is a comma-separated list of font names.The font-style can be normal or italic. The font-size can be one of the CSS sizes or a numeric point size. The font-weight can be normal or bold. The default is application-dependent, but is a text font vs. a music font.
-    /// - Parameter color: The color attribute group indicates the color of an element.
-    /// - Parameter placement: The placement attribute indicates whether something is above or below another element, such as a note or a notation.
-    /// - Parameter smufl: The smufl attribute group is used to indicate a particular Standard Music Font Layout (SMuFL) character. Sometimes this is a formatting choice, and sometimes this is a refinement of the semantic meaning of an element.
+    /// - Parameter id:            The optional-unique-id attribute group allows an element to optionally specify an ID
+    ///                            that is unique to the entire document. This attribute group is not used for a
+    ///                            required id attribute, or for an id attribute that specifies an id reference.
+    /// - Parameter value:         The value of this element.
+    /// - Parameter kind:          Whether this element starts, stops, or is a single occurrence of the notation.
+    /// - Parameter number:        Defaults to `1`.
+    /// - Parameter printsObject:  A Boolean value indicating whether to print an object (e.g. a note or a rest).
+    ///                            Defaults to `true` if not specified.
+    /// - Parameter position:      For most elements, any program will compute a default x and y position. The position
+    ///                            attributes let this be changed two ways.
+    /// - Parameter font:          The font attribute group gathers together attributes for determining the font within
+    ///                            a credit or direction. They are based on the text styles for Cascading Style Sheets.
+    ///                            The font-family is a comma-separated list of font names. The font-style can be normal
+    ///                            or italic. The font-size can be one of the CSS sizes or a numeric point size. The
+    ///                            font-weight can be normal or bold. The default is application-dependent, but is a
+    ///                            text font vs. a music font.
+    /// - Parameter color:         The color attribute group indicates the color of an element.
+    /// - Parameter placement:     The placement attribute indicates whether something is above or below another
+    ///                            element, such as a note or a notation.
+    /// - Parameter smufl:         The smufl attribute group is used to indicate a particular Standard Music Font Layout
+    ///                            (SMuFL) character. Sometimes this is a formatting choice, and sometimes this is a
+    ///                            refinement of the semantic meaning of an element.
     public init(id: String? = nil,
                 value: String,
                 kind: MXLStartStopSingle,
@@ -52,11 +64,11 @@ public struct MXLOtherNotation {
     /// The color attribute group indicates the color of an element.
     public let color: MXLColor?
 
-    /// The font attribute group gathers together attributes for determining the font within a credit or direction.
-    /// They are based on the text styles for Cascading Style Sheets. The font-family is a comma-separated list of
-    /// font names.The font-style can be normal or italic. The font-size can be one of the CSS sizes or a numeric
-    /// point size. The font-weight can be normal or bold. The default is application-dependent, but is a text font
-    /// vs. a music font.
+    /// The font attribute group gathers together attributes for determining the font within a credit or direction. They
+    /// are based on the text styles for Cascading Style Sheets. The font-family is a comma-separated list of font
+    /// names. The font-style can be normal or italic. The font-size can be one of the CSS sizes or a numeric point
+    /// size. The font-weight can be normal or bold. The default is application-dependent, but is a text font vs. a
+    /// music font.
     public let font: MXLFont
 
     /// The optional-unique-id attribute group allows an element to optionally specify an ID that is unique to the

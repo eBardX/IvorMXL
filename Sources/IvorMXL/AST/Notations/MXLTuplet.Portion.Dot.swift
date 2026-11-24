@@ -11,8 +11,13 @@ extension MXLTuplet.Portion {
 
         /// Creates a new `MXLTuplet.Portion.Dot`.
         ///
-        /// - Parameter font: The font attribute group gathers together attributes for determining the font within a credit or direction. They are based on the text styles for Cascading Style Sheets. The font-family is a comma-separated list of font names.The font-style can be normal or italic. The font-size can be one of the CSS sizes or a numeric point size. The font-weight can be normal or bold. The default is application-dependent, but is a text font vs. a music font.
-        /// - Parameter color: The color attribute group indicates the color of an element.
+        /// - Parameter font:   The font attribute group gathers together attributes for determining the font within a
+        ///                     credit or direction. They are based on the text styles for Cascading Style Sheets. The
+        ///                     font-family is a comma-separated list of font names. The font-style can be normal or
+        ///                     italic. The font-size can be one of the CSS sizes or a numeric point size. The
+        ///                     font-weight can be normal or bold. The default is application-dependent, but is a text
+        ///                     font vs. a music font.
+        /// - Parameter color:  The color attribute group indicates the color of an element.
         public init(font: MXLFont = MXLFont(),
                     color: MXLColor? = nil) {
             self.color = color
@@ -26,7 +31,7 @@ extension MXLTuplet.Portion {
 
         /// The font attribute group gathers together attributes for determining the font within a credit or direction.
         /// They are based on the text styles for Cascading Style Sheets. The font-family is a comma-separated list of
-        /// font names.The font-style can be normal or italic. The font-size can be one of the CSS sizes or a numeric
+        /// font names. The font-style can be normal or italic. The font-size can be one of the CSS sizes or a numeric
         /// point size. The font-weight can be normal or bold. The default is application-dependent, but is a text font
         /// vs. a music font.
         public let font: MXLFont

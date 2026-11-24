@@ -18,8 +18,10 @@ extension MXLHarmony {
         ///
         /// - Parameter content:    One of the alternatives for HarmonyChord.
         /// - Parameter kind:       The kind of chord, such as major, minor, or diminished.
-        /// - Parameter inversion:  The harmony inversion, where `0` indicates root position, `1` indicates first inversion, and so on.
-        /// - Parameter bass:       The bass note used in popular music chord symbols (e.g. the C in G/C), generally not used together with an inversion.
+        /// - Parameter inversion:  The harmony inversion, where `0` indicates root position, `1` indicates first
+        ///                         inversion, and so on.
+        /// - Parameter bass:       The bass note used in popular music chord symbols (e.g. the C in G/C), generally not
+        ///                         used together with an inversion.
         /// - Parameter degree:     The individual notes added, altered, or subtracted from the chord kind.
         public init(content: MXLHarmony.Chord.Content,
                     kind: Kind,

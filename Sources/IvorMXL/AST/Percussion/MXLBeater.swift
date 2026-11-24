@@ -10,8 +10,8 @@ public struct MXLBeater {
 
     /// Creates a new `MXLBeater`.
     ///
-    /// - Parameter value: The value of this element.
-    /// - Parameter tip:  The direction the tip of the beater points.
+    /// - Parameter value:  The value of this element.
+    /// - Parameter tip:    The direction the tip of the beater points.
     public init(value: Value,
                 tip: MXLTipDirection? = nil) {
         self.tip = tip

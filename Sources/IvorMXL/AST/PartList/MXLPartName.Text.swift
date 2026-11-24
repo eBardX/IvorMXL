@@ -11,11 +11,21 @@ extension MXLPartName {
 
         /// Creates a new `MXLPartName.Text`.
         ///
-        /// - Parameter position: For most elements, any program will compute a default x and y position. The position attributes let this be changed two ways.
-        /// - Parameter font: The font attribute group gathers together attributes for determining the font within a credit or direction. They are based on the text styles for Cascading Style Sheets. The font-family is a comma-separated list of font names. The font-style can be normal or italic. The font-size can be one of the CSS sizes or a numeric point size. The font-weight can be normal or bold. The default is application-dependent, but is a text font vs. a music font.
-        /// - Parameter color: The color attribute group indicates the color of an element.
-        /// - Parameter printsObject: A Boolean value indicating whether to print an object (e.g. a note or a rest). Defaults to `true` if not specified.
-        /// - Parameter justify: The justify attribute is used to indicate left, center, or right justification. The default value varies for different elements. For elements where the justify attribute is present but the halign attribute is not, the justify attribute indicates horizontal alignment as well as justification.
+        /// - Parameter position:      For most elements, any program will compute a default x and y position. The
+        ///                            position attributes let this be changed two ways.
+        /// - Parameter font:          The font attribute group gathers together attributes for determining the font
+        ///                            within a credit or direction. They are based on the text styles for Cascading
+        ///                            Style Sheets. The font-family is a comma-separated list of font names. The
+        ///                            font-style can be normal or italic. The font-size can be one of the CSS sizes or
+        ///                            a numeric point size. The font-weight can be normal or bold. The default is
+        ///                            application-dependent, but is a text font vs. a music font.
+        /// - Parameter color:         The color attribute group indicates the color of an element.
+        /// - Parameter printsObject:  A Boolean value indicating whether to print an object (e.g. a note or a rest).
+        ///                            Defaults to `true` if not specified.
+        /// - Parameter justify:       The justify attribute is used to indicate left, center, or right justification.
+        ///                            The default value varies for different elements. For elements where the justify
+        ///                            attribute is present but the halign attribute is not, the justify attribute
+        ///                            indicates horizontal alignment as well as justification.
         public init(position: MXLPosition = MXLPosition(),
                     font: MXLFont = MXLFont(),
                     color: MXLColor? = nil,
@@ -50,9 +60,9 @@ extension MXLPartName {
         /// For most elements, any program will compute a default x and y position. The position attributes let this be
         /// changed two ways.
         ///
-        /// The default-x and default-y attributes change the computation of the default position. For most elements, the
-        /// origin is changed relative to the left-hand side of the note or the musical position within the bar (x) and
-        /// the top line of the staff (y).
+        /// The default-x and default-y attributes change the computation of the default position. For most elements,
+        /// the origin is changed relative to the left-hand side of the note or the musical position within the bar (x)
+        /// and the top line of the staff (y).
         ///
         /// For the following elements, the default-x value changes the origin relative to the start of the current
         /// measure:
@@ -80,11 +90,11 @@ extension MXLPartName {
         /// interline space. For stems, positive relative-y lengthens a stem while negative relative-y shortens it.
         ///
         /// The default-x and default-y position attributes provide higher-resolution positioning data than related
-        /// features such as the placement attribute and the offset element. Applications reading a MusicXML file that can
-        /// understand both features should generally rely on the default-x and default-y attributes for their greater
-        /// accuracy. For the relative-x and relative-y attributes, the offset element, placement attribute, and directive
-        /// attribute provide context for the relative position information, so the two features should be interpreted
-        /// together.
+        /// features such as the placement attribute and the offset element. Applications reading a MusicXML file that
+        /// can understand both features should generally rely on the default-x and default-y attributes for their
+        /// greater accuracy. For the relative-x and relative-y attributes, the offset element, placement attribute, and
+        /// directive attribute provide context for the relative position information, so the two features should be
+        /// interpreted together.
         ///
         /// As elsewhere in the MusicXML format, tenths are the global tenths defined by the scaling element, not the
         /// local tenths of a staff resized by the staff-size element.

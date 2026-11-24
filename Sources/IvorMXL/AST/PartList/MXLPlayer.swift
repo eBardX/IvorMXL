@@ -10,8 +10,10 @@ public struct MXLPlayer {
 
     /// Creates a new `MXLPlayer`.
     ///
-    /// - Parameter id: A unique identifier for this player, referenced by other elements to associate content with a specific player.
-    /// - Parameter name: The player-name element is typically used within a software application, rather than appearing on the printed page of a score.
+    /// - Parameter id:    A unique identifier for this player, referenced by other elements to associate content with a
+    ///                    specific player.
+    /// - Parameter name:  The player-name element is typically used within a software application, rather than
+    ///                    appearing on the printed page of a score.
     public init(id: String,
                 name: String) {
         self.id = id

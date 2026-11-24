@@ -10,8 +10,8 @@ public struct MXLWood {
 
     /// Creates a new `MXLWood`.
     ///
-    /// - Parameter value: The value of this element.
-    /// - Parameter smufl: Distinguishes different SMuFL stylistic alternates for this wood pictogram.
+    /// - Parameter value:  The value of this element.
+    /// - Parameter smufl:  Distinguishes different SMuFL stylistic alternates for this wood pictogram.
     public init(value: Value,
                 smufl: MXLSmuflPictogramGlyphName? = nil) {
         self.smufl = smufl

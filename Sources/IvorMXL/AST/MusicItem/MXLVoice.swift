@@ -11,7 +11,7 @@ public struct MXLVoice {
 
     /// Creates a new `MXLVoice`.
     ///
-    /// - Parameter voice: The identifier distinguishing this voice from other voices in the same part.
+    /// - Parameter voice:  The identifier distinguishing this voice from other voices in the same part.
     public init(voice: String) {
         self.voice = voice
     }

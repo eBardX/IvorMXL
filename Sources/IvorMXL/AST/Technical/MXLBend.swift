@@ -12,14 +12,33 @@ public struct MXLBend {
 
     /// Creates a new `MXLBend`.
     ///
-    /// - Parameter alter:     The bend-alter element indicates the number of semitones in the bend, similar to the alter element. As with the alter element, numbers like 0.5 can be used to indicate microtones. Negative values indicate pre-bends or releases. The pre-bend and release elements are used to distinguish what is intended. Because the bend-alter element represents the number of steps in the bend, a release after a bend has a negative bend-alter value, not a zero value.
+    /// - Parameter alter:     The bend-alter element indicates the number of semitones in the bend, similar to the
+    ///                        alter element. As with the alter element, numbers like 0.5 can be used to indicate
+    ///                        microtones. Negative values indicate pre-bends or releases. The pre-bend and release
+    ///                        elements are used to distinguish what is intended. Because the bend-alter element
+    ///                        represents the number of steps in the bend, a release after a bend has a negative
+    ///                        bend-alter value, not a zero value.
     /// - Parameter content:   One of the alternatives for Bend.
-    /// - Parameter withBar:   The with-bar element indicates that the bend is to be done at the bridge with a whammy or vibrato bar. The content of the element indicates how this should be notated. Content values of “scoop” and “dip” refer to the SMuFL guitarVibratoBarScoop and guitarVibratoBarDip glyphs.
-    /// - Parameter shape:     Distinguishes between the angled bend symbols commonly used in standard notation and the curved bend symbols commonly used in both tablature and standard notation.
-    /// - Parameter position:  For most elements, any program will compute a default x and y position. The position attributes let this be changed two ways.
-    /// - Parameter font:      The font attribute group gathers together attributes for determining the font within a credit or direction. They are based on the text styles for Cascading Style Sheets. The font-family is a comma-separated list of font names. The font-style can be normal or italic. The font-size can be one of the CSS sizes or a numeric point size. The font-weight can be normal or bold. The default is application-dependent, but is a text font vs. a music font.
+    /// - Parameter withBar:   The with-bar element indicates that the bend is to be done at the bridge with a whammy or
+    ///                        vibrato bar. The content of the element indicates how this should be notated. Content
+    ///                        values of “scoop” and “dip” refer to the SMuFL guitarVibratoBarScoop and
+    ///                        guitarVibratoBarDip glyphs.
+    /// - Parameter shape:     Distinguishes between the angled bend symbols commonly used in standard notation and the
+    ///                        curved bend symbols commonly used in both tablature and standard notation.
+    /// - Parameter position:  For most elements, any program will compute a default x and y position. The position
+    ///                        attributes let this be changed two ways.
+    /// - Parameter font:      The font attribute group gathers together attributes for determining the font within a
+    ///                        credit or direction. They are based on the text styles for Cascading Style Sheets. The
+    ///                        font-family is a comma-separated list of font names. The font-style can be normal or
+    ///                        italic. The font-size can be one of the CSS sizes or a numeric point size. The
+    ///                        font-weight can be normal or bold. The default is application-dependent, but is a text
+    ///                        font vs. a music font.
     /// - Parameter color:     The color attribute group indicates the color of an element.
-    /// - Parameter sound:     The bend-sound type is used for bend and slide elements, and is similar to the trill-sound attribute group. Here the beats element refers to the number of discrete elements (like MIDI pitch bends) used to represent a continuous bend or slide. The first-beat indicates the percentage of the duration for starting a bend; the last-beat the percentage for ending it. The default choices are:
+    /// - Parameter sound:     The bend-sound type is used for bend and slide elements, and is similar to the
+    ///                        trill-sound attribute group. Here the beats element refers to the number of discrete
+    ///                        elements (like MIDI pitch bends) used to represent a continuous bend or slide. The
+    ///                        first-beat indicates the percentage of the duration for starting a bend; the last-beat
+    ///                        the percentage for ending it. The default choices are:
     public init(alter: MXLSemitones,
                 content: Content? = nil,
                 withBar: MXLPlacementText? = nil,

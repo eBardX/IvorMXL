@@ -24,15 +24,32 @@ public struct MXLMeasureNumbering {
     /// Creates a new `MXLMeasureNumbering`.
     ///
     /// - Parameter value:                      The value of this element.
-    /// - Parameter system:                     Distinguishes measure numbers that are associated with a system rather than the particular part where this element appears.
-    /// - Parameter staff:                      The staff used as the reference point for vertical positioning. Refers to staff numbers within the part, from top to bottom on the system. A value of `1` is assumed if not present.
-    /// - Parameter alwaysShowsOnMultipleRest:  A Boolean value indicating whether the measure number should always be shown on a multiple rest, even if the multiple rest starts midway through a system when measure numbering is set to system level.
-    /// - Parameter showsRangeOnMultipleRest:   A Boolean value indicating whether measure numbers on multiple rests display the range of numbers for the first and last measure, rather than just the number of the first measure.
-    /// - Parameter position:                   For most elements, any program will compute a default x and y position. The position attributes let this be changed two ways.
-    /// - Parameter font:                       The font attribute group gathers together attributes for determining the font within a credit or direction. They are based on the text styles for Cascading Style Sheets. The font-family is a comma-separated list of font names. The font-style can be normal or italic. The font-size can be one of the CSS sizes or a numeric point size. The font-weight can be normal or bold. The default is application-dependent, but is a text font vs. a music font.
+    /// - Parameter system:                     Distinguishes measure numbers that are associated with a system rather
+    ///                                         than the particular part where this element appears.
+    /// - Parameter staff:                      The staff used as the reference point for vertical positioning. Refers
+    ///                                         to staff numbers within the part, from top to bottom on the system. A
+    ///                                         value of `1` is assumed if not present.
+    /// - Parameter alwaysShowsOnMultipleRest:  A Boolean value indicating whether the measure number should always be
+    ///                                         shown on a multiple rest, even if the multiple rest starts midway
+    ///                                         through a system when measure numbering is set to system level.
+    /// - Parameter showsRangeOnMultipleRest:   A Boolean value indicating whether measure numbers on multiple rests
+    ///                                         display the range of numbers for the first and last measure, rather than
+    ///                                         just the number of the first measure.
+    /// - Parameter position:                   For most elements, any program will compute a default x and y position.
+    ///                                         The position attributes let this be changed two ways.
+    /// - Parameter font:                       The font attribute group gathers together attributes for determining the
+    ///                                         font within a credit or direction. They are based on the text styles for
+    ///                                         Cascading Style Sheets. The font-family is a comma-separated list of
+    ///                                         font names. The font-style can be normal or italic. The font-size can be
+    ///                                         one of the CSS sizes or a numeric point size. The font-weight can be
+    ///                                         normal or bold. The default is application-dependent, but is a text font
+    ///                                         vs. a music font.
     /// - Parameter color:                      The color attribute group indicates the color of an element.
-    /// - Parameter halign:                     In cases where text extends over more than one line, horizontal alignment and justify values can be different. The most typical case is for credits, such as:
-    /// - Parameter valign:                     The valign attribute is used to indicate vertical alignment to the top, middle, bottom, or baseline of the text. Defaults are implementation-dependent.
+    /// - Parameter halign:                     In cases where text extends over more than one line, horizontal
+    ///                                         alignment and justify values can be different.
+    /// - Parameter valign:                     The valign attribute is used to indicate vertical alignment to the top,
+    ///                                         middle, bottom, or baseline of the text. Defaults are
+    ///                                         implementation-dependent.
     public init(value: Value,
                 system: MXLSystemRelationNumber? = nil,
                 staff: MXLStaffNumber? = nil,

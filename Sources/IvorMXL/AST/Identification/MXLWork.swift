@@ -10,9 +10,10 @@ public struct MXLWork {
 
     /// Creates a new `MXLWork`.
     ///
-    /// - Parameter number: The work-number element specifies the number of a work, such as its opus number.
-    /// - Parameter title: The work-title element specifies the title of a work, not including its opus or other work number.
-    /// - Parameter opus: A link to the opus document that composes multiple scores into a collection.
+    /// - Parameter number:  The work-number element specifies the number of a work, such as its opus number.
+    /// - Parameter title:   The work-title element specifies the title of a work, not including its opus or other work
+    ///                      number.
+    /// - Parameter opus:    A link to the opus document that composes multiple scores into a collection.
     public init(number: String? = nil,
                 title: String? = nil,
                 opus: MXLXLink? = nil) {

@@ -10,33 +10,6 @@ struct MXLNormalizerTests {
 
 extension MXLNormalizerTests {
     @Test
-    func changeMessage_isNotEmpty() {
-        let allCases: [MXLNormalizer.Change] = [.convertedToPartwise,
-                                                .renamedElement("old", "new"),
-                                                .replacedConstruct("old", "new"),
-                                                .suppliedDefault("divisions", "1"),
-                                                .upgradedVersion(.v1_0, .v4_0)]
-
-        for change in allCases {
-            #expect(!change.message.isEmpty)
-        }
-    }
-
-    @Test
-    func changeMessage_quotesTheAssociatedValues() {
-        #expect(MXLNormalizer.Change.renamedElement("directive", "other").message.contains("‘directive’"))
-        #expect(MXLNormalizer.Change.suppliedDefault("divisions", "1").message.contains("‘1’"))
-    }
-
-    @Test
-    func changeMessage_spellsVersionsInDottedForm() {
-        let message = MXLNormalizer.Change.upgradedVersion(.v1_0, .v4_0).message
-
-        #expect(message.contains("1.0"))
-        #expect(message.contains("4.0"))
-    }
-
-    @Test
     func m1_movesStaffSpacingToStaffLayout() throws {
         let (score, changes) = try normalize("print-staff-spacing.musicxml")
 

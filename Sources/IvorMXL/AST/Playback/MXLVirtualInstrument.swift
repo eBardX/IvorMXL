@@ -10,7 +10,8 @@ public struct MXLVirtualInstrument {
     /// Creates a new `MXLVirtualInstrument`.
     ///
     /// - Parameter virtualLibrary:  The virtual-library element indicates the virtual instrument library name.
-    /// - Parameter virtualName:     The virtual-name element indicates the library-specific name for the virtual instrument.
+    /// - Parameter virtualName:     The virtual-name element indicates the library-specific name for the virtual
+    ///                              instrument.
     public init(virtualLibrary: String? = nil,
                 virtualName: String? = nil) {
         self.virtualLibrary = virtualLibrary

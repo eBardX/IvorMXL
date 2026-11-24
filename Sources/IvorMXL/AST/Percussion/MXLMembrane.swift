@@ -10,8 +10,8 @@ public struct MXLMembrane {
 
     /// Creates a new `MXLMembrane`.
     ///
-    /// - Parameter value: The value of this element.
-    /// - Parameter smufl: Distinguishes different SMuFL stylistic alternates for this membrane pictogram.
+    /// - Parameter value:  The value of this element.
+    /// - Parameter smufl:  Distinguishes different SMuFL stylistic alternates for this membrane pictogram.
     public init(value: Value,
                 smufl: MXLSmuflPictogramGlyphName? = nil) {
         self.smufl = smufl

@@ -15,8 +15,10 @@ public struct MXLElementPosition {
 
     /// Creates a new `MXLElementPosition`.
     ///
-    /// - Parameter element:   The element type for a descendant of the next sibling element that is not a link or bookmark.
-    /// - Parameter position:  The position of the descendant element specified by `element`, where the first position is `1`. Ignored if `element` is `nil`.
+    /// - Parameter element:   The element type for a descendant of the next sibling element that is not a link or
+    ///                        bookmark.
+    /// - Parameter position:  The position of the descendant element specified by `element`, where the first position
+    ///                        is `1`. Ignored if `element` is `nil`.
     public init(element: String? = nil,
                 position: Int? = nil) {
         self.element = element

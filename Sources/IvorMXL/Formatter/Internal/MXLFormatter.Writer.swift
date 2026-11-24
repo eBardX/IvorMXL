@@ -10,7 +10,7 @@ extension MXLFormatter {
     // `XestiXML.XMLFormatter`.
     //
     // The element stack is kept here rather than in the node tree because the
-    // `MXLFormatter+X.swift` functions write in document order — opening an
+    // `MXLFormatter.Writer+X.swift` functions write in document order — opening an
     // element, writing its children, then closing it — whereas an
     // `XestiXML.XMLNode` is immutable and must be built from the leaves up.
     internal struct Writer {

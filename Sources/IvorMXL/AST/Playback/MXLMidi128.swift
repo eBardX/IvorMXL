@@ -5,7 +5,7 @@ public import XestiTools
 /// The midi-128 type is used to express MIDI 1.0 values that range from 1 to 128.
 ///
 /// Maps the MusicXML `<midi-program>` and `<midi-unpitched>` elements.
-public struct MXLMidi128: UIntRepresentable {
+public struct MXLMidi128 {
 
     // MARK: Public Initializers
 
@@ -38,9 +38,14 @@ extension MXLMidi128 {
     ///
     /// - Parameter uintValue:  The unsigned integer value to check for validity.
     ///
-    /// - Returns: `true` when the provided unsigned integer value is between `1` and `128`, inclusive; `false`
-    ///            otherwise.
+    /// - Returns:  `true` when the provided unsigned integer value is between `1` and `128`, inclusive; `false`
+    ///             otherwise.
     public static func isValid(_ uintValue: UInt) -> Bool {
         (1...128).contains(uintValue)
     }
+}
+
+// MARK: - UIntRepresentable
+
+extension MXLMidi128: UIntRepresentable {
 }

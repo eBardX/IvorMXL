@@ -5,7 +5,7 @@ public import XestiTools
 /// The smufl-accidental-glyph-name type is used to reference a specific Standard Music Font Layout (SMuFL)
 /// accidental character. The value is a SMuFL canonical glyph name that starts with one of the strings used at
 /// the start of glyph names for SMuFL accidentals.
-public struct MXLSmuflAccidentalGlyphName: StringRepresentable {
+public struct MXLSmuflAccidentalGlyphName {
 
     // MARK: Public Initializers
 
@@ -13,7 +13,7 @@ public struct MXLSmuflAccidentalGlyphName: StringRepresentable {
     ///
     /// If the provided string value is determined to be invalid, this initializer returns `nil`.
     ///
-    /// - Parameter stringValue: A SMuFL canonical glyph name for an accidental character.
+    /// - Parameter stringValue:  A SMuFL canonical glyph name for an accidental character.
     public init?(stringValue: String) {
         guard Self.isValid(stringValue)
         else { return nil }
@@ -35,11 +35,10 @@ extension MXLSmuflAccidentalGlyphName {
 
     /// Determines if the provided string value is a valid representation for a `MXLSmuflAccidentalGlyphName`.
     ///
-    /// - Parameter stringValue: The string value to check for validity.
+    /// - Parameter stringValue:  The string value to check for validity.
     ///
-    /// - Returns: `true` when the provided string value starts with `acc`, `medRenFla`, `medRenNatura`,
-    ///            `medRenShar`, or `kievanAccidental`, followed by one or more further glyph name characters;
-    ///            `false` otherwise.
+    /// - Returns:  `true` when the provided string value starts with `acc`, `medRenFla`, `medRenNatura`, `medRenShar`,
+    ///             or `kievanAccidental`, followed by one or more further glyph name characters; `false` otherwise.
     public static func isValid(_ stringValue: String) -> Bool {
         let prefixes = ["acc", "medRenFla", "medRenNatura", "medRenShar", "kievanAccidental"]
 
@@ -50,4 +49,9 @@ extension MXLSmuflAccidentalGlyphName {
 
         return !suffix.isEmpty && MXLSmuflGlyphName.isValid(String(suffix))
     }
+}
+
+// MARK: - StringRepresentable
+
+extension MXLSmuflAccidentalGlyphName: StringRepresentable {
 }

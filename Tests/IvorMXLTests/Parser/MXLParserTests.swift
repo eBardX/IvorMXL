@@ -149,6 +149,63 @@ extension MXLParserTests {
     }
 
     @Test
+    func parse_negativeDurationForwardStillFails() {
+        let xml = measureXML("""
+        <forward>
+          <duration>-1</duration>
+        </forward>
+        """)
+
+        #expect(throws: (any Error).self) {
+            try MXLParser().parse(Data(xml.utf8), compressed: false)
+        }
+    }
+
+    @Test
+    func parse_nonTraditionalKeyKeepsEveryGroup() throws {
+        let xml = measureXML("""
+            <attributes>
+              <key>
+                <key-step>B</key-step>
+                <key-alter>-1</key-alter>
+                <key-step>F</key-step>
+                <key-alter>1</key-alter>
+                <key-accidental>sharp</key-accidental>
+                <key-step>G</key-step>
+                <key-alter>1.5</key-alter>
+              </key>
+            </attributes>
+            """)
+        let (entity, _) = try MXLParser().parse(Data(xml.utf8),
+                                                compressed: false)
+
+        guard case let .scorePartwise(score) = entity.content,
+              case let .attributes(attributes) = score.parts[0].measures[0].items[1],
+              case let .nonTraditionalKey(groups) = attributes.key.first?.content
+        else {
+            Issue.record("Expected a non-traditional key")
+
+            return
+        }
+
+        #expect(groups.map(\.step) == [.b, .f, .g])
+        #expect(groups.map(\.alter) == [-1, 1, 1.5])
+        #expect(groups.map { $0.accidental?.value } == [nil, .sharp, nil])
+    }
+
+    @Test(arguments: ["<key-step>B</key-step><key-step>F</key-step><key-alter>1</key-alter>",    // step without alter
+                      "<key-step>B</key-step><key-alter>-1</key-alter><key-alter>1</key-alter>", // two alters
+                      "<key-step>B</key-step>"])                                                   // last step without alter
+    func parse_nonTraditionalKeyWithBrokenGroupThrows(_ groups: String) {
+        let xml = measureXML("<attributes><key>\(groups)</key></attributes>")
+
+        #expect(throws: (any Error).self) {
+            try MXLParser().parse(Data(xml.utf8),
+                                  compressed: false)
+        }
+    }
+
+    @Test
     func parse_opus() throws {
         let xml = """
         <?xml version="1.0" encoding="UTF-8"?>
@@ -179,6 +236,63 @@ extension MXLParserTests {
         } else {
             Issue.record("Expected nested opus content")
         }
+    }
+
+    @Test
+    func parse_ornamentsAccidentalMarkBeforeAnyOrnamentThrows() {
+        #expect(throws: (any Error).self) {
+            try MXLParser().parse(Data(ornamentsXML("<accidental-mark>flat</accidental-mark><trill-mark/>").utf8),
+                                  compressed: false)
+        }
+    }
+
+    @Test
+    func parse_ornamentsHoldEveryOrnamentWithItsAccidentalMarks() throws {
+        let (entity, _) = try MXLParser().parse(Data(ornamentsXML("""
+            <trill-mark/><accidental-mark>flat</accidental-mark><wavy-line type="start"/>
+            <inverted-mordent/><accidental-mark>sharp</accidental-mark><accidental-mark>natural</accidental-mark>
+            """).utf8),
+                                                compressed: false)
+
+        guard case let .scorePartwise(score) = entity.content,
+              case let .note(note) = score.parts[0].measures[0].items[1],
+              case let .ornaments(ornaments) = note.notations[0].items[0]
+        else {
+            Issue.record("Expected ornaments")
+
+            return
+        }
+
+        #expect(ornaments.entries.count == 3)
+        #expect(ornaments.entries.map { $0.accidentalMarks.map(\.value) } == [[.flat], [], [.sharp, .natural]])
+
+        guard case .trillMark = ornaments.entries[0].content,
+              case let .wavyLine(wavyLine) = ornaments.entries[1].content,
+              case .invertedMordent = ornaments.entries[2].content
+        else {
+            Issue.record("Expected a trill mark, a wavy line and an inverted mordent")
+
+            return
+        }
+
+        #expect(wavyLine.kind == .start)
+    }
+
+    @Test
+    func parse_ornamentsMayBeEmpty() throws {
+        let (entity, _) = try MXLParser().parse(Data(ornamentsXML("").utf8),
+                                                compressed: false)
+
+        guard case let .scorePartwise(score) = entity.content,
+              case let .note(note) = score.parts[0].measures[0].items[1],
+              case let .ornaments(ornaments) = note.notations[0].items[0]
+        else {
+            Issue.record("Expected ornaments")
+
+            return
+        }
+
+        #expect(ornaments.entries.isEmpty)
     }
 
     @Test
@@ -398,66 +512,5 @@ extension MXLParserTests {
         })
         #expect(diagnostics == [.droppedZeroDuration("forward"),
                                 .droppedZeroDuration("backup")])
-    }
-
-    @Test
-    func parse_negativeDurationForwardStillFails() {
-        let xml = measureXML("""
-        <forward>
-          <duration>-1</duration>
-        </forward>
-        """)
-
-        #expect(throws: (any Error).self) {
-            try MXLParser().parse(Data(xml.utf8), compressed: false)
-        }
-    }
-}
-
-// MARK: -
-
-extension MXLParserTests {
-    @Test
-    func parse_nonTraditionalKeyKeepsEveryGroup() throws {
-        let xml = measureXML("""
-            <attributes>
-              <key>
-                <key-step>B</key-step>
-                <key-alter>-1</key-alter>
-                <key-step>F</key-step>
-                <key-alter>1</key-alter>
-                <key-accidental>sharp</key-accidental>
-                <key-step>G</key-step>
-                <key-alter>1.5</key-alter>
-              </key>
-            </attributes>
-            """)
-        let (entity, _) = try MXLParser().parse(Data(xml.utf8),
-                                                compressed: false)
-
-        guard case let .scorePartwise(score) = entity.content,
-              case let .attributes(attributes) = score.parts[0].measures[0].items[1],
-              case let .nonTraditionalKey(groups) = attributes.key.first?.content
-        else {
-            Issue.record("Expected a non-traditional key")
-
-            return
-        }
-
-        #expect(groups.map(\.step) == [.b, .f, .g])
-        #expect(groups.map(\.alter) == [-1, 1, 1.5])
-        #expect(groups.map { $0.accidental?.value } == [nil, .sharp, nil])
-    }
-
-    @Test(arguments: ["<key-step>B</key-step><key-step>F</key-step><key-alter>1</key-alter>",    // step without alter
-                      "<key-step>B</key-step><key-alter>-1</key-alter><key-alter>1</key-alter>", // two alters
-                      "<key-step>B</key-step>"])                                                   // last step without alter
-    func parse_nonTraditionalKeyWithBrokenGroupThrows(_ groups: String) {
-        let xml = measureXML("<attributes><key>\(groups)</key></attributes>")
-
-        #expect(throws: (any Error).self) {
-            try MXLParser().parse(Data(xml.utf8),
-                                  compressed: false)
-        }
     }
 }

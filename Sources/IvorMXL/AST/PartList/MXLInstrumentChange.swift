@@ -11,7 +11,7 @@ public struct MXLInstrumentChange {
 
     /// Creates a new `MXLInstrumentChange`.
     ///
-    /// - Parameter id: A reference to the id of the score-instrument affected by this change.
+    /// - Parameter id:  A reference to the id of the score-instrument affected by this change.
     public init(id: String) {
         self.id = id
     }

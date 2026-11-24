@@ -16,11 +16,18 @@ public struct MXLMeasureStyle {
 
     /// Creates a new `MXLMeasureStyle`.
     ///
-    /// - Parameter id: The optional-unique-id attribute group allows an element to optionally specify an ID that is unique to the entire document. This attribute group is not used for a required id attribute, or for an id attribute that specifies an id reference.
-    /// - Parameter content: One of the alternatives for MeasureStyle.
-    /// - Parameter number: The staff number, from top to bottom on the system, that this element applies to.
-    /// - Parameter font: The font attribute group gathers together attributes for determining the font within a credit or direction. They are based on the text styles for Cascading Style Sheets. The font-family is a comma-separated list of font names. The font-style can be normal or italic. The font-size can be one of the CSS sizes or a numeric point size. The font-weight can be normal or bold. The default is application-dependent, but is a text font vs. a music font.
-    /// - Parameter color: The color attribute group indicates the color of an element.
+    /// - Parameter id:       The optional-unique-id attribute group allows an element to optionally specify an ID that
+    ///                       is unique to the entire document. This attribute group is not used for a required id
+    ///                       attribute, or for an id attribute that specifies an id reference.
+    /// - Parameter content:  One of the alternatives for MeasureStyle.
+    /// - Parameter number:   The staff number, from top to bottom on the system, that this element applies to.
+    /// - Parameter font:     The font attribute group gathers together attributes for determining the font within a
+    ///                       credit or direction. They are based on the text styles for Cascading Style Sheets. The
+    ///                       font-family is a comma-separated list of font names. The font-style can be normal or
+    ///                       italic. The font-size can be one of the CSS sizes or a numeric point size. The font-weight
+    ///                       can be normal or bold. The default is application-dependent, but is a text font vs. a
+    ///                       music font.
+    /// - Parameter color:    The color attribute group indicates the color of an element.
     public init(id: String? = nil,
                 content: Content,
                 number: MXLStaffNumber? = nil,

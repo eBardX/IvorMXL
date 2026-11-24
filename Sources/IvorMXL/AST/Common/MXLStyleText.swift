@@ -9,8 +9,9 @@ public struct MXLStyleText {
 
     /// Creates a new `MXLStyleText`.
     ///
-    /// - Parameter value: The value of this element.
-    /// - Parameter printStyle: The print-style attribute group collects the most popular combination of printing attributes: position, font, and color.
+    /// - Parameter value:       The value of this element.
+    /// - Parameter printStyle:  The print-style attribute group collects the most popular combination of printing
+    ///                          attributes: position, font, and color.
     public init(value: String,
                 printStyle: MXLPrintStyle) {
         self.printStyle = printStyle

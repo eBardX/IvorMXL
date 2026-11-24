@@ -10,7 +10,7 @@ public import XestiTools
 /// purple.
 ///
 /// As in SVG 1.1, colors are defined in terms of the sRGB color space (IEC 61966).
-public struct MXLColor: StringRepresentable {
+public struct MXLColor {
 
     // MARK: Public Initializers
 
@@ -18,8 +18,8 @@ public struct MXLColor: StringRepresentable {
     ///
     /// If the provided string value is determined to be invalid, this initializer returns `nil`.
     ///
-    /// - Parameter stringValue: A `#` followed by a hexadecimal RGB triple or ARGB tuple, such as “#800080” or
-    ///                          “#40800080”.
+    /// - Parameter stringValue:  A `#` followed by a hexadecimal RGB triple or ARGB tuple, such as “#800080” or
+    ///                           “#40800080”.
     public init?(stringValue: String) {
         guard Self.isValid(stringValue)
         else { return nil }
@@ -41,10 +41,10 @@ extension MXLColor {
 
     /// Determines if the provided string value is a valid representation for a `MXLColor`.
     ///
-    /// - Parameter stringValue: The string value to check for validity.
+    /// - Parameter stringValue:  The string value to check for validity.
     ///
-    /// - Returns: `true` when the provided string value is a `#` followed by 6 or 8 uppercase hexadecimal digits;
-    ///            `false` otherwise.
+    /// - Returns:  `true` when the provided string value is a `#` followed by 6 or 8 uppercase hexadecimal digits;
+    ///             `false` otherwise.
     public static func isValid(_ stringValue: String) -> Bool {
         guard stringValue.hasPrefix("#")
         else { return false }
@@ -56,4 +56,9 @@ extension MXLColor {
 
         return hexDigits.allSatisfy { $0.isNumber || ("A"..."F").contains($0) }
     }
+}
+
+// MARK: - StringRepresentable
+
+extension MXLColor: StringRepresentable {
 }

@@ -13,7 +13,8 @@ public struct MXLWait {
 
     /// Creates a new `MXLWait`.
     ///
-    /// - Parameter player:    References the id attribute of a player element defined within the matching score-part, restricting the wait to that player.
+    /// - Parameter player:    References the id attribute of a player element defined within the matching score-part,
+    ///                        restricting the wait to that player.
     /// - Parameter timeOnly:  Restricts the wait to a set of times through a repeated section.
     public init(player: String? = nil,
                 timeOnly: MXLTimeOnly? = nil) {

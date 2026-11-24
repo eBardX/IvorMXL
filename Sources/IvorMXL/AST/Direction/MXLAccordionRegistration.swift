@@ -1,7 +1,7 @@
 // © 2026 John Gary Pusey (see LICENSE.md)
 
 /// The accordion-registration type is used for accordion registration symbols. These are circular symbols divided
-/// horizontally into high, middle, and low sections that correspond to 4', 8', and 16' pipes. Each accordion-
+/// horizontally into high, middle, and low sections that correspond to 4′, 8′, and 16′ pipes. Each accordion-
 /// high, accordion-middle, and accordion-low element represents the presence of one or more dots in the
 /// registration diagram. An accordion-registration element needs to have at least one of the child elements
 /// present.
@@ -13,15 +13,29 @@ public struct MXLAccordionRegistration {
 
     /// Creates a new `MXLAccordionRegistration`.
     ///
-    /// - Parameter id: The optional-unique-id attribute group allows an element to optionally specify an ID that is unique to the entire document. This attribute group is not used for a required id attribute, or for an id attribute that specifies an id reference.
-    /// - Parameter hasHighDot: A Boolean value indicating whether the high (4') section of the registration symbol has a dot.
-    /// - Parameter accordionMiddle: The accordion-middle element indicates the presence of 1 to 3 dots in the middle (8') section of the registration symbol. This element is omitted if no dots are present.
-    /// - Parameter hasLowDot: A Boolean value indicating whether the low (16') section of the registration symbol has a dot.
-    /// - Parameter position: For most elements, any program will compute a default x and y position. The position attributes let this be changed two ways.
-    /// - Parameter font: The font attribute group gathers together attributes for determining the font within a credit or direction. They are based on the text styles for Cascading Style Sheets. The font-family is a comma-separated list of font names.The font-style can be normal or italic. The font-size can be one of the CSS sizes or a numeric point size. The font-weight can be normal or bold. The default is application-dependent, but is a text font vs. a music font.
-    /// - Parameter color: The color attribute group indicates the color of an element.
-    /// - Parameter halign: In cases where text extends over more than one line, horizontal alignment and justify values can be different. The most typical case is for credits, such as:
-    /// - Parameter valign: The valign attribute is used to indicate vertical alignment to the top, middle, bottom, or baseline of the text. Defaults are implementation-dependent.
+    /// - Parameter id:               The optional-unique-id attribute group allows an element to optionally specify an
+    ///                               ID that is unique to the entire document. This attribute group is not used for a
+    ///                               required id attribute, or for an id attribute that specifies an id reference.
+    /// - Parameter hasHighDot:       A Boolean value indicating whether the high (4′) section of the registration
+    ///                               symbol has a dot.
+    /// - Parameter accordionMiddle:  The accordion-middle element indicates the presence of 1 to 3 dots in the middle
+    ///                               (8′) section of the registration symbol. This element is omitted if no dots are
+    ///                               present.
+    /// - Parameter hasLowDot:        A Boolean value indicating whether the low (16′) section of the registration
+    ///                               symbol has a dot.
+    /// - Parameter position:         For most elements, any program will compute a default x and y position. The
+    ///                               position attributes let this be changed two ways.
+    /// - Parameter font:             The font attribute group gathers together attributes for determining the font
+    ///                               within a credit or direction. They are based on the text styles for Cascading
+    ///                               Style Sheets. The font-family is a comma-separated list of font names. The
+    ///                               font-style can be normal or italic. The font-size can be one of the CSS sizes or a
+    ///                               numeric point size. The font-weight can be normal or bold. The default is
+    ///                               application-dependent, but is a text font vs. a music font.
+    /// - Parameter color:            The color attribute group indicates the color of an element.
+    /// - Parameter halign:           In cases where text extends over more than one line, horizontal alignment and
+    ///                               justify values can be different.
+    /// - Parameter valign:           The valign attribute is used to indicate vertical alignment to the top, middle,
+    ///                               bottom, or baseline of the text. Defaults are implementation-dependent.
     public init(id: String? = nil,
                 hasHighDot: Bool,
                 accordionMiddle: MXLAccordionMiddle? = nil,
@@ -44,7 +58,7 @@ public struct MXLAccordionRegistration {
 
     // MARK: Public Instance Properties
 
-    /// The accordion-middle element indicates the presence of 1 to 3 dots in the middle (8') section of the
+    /// The accordion-middle element indicates the presence of 1 to 3 dots in the middle (8′) section of the
     /// registration symbol. This element is omitted if no dots are present.
     ///
     /// Maps to a nested MusicXML `<accordion-middle>` element.
@@ -53,11 +67,11 @@ public struct MXLAccordionRegistration {
     /// The color attribute group indicates the color of an element.
     public let color: MXLColor?
 
-    /// The font attribute group gathers together attributes for determining the font within a credit or direction.
-    /// They are based on the text styles for Cascading Style Sheets. The font-family is a comma-separated list of
-    /// font names.The font-style can be normal or italic. The font-size can be one of the CSS sizes or a numeric
-    /// point size. The font-weight can be normal or bold. The default is application-dependent, but is a text font
-    /// vs. a music font.
+    /// The font attribute group gathers together attributes for determining the font within a credit or direction. They
+    /// are based on the text styles for Cascading Style Sheets. The font-family is a comma-separated list of font
+    /// names. The font-style can be normal or italic. The font-size can be one of the CSS sizes or a numeric point
+    /// size. The font-weight can be normal or bold. The default is application-dependent, but is a text font vs. a
+    /// music font.
     public let font: MXLFont
 
     /// In cases where text extends over more than one line, horizontal alignment and justify values can be different.
@@ -75,12 +89,12 @@ public struct MXLAccordionRegistration {
     /// Maps to the MusicXML `halign` attribute.
     public let halign: MXLLeftCenterRight?
 
-    /// A Boolean value indicating whether the high (4') section of the registration symbol has a dot.
+    /// A Boolean value indicating whether the high (4′) section of the registration symbol has a dot.
     ///
     /// Maps to a nested MusicXML `<accordion-high>` element.
     public let hasHighDot: Bool
 
-    /// A Boolean value indicating whether the low (16') section of the registration symbol has a dot.
+    /// A Boolean value indicating whether the low (16′) section of the registration symbol has a dot.
     ///
     /// Maps to a nested MusicXML `<accordion-low>` element.
     public let hasLowDot: Bool

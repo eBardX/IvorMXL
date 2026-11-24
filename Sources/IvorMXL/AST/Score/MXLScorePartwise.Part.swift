@@ -2,6 +2,8 @@
 
 extension MXLScorePartwise {
 
+    /// A part within a part-wise score, containing that part’s measures.
+    ///
     /// Maps the MusicXML `<part>` element.
     public struct Part {
 
@@ -9,8 +11,9 @@ extension MXLScorePartwise {
 
         /// Creates a new `MXLScorePartwise.Part`.
         ///
-        /// - Parameter id: In either partwise or timewise format, the part element has an id attribute that is an IDREF back to a score-part in the part-list.
-        /// - Parameter measures: The measures that make up this part.
+        /// - Parameter id:        In either partwise or timewise format, the part element has an id attribute that is
+        ///                        an IDREF back to a score-part in the part-list.
+        /// - Parameter measures:  The measures that make up this part.
         public init(id: String,
                     measures: [Measure] = []) {
             self.id = id
@@ -19,8 +22,8 @@ extension MXLScorePartwise {
 
         // MARK: Public Instance Properties
 
-        /// In either partwise or timewise format, the part element has an id attribute that is an IDREF back to a score-
-        /// part in the part-list.
+        /// In either partwise or timewise format, the part element has an id attribute that is an IDREF back to a
+        /// score- part in the part-list.
         ///
         /// Maps to the MusicXML `id` attribute.
         public let id: String

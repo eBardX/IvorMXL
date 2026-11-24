@@ -61,7 +61,7 @@ extension MXLParser {
                              tied: secondBeatUnitTieds.count > 1 ? [parseMetronomeBeatUnitTied(secondBeatUnitTieds[1])] : [])
     }
 
-internal static func parseMetronomeNote(_ node: Node) throws -> MXLMetronome.Note {
+    internal static func parseMetronomeNote(_ node: Node) throws -> MXLMetronome.Note {
         try MXLMetronome.Note(kind: node.valueOfRequiredChildElement(.metronomeType, parseNoteKindValue),
                               dot: node.allChildElements(.metronomeDot).count,
                               beam: node.optionalChildElements(.metronomeBeam, parseMetronomeNoteBeam),

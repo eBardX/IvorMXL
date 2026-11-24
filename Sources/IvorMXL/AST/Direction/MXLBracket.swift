@@ -12,16 +12,22 @@ public struct MXLBracket {
 
     /// Creates a new `MXLBracket`.
     ///
-    /// - Parameter id: The optional-unique-id attribute group allows an element to optionally specify an ID that is unique to the entire document. This attribute group is not used for a required id attribute, or for an id attribute that specifies an id reference.
-    /// - Parameter kind:  Whether this is the start, stop, or continuation of the bracket.
-    /// - Parameter number:  Distinguishes this bracket from other brackets that might be active at the same time.
-    /// - Parameter lineEnd:  Specifies if there is a jog up or down (or both), an arrow, or nothing at the start or end of the bracket.
-    /// - Parameter endLength:  The length of the jog, if the line-end is up or down.
-    /// - Parameter lineKind: The line-type attribute distinguishes between solid, dashed, dotted, and wavy lines.
-    /// - Parameter dashLength:  The length, in tenths, of the dashes in a dashed line. Ignored if the corresponding line-type attribute is not dashed.
-    /// - Parameter spaceLength:  The length, in tenths, of the spaces in a dashed line. Ignored if the corresponding line-type attribute is not dashed.
-    /// - Parameter position: For most elements, any program will compute a default x and y position. The position attributes let this be changed two ways.
-    /// - Parameter color: The color attribute group indicates the color of an element.
+    /// - Parameter id:           The optional-unique-id attribute group allows an element to optionally specify an ID
+    ///                           that is unique to the entire document. This attribute group is not used for a required
+    ///                           id attribute, or for an id attribute that specifies an id reference.
+    /// - Parameter kind:         Whether this is the start, stop, or continuation of the bracket.
+    /// - Parameter number:       Distinguishes this bracket from other brackets that might be active at the same time.
+    /// - Parameter lineEnd:      Specifies if there is a jog up or down (or both), an arrow, or nothing at the start or
+    ///                           end of the bracket.
+    /// - Parameter endLength:    The length of the jog, if the line-end is up or down.
+    /// - Parameter lineKind:     The line-type attribute distinguishes between solid, dashed, dotted, and wavy lines.
+    /// - Parameter dashLength:   The length, in tenths, of the dashes in a dashed line. Ignored if the corresponding
+    ///                           line-type attribute is not dashed.
+    /// - Parameter spaceLength:  The length, in tenths, of the spaces in a dashed line. Ignored if the corresponding
+    ///                           line-type attribute is not dashed.
+    /// - Parameter position:     For most elements, any program will compute a default x and y position. The position
+    ///                           attributes let this be changed two ways.
+    /// - Parameter color:        The color attribute group indicates the color of an element.
     public init(id: String? = nil,
                 kind: MXLStartStopContinue,
                 number: MXLNumberLevel? = nil,
@@ -72,7 +78,7 @@ public struct MXLBracket {
     /// Maps to the MusicXML `type` attribute.
     public let kind: MXLStartStopContinue
 
-    /// Specifies if there is a jog up or down (or both), an arrow, or nothing at the start or end of the bracket.
+    /// The kind of line end at the start or end of the bracket: a jog up or down (or both), an arrow, or nothing.
     ///
     /// Maps to the MusicXML `line-end` attribute.
     public let lineEnd: MXLLineEnd

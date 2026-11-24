@@ -28,14 +28,14 @@ extension MXLNote.Notehead {
         /// A normal notehead with a back slash through it.
         case backSlashed
 
+        /// A circled notehead.
+        case circled
+
         /// A notehead with a dot in a circle.
         case circleDot
 
         /// A notehead shaped like a circle with an X.
         case circleX
-
-        /// A circled notehead.
-        case circled
 
         /// A cluster notehead.
         case cluster

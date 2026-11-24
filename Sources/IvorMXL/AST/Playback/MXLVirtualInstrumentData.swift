@@ -8,7 +8,10 @@ public struct MXLVirtualInstrumentData {
 
     /// Creates a new `MXLVirtualInstrumentData`.
     ///
-    /// - Parameter instrumentSound:    The instrument-sound element describes the default timbre of the score-instrument. This description is independent of a particular virtual or MIDI instrument specification and allows playback to be shared more easily between applications and libraries.
+    /// - Parameter instrumentSound:    The instrument-sound element describes the default timbre of the
+    ///                                 score-instrument. This description is independent of a particular virtual or
+    ///                                 MIDI instrument specification and allows playback to be shared more easily
+    ///                                 between applications and libraries.
     /// - Parameter content:            One of the alternatives for VirtualInstrumentData.
     /// - Parameter virtualInstrument:  The specific virtual instrument used for the instrument sound.
     public init(instrumentSound: String? = nil,

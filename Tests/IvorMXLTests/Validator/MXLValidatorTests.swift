@@ -2,7 +2,6 @@
 
 @testable import IvorMXL
 import Testing
-import XestiTools
 
 struct MXLValidatorTests {
 }
@@ -10,16 +9,6 @@ struct MXLValidatorTests {
 // MARK: -
 
 extension MXLValidatorTests {
-    @Test
-    func errorMessage_isNotEmpty() {
-        let allCases: [MXLValidator.Error] = [.notNormalized]
-
-        for error in allCases {
-            #expect(!error.message.isEmpty)
-            #expect(error.category == Category("IvorMXL"))
-        }
-    }
-
     @Test(arguments: FixtureLoader.allScoreFixtures)
     func parseNormalizeValidate_leavesEveryScoreFixtureValidated(_ fixture: FixtureLoader.Fixture) throws {
         let (document, _) = try FixtureLoader.parse(fixture)

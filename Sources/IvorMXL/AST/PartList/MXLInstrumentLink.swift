@@ -12,7 +12,7 @@ public struct MXLInstrumentLink {
 
     /// Creates a new `MXLInstrumentLink`.
     ///
-    /// - Parameter id: A reference to the id attribute of a score-instrument element.
+    /// - Parameter id:  A reference to the id attribute of a score-instrument element.
     public init(id: String) {
         self.id = id
     }

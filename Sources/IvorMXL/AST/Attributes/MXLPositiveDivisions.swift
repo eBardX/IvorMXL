@@ -13,8 +13,8 @@ public struct MXLPositiveDivisions {
     ///
     /// If the provided integer value is determined to be invalid, this initializer returns `nil`.
     ///
-    /// - Parameter intValue: A positive value expressed in terms of the musical divisions defined by the divisions
-    ///                       element.
+    /// - Parameter intValue:  A positive value expressed in terms of the musical divisions defined by the divisions
+    ///                        element.
     public init?(intValue: Int) {
         guard Self.isValid(intValue)
         else { return nil }
@@ -36,9 +36,9 @@ extension MXLPositiveDivisions {
 
     /// Determines if the provided integer value is a valid representation for a `MXLPositiveDivisions`.
     ///
-    /// - Parameter intValue: The integer value to check for validity.
+    /// - Parameter intValue:  The integer value to check for validity.
     ///
-    /// - Returns: `true` when the provided integer value is greater than zero; `false` otherwise.
+    /// - Returns:  `true` when the provided integer value is greater than zero; `false` otherwise.
     public static func isValid(_ intValue: Int) -> Bool {
         intValue > 0
     }

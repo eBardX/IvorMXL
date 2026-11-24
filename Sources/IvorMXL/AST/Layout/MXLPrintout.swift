@@ -12,10 +12,16 @@ public struct MXLPrintout {
 
     /// Creates a new `MXLPrintout`.
     ///
-    /// - Parameter printsObject:   A Boolean value indicating whether to print an object (e.g. a note or a rest). Defaults to `true` if not specified.
-    /// - Parameter printsDot:      A Boolean value indicating whether to print the augmentation dots for a note. Defaults to `true`; treated as `false` if `printsObject` is `false` and this is not specified.
-    /// - Parameter printsSpacing:  A Boolean value indicating whether to leave spacing for an invisible note or object. Used only if no note, dot, or lyric is being printed. Defaults to `true` if not specified.
-    /// - Parameter printsLyric:    A Boolean value indicating whether to print the lyrics for a note. Defaults to `true`; treated as `false` if `printsObject` is `false` and this is not specified.
+    /// - Parameter printsObject:   A Boolean value indicating whether to print an object (e.g. a note or a rest).
+    ///                             Defaults to `true` if not specified.
+    /// - Parameter printsDot:      A Boolean value indicating whether to print the augmentation dots for a note.
+    ///                             Defaults to `true`; treated as `false` if `printsObject` is `false` and this is not
+    ///                             specified.
+    /// - Parameter printsSpacing:  A Boolean value indicating whether to leave spacing for an invisible note or object.
+    ///                             Used only if no note, dot, or lyric is being printed. Defaults to `true` if not
+    ///                             specified.
+    /// - Parameter printsLyric:    A Boolean value indicating whether to print the lyrics for a note. Defaults to
+    ///                             `true`; treated as `false` if `printsObject` is `false` and this is not specified.
     public init(printsObject: Bool? = nil,
                 printsDot: Bool? = nil,
                 printsSpacing: Bool? = nil,

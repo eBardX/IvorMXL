@@ -20,17 +20,25 @@ public struct MXLPartGroup {
 
     /// Creates a new `MXLPartGroup`.
     ///
-    /// - Parameter name: The name of the group of parts.
-    /// - Parameter nameDisplay: Formatting specified in the group-name-display element overrides formatting specified in the group-name element.
-    /// - Parameter abbreviation: The abbreviation of the group of parts.
-    /// - Parameter abbreviationDisplay: Formatting specified in the group-abbreviation-display element overrides formatting specified in the group-abbreviation element.
-    /// - Parameter symbol: The symbol used to indicate the group, such as a brace or bracket.
-    /// - Parameter barline: Indicates whether the group has common barlines across its parts.
-    /// - Parameter stretchesTimeSignature: A Boolean value indicating whether the displayed time signatures should stretch across all parts and staves in the group.
-    /// - Parameter footnote: The footnote element specifies editorial information that appears in footnotes in the printed score. It is defined within a group due to its multiple uses within the MusicXML schema.
-    /// - Parameter level: The level element specifies editorial information for different MusicXML elements. It is defined within a group due to its multiple uses within the MusicXML schema.
-    /// - Parameter kind: Whether this element marks the start or the stop of the group.
-    /// - Parameter number: The number used to distinguish overlapping and nested part-groups, not the sequence of groups. Defaults to `1` if not specified.
+    /// - Parameter name:                    The name of the group of parts.
+    /// - Parameter nameDisplay:             Formatting specified in the group-name-display element overrides formatting
+    ///                                      specified in the group-name element.
+    /// - Parameter abbreviation:            The abbreviation of the group of parts.
+    /// - Parameter abbreviationDisplay:     Formatting specified in the group-abbreviation-display element overrides
+    ///                                      formatting specified in the group-abbreviation element.
+    /// - Parameter symbol:                  The symbol used to indicate the group, such as a brace or bracket.
+    /// - Parameter barline:                 Indicates whether the group has common barlines across its parts.
+    /// - Parameter stretchesTimeSignature:  A Boolean value indicating whether the displayed time signatures should
+    ///                                      stretch across all parts and staves in the group.
+    /// - Parameter footnote:                The footnote element specifies editorial information that appears in
+    ///                                      footnotes in the printed score. It is defined within a group due to its
+    ///                                      multiple uses within the MusicXML schema.
+    /// - Parameter level:                   The level element specifies editorial information for different MusicXML
+    ///                                      elements. It is defined within a group due to its multiple uses within the
+    ///                                      MusicXML schema.
+    /// - Parameter kind:                    Whether this element marks the start or the stop of the group.
+    /// - Parameter number:                  The number used to distinguish overlapping and nested part-groups, not the
+    ///                                      sequence of groups. Defaults to `1` if not specified.
     public init(name: MXLGroupName? = nil,
                 nameDisplay: MXLNameDisplay? = nil,
                 abbreviation: MXLGroupName? = nil,
@@ -68,7 +76,7 @@ public struct MXLPartGroup {
     /// Maps to a nested MusicXML `<group-abbreviation-display>` element.
     public let abbreviationDisplay: MXLNameDisplay?
 
-    /// Indicates whether the group has common barlines across its parts.
+    /// Whether the group has common barlines across its parts.
     ///
     /// Maps to a nested MusicXML `<group-barline>` element.
     public let barline: MXLGroupBarline?

@@ -11,16 +11,28 @@ public struct MXLTextElementData {
 
     /// Creates a new `MXLTextElementData`.
     ///
-    /// - Parameter value: The value of this element.
-    /// - Parameter font: The font attribute group gathers together attributes for determining the font within a credit or direction. They are based on the text styles for Cascading Style Sheets. The font-family is a comma-separated list of font names. The font-style can be normal or italic. The font-size can be one of the CSS sizes or a numeric point size. The font-weight can be normal or bold. The default is application-dependent, but is a text font vs. a music font.
-    /// - Parameter color: The color attribute group indicates the color of an element.
-    /// - Parameter underline: The number of lines used to underline the text: `0` (none), `1`, `2`, or `3`.
-    /// - Parameter overline: The number of lines used to overline the text: `0` (none), `1`, `2`, or `3`.
-    /// - Parameter lineThrough: The number of lines used to strike through the text: `0` (none), `1`, `2`, or `3`.
-    /// - Parameter rotation: The rotation attribute is used to rotate text around the alignment point specified by the halign and valign attributes. Positive values are clockwise rotations, while negative values are counter-clockwise rotations.
-    /// - Parameter letterSpacing: The letter-spacing attribute specifies text tracking. Values are either “normal” or a number representing the number of ems to add between each letter. The number may be negative in order to subtract space. The default is normal, which allows flexibility of letter-spacing for purposes of text justification.
-    /// - Parameter xmlLang: The xml:lang attribute value.
-    /// - Parameter dir: The text-direction attribute is used to adjust and override the Unicode bidirectional text algorithm, similar to the Directionality data category in the W3C Internationalization Tag Set recommendation.
+    /// - Parameter value:          The value of this element.
+    /// - Parameter font:           The font attribute group gathers together attributes for determining the font within
+    ///                             a credit or direction. They are based on the text styles for Cascading Style Sheets.
+    ///                             The font-family is a comma-separated list of font names. The font-style can be
+    ///                             normal or italic. The font-size can be one of the CSS sizes or a numeric point size.
+    ///                             The font-weight can be normal or bold. The default is application-dependent, but is
+    ///                             a text font vs. a music font.
+    /// - Parameter color:          The color attribute group indicates the color of an element.
+    /// - Parameter underline:      The number of lines used to underline the text: `0` (none), `1`, `2`, or `3`.
+    /// - Parameter overline:       The number of lines used to overline the text: `0` (none), `1`, `2`, or `3`.
+    /// - Parameter lineThrough:    The number of lines used to strike through the text: `0` (none), `1`, `2`, or `3`.
+    /// - Parameter rotation:       The rotation attribute is used to rotate text around the alignment point specified
+    ///                             by the halign and valign attributes. Positive values are clockwise rotations, while
+    ///                             negative values are counter-clockwise rotations.
+    /// - Parameter letterSpacing:  The letter-spacing attribute specifies text tracking. Values are either “normal” or
+    ///                             a number representing the number of ems to add between each letter. The number may
+    ///                             be negative in order to subtract space. The default is normal, which allows
+    ///                             flexibility of letter-spacing for purposes of text justification.
+    /// - Parameter xmlLang:        The xml:lang attribute value.
+    /// - Parameter dir:            The text-direction attribute is used to adjust and override the Unicode
+    ///                             bidirectional text algorithm, similar to the Directionality data category in the W3C
+    ///                             Internationalization Tag Set recommendation.
     public init(value: String,
                 font: MXLFont = MXLFont(),
                 color: MXLColor? = nil,

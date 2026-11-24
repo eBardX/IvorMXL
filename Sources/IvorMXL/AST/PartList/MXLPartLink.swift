@@ -12,9 +12,14 @@ public struct MXLPartLink {
 
     /// Creates a new `MXLPartLink`.
     ///
-    /// - Parameter instrumentLink: Identifies the instruments used in the linked document.
-    /// - Parameter groupLink: Multiple part-link elements can reference different types of linked documents, such as parts and condensed score. The optional group-link elements identify the groups used in the linked document. The content of a group-link element should match the content of a group element in the linked document.
-    /// - Parameter xlink: The link-attributes group includes all the simple XLink attributes supported in the MusicXML format. It is also used to connect a MusicXML score with MusicXML parts or a MusicXML opus.
+    /// - Parameter instrumentLink:  Identifies the instruments used in the linked document.
+    /// - Parameter groupLink:       Multiple part-link elements can reference different types of linked documents, such
+    ///                              as parts and condensed score. The optional group-link elements identify the groups
+    ///                              used in the linked document. The content of a group-link element should match the
+    ///                              content of a group element in the linked document.
+    /// - Parameter xlink:           The link-attributes group includes all the simple XLink attributes supported in the
+    ///                              MusicXML format. It is also used to connect a MusicXML score with MusicXML parts or
+    ///                              a MusicXML opus.
     public init(instrumentLink: [MXLInstrumentLink] = [],
                 groupLink: [String] = [],
                 xlink: MXLXLink) {

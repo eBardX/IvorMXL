@@ -4,7 +4,7 @@ public import XestiTools
 
 /// The string-number type indicates a string number. Strings are numbered from high to low, with 1 being the
 /// highest pitched full-length string.
-public struct MXLStringNumber: UIntRepresentable {
+public struct MXLStringNumber {
 
     // MARK: Public Initializers
 
@@ -13,7 +13,7 @@ public struct MXLStringNumber: UIntRepresentable {
     /// If the provided unsigned integer value is determined to be invalid, this initializer returns `nil`.
     ///
     /// - Parameter uintValue:  Strings are numbered from high to low, with 1 being the highest pitched full-length
-    ///                        string.
+    ///                         string.
     public init?(uintValue: UInt) {
         guard Self.isValid(uintValue)
         else { return nil }
@@ -37,8 +37,13 @@ extension MXLStringNumber {
     ///
     /// - Parameter uintValue:  The unsigned integer value to check for validity.
     ///
-    /// - Returns: `true` when the provided unsigned integer value is greater than zero; `false` otherwise.
+    /// - Returns:  `true` when the provided unsigned integer value is greater than zero; `false` otherwise.
     public static func isValid(_ uintValue: UInt) -> Bool {
         uintValue > 0
     }
+}
+
+// MARK: - UIntRepresentable
+
+extension MXLStringNumber: UIntRepresentable {
 }

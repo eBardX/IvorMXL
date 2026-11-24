@@ -10,9 +10,10 @@ public struct MXLGroupSymbol {
 
     /// Creates a new `MXLGroupSymbol`.
     ///
-    /// - Parameter value: The value of this element.
-    /// - Parameter position: For most elements, any program will compute a default x and y position. The position attributes let this be changed two ways.
-    /// - Parameter color: The color attribute group indicates the color of an element.
+    /// - Parameter value:     The value of this element.
+    /// - Parameter position:  For most elements, any program will compute a default x and y position. The position
+    ///                        attributes let this be changed two ways.
+    /// - Parameter color:     The color attribute group indicates the color of an element.
     public init(value: MXLGroupSymbolValue,
                 position: MXLPosition = MXLPosition(),
                 color: MXLColor? = nil) {

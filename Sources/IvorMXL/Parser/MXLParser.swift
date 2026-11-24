@@ -25,9 +25,8 @@ extension MXLParser {
 
     /// Parses a MusicXML document from the provided data.
     ///
-    /// - Parameter data:           The data to parse.
-    /// - Parameter compressed:     A Boolean value indicating whether the data
-    ///                             is in compressed (`.mxl`) format.
+    /// - Parameter data:        The data to parse.
+    /// - Parameter compressed:  A Boolean value indicating whether the data is in compressed (`.mxl`) format.
     ///
     /// - Returns:  The ``MXLDocument`` parsed from the provided data, together
     ///             with any ``MXLParser/Diagnostic`` the parse produced. The

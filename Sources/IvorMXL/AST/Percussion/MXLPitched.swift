@@ -11,8 +11,9 @@ public struct MXLPitched {
 
     /// Creates a new `MXLPitched`.
     ///
-    /// - Parameter value: The value of this element.
-    /// - Parameter smufl: Distinguishes different SMuFL glyphs for a particular pictogram within the Tuned mallet percussion pictograms range.
+    /// - Parameter value:  The value of this element.
+    /// - Parameter smufl:  Distinguishes different SMuFL glyphs for a particular pictogram within the Tuned mallet
+    ///                     percussion pictograms range.
     public init(value: Value,
                 smufl: MXLSmuflPictogramGlyphName? = nil) {
         self.smufl = smufl

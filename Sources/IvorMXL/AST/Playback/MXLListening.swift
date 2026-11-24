@@ -19,7 +19,8 @@ public struct MXLListening {
     /// Creates a new `MXLListening`.
     ///
     /// - Parameter items:   One of the alternatives for Listening.
-    /// - Parameter offset:  Indicates that the listening change takes place offset from the current score position, in divisions.
+    /// - Parameter offset:  Indicates that the listening change takes place offset from the current score position, in
+    ///                      divisions.
     public init(items: [Item] = [],
                 offset: MXLOffset? = nil) {
         self.items = items
@@ -31,7 +32,7 @@ public struct MXLListening {
     /// One of the alternatives for Listening.
     public let items: [Item]
 
-    /// Indicates that the listening change takes place offset from the current score position, in divisions.
+    /// The offset of the listening change from the current score position, in divisions.
     ///
     /// Maps to a nested MusicXML `<offset>` element.
     public let offset: MXLOffset?

@@ -7,8 +7,8 @@ extension MXLHarmonic {
         /// The artificial element indicates that this is an artificial harmonic.
         case artificial
 
-        /// The natural element indicates that this is a natural harmonic. These are usually notated at base pitch rather
-        /// than sounding pitch.
+        /// The natural element indicates that this is a natural harmonic. These are usually notated at base pitch
+        /// rather than sounding pitch.
         case natural
     }
 }

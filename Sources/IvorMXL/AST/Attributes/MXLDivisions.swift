@@ -11,7 +11,7 @@ public struct MXLDivisions {
 
     /// Creates a new `MXLDivisions` with the provided integer value.
     ///
-    /// - Parameter intValue: A value expressed in terms of the musical divisions defined by the divisions element.
+    /// - Parameter intValue:  A value expressed in terms of the musical divisions defined by the divisions element.
     public init?(intValue: Int) {
         self.intValue = intValue
     }

@@ -2,10 +2,20 @@
 
 // MARK: -
 
-enum MXLNormalizerMigrationError: Error {
+enum MXLNormalizerMigrationError {
     case unsupportedContent
 }
 
-enum MXLScoreTransformTestError: Error {
+enum MXLScoreTransformTestError {
     case unsupportedContent
+}
+
+// MARK: - Error
+
+extension MXLNormalizerMigrationError: Error {
+}
+
+// MARK: - Error
+
+extension MXLScoreTransformTestError: Error {
 }

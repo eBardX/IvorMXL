@@ -16,7 +16,7 @@ public struct MXLDocument {
     /// The document is neither normalized nor validated; both
     /// ``isNormalized`` and ``isValidated`` are `false`.
     ///
-    /// - Parameter content: The content of the document.
+    /// - Parameter content:  The content of the document.
     public init(content: Content) {
         self.init(content: content,
                   isNormalized: false,
@@ -61,12 +61,13 @@ extension MXLDocument: Equatable {
 
     // MARK: Public Type Methods
 
-    /// Two documents are equal when their ``content`` matches;
-    /// ``isNormalized`` and ``isValidated`` are intentionally excluded because
-    /// they are metadata, not content.
+    /// Returns a Boolean value indicating whether two documents have equal content.
     ///
-    /// - Parameter lhs: The first document to compare.
-    /// - Parameter rhs: The second document to compare.
+    /// Two documents are equal when their ``content`` matches; ``isNormalized`` and ``isValidated`` are
+    /// intentionally excluded because they are metadata, not content.
+    ///
+    /// - Parameter lhs:  The first document to compare.
+    /// - Parameter rhs:  The second document to compare.
     ///
     /// - Returns:  Whether the two documents have equal content.
     public static func == (lhs: Self,
@@ -85,7 +86,7 @@ extension MXLDocument: Hashable {
     /// compared by `==`; ``isNormalized`` and ``isValidated`` are intentionally
     /// excluded because they are metadata, not content.
     ///
-    /// - Parameter hasher: The hasher to use.
+    /// - Parameter hasher:  The hasher to use.
     public func hash(into hasher: inout Hasher) {
         hasher.combine(content)
     }

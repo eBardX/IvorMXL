@@ -16,17 +16,30 @@ public struct MXLTime {
 
     /// Creates a new `MXLTime`.
     ///
-    /// - Parameter id: The optional-unique-id attribute group allows an element to optionally specify an ID that is unique to the entire document. This attribute group is not used for a required id attribute, or for an id attribute that specifies an id reference.
-    /// - Parameter content: One of the alternatives for Time.
-    /// - Parameter number: The staff number within the part that this element applies to. If absent, the time signature applies to all staves in the part.
-    /// - Parameter symbol: The symbol used to indicate common and cut time as well as a single number display.
-    /// - Parameter separator: How the beats and beat-type values are displayed relative to one another. `.stacked` if not specified.
-    /// - Parameter position: For most elements, any program will compute a default x and y position. The position attributes let this be changed two ways.
-    /// - Parameter font: The font attribute group gathers together attributes for determining the font within a credit or direction. They are based on the text styles for Cascading Style Sheets. The font-family is a comma-separated list of font names. The font-style can be normal or italic. The font-size can be one of the CSS sizes or a numeric point size. The font-weight can be normal or bold. The default is application-dependent, but is a text font vs. a music font.
-    /// - Parameter color: The color attribute group indicates the color of an element.
-    /// - Parameter halign: In cases where text extends over more than one line, horizontal alignment and justify values can be different. The most typical case is for credits, such as:
-    /// - Parameter valign: The valign attribute is used to indicate vertical alignment to the top, middle, bottom, or baseline of the text. Defaults are implementation-dependent.
-    /// - Parameter printsObject: A Boolean value indicating whether to print an object (e.g. a note or a rest). Defaults to `true` if not specified.
+    /// - Parameter id:            The optional-unique-id attribute group allows an element to optionally specify an ID
+    ///                            that is unique to the entire document. This attribute group is not used for a
+    ///                            required id attribute, or for an id attribute that specifies an id reference.
+    /// - Parameter content:       One of the alternatives for Time.
+    /// - Parameter number:        The staff number within the part that this element applies to. If absent, the time
+    ///                            signature applies to all staves in the part.
+    /// - Parameter symbol:        The symbol used to indicate common and cut time as well as a single number display.
+    /// - Parameter separator:     How the beats and beat-type values are displayed relative to one another. `.stacked`
+    ///                            if not specified.
+    /// - Parameter position:      For most elements, any program will compute a default x and y position. The position
+    ///                            attributes let this be changed two ways.
+    /// - Parameter font:          The font attribute group gathers together attributes for determining the font within
+    ///                            a credit or direction. They are based on the text styles for Cascading Style Sheets.
+    ///                            The font-family is a comma-separated list of font names. The font-style can be normal
+    ///                            or italic. The font-size can be one of the CSS sizes or a numeric point size. The
+    ///                            font-weight can be normal or bold. The default is application-dependent, but is a
+    ///                            text font vs. a music font.
+    /// - Parameter color:         The color attribute group indicates the color of an element.
+    /// - Parameter halign:        In cases where text extends over more than one line, horizontal alignment and justify
+    ///                            values can be different.
+    /// - Parameter valign:        The valign attribute is used to indicate vertical alignment to the top, middle,
+    ///                            bottom, or baseline of the text. Defaults are implementation-dependent.
+    /// - Parameter printsObject:  A Boolean value indicating whether to print an object (e.g. a note or a rest).
+    ///                            Defaults to `true` if not specified.
     public init(id: String? = nil,
                 content: Content,
                 number: MXLStaffNumber? = nil,
@@ -88,7 +101,8 @@ public struct MXLTime {
     /// Maps to the MusicXML `id` attribute.
     public let id: String?
 
-    /// The staff number within the part that this element applies to. If absent, the time signature applies to all staves in the part.
+    /// The staff number within the part that this element applies to. If absent, the time signature applies to all
+    /// staves in the part.
     ///
     /// Maps to the MusicXML `number` attribute.
     public let number: MXLStaffNumber?

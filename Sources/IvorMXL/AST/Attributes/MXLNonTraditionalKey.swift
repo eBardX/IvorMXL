@@ -8,9 +8,16 @@ public struct MXLNonTraditionalKey {
 
     /// Creates a new `MXLNonTraditionalKey`.
     ///
-    /// - Parameter step: Non-traditional key signatures are represented using a list of altered tones. The key-step element indicates the pitch step to be altered, represented using the same names as in the step element.
-    /// - Parameter alter: Non-traditional key signatures are represented using a list of altered tones. The key-alter element represents the alteration for a given pitch step, represented with semitones in the same manner as the alter element.
-    /// - Parameter accidental: Non-traditional key signatures are represented using a list of altered tones. The key-accidental element indicates the accidental to be displayed in the key signature, represented in the same manner as the accidental element. It is used for disambiguating microtonal accidentals.
+    /// - Parameter step:        Non-traditional key signatures are represented using a list of altered tones. The
+    ///                          key-step element indicates the pitch step to be altered, represented using the same
+    ///                          names as in the step element.
+    /// - Parameter alter:       Non-traditional key signatures are represented using a list of altered tones. The
+    ///                          key-alter element represents the alteration for a given pitch step, represented with
+    ///                          semitones in the same manner as the alter element.
+    /// - Parameter accidental:  Non-traditional key signatures are represented using a list of altered tones. The
+    ///                          key-accidental element indicates the accidental to be displayed in the key signature,
+    ///                          represented in the same manner as the accidental element. It is used for disambiguating
+    ///                          microtonal accidentals.
     public init(step: MXLStep,
                 alter: MXLSemitones,
                 accidental: MXLKeyAccidental? = nil) {

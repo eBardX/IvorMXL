@@ -29,9 +29,12 @@ public struct MXLSystemLayout {
     /// Creates a new `MXLSystemLayout`.
     ///
     /// - Parameter systemMargins:      The left and right margins for the system, relative to the page margins.
-    /// - Parameter systemDistance:     The vertical distance from the bottom line of the previous system to the top line of the current system, in tenths. Ignored for the first system on a page.
-    /// - Parameter topSystemDistance:  The vertical distance from the page’s top margin to the top line of the first system, in tenths. Ignored for all but the first system on a page.
-    /// - Parameter systemDividers:     Indicates the presence or absence of system dividers between this system and the previous system.
+    /// - Parameter systemDistance:     The vertical distance from the bottom line of the previous system to the top
+    ///                                 line of the current system, in tenths. Ignored for the first system on a page.
+    /// - Parameter topSystemDistance:  The vertical distance from the page’s top margin to the top line of the first
+    ///                                 system, in tenths. Ignored for all but the first system on a page.
+    /// - Parameter systemDividers:     Indicates the presence or absence of system dividers between this system and the
+    ///                                 previous system.
     public init(systemMargins: MXLSystemMargins? = nil,
                 systemDistance: MXLTenths? = nil,
                 topSystemDistance: MXLTenths? = nil,
@@ -50,7 +53,7 @@ public struct MXLSystemLayout {
     /// Maps to a nested MusicXML `<system-distance>` element.
     public let systemDistance: MXLTenths?
 
-    /// Indicates the presence or absence of system dividers between this system and the previous system.
+    /// The presence or absence of system dividers between this system and the previous system.
     ///
     /// Maps to a nested MusicXML `<system-dividers>` element.
     public let systemDividers: MXLSystemDividers?

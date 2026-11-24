@@ -33,36 +33,68 @@ public struct MXLNote {
 
     /// Creates a new `MXLNote`.
     ///
-    /// - Parameter id:                The optional-unique-id attribute group allows an element to optionally specify an ID that is unique to the entire document. This attribute group is not used for a required id attribute, or for an id attribute that specifies an id reference.
+    /// - Parameter id:                The optional-unique-id attribute group allows an element to optionally specify an
+    ///                                ID that is unique to the entire document. This attribute group is not used for a
+    ///                                required id attribute, or for an id attribute that specifies an id reference.
     /// - Parameter content:           One of the alternatives for Note.
     /// - Parameter instrument:        The instruments used to play this note, for parts with multiple instruments.
-    /// - Parameter footnote:          The footnote element specifies editorial information that appears in footnotes in the printed score. It is defined within a group due to its multiple uses within the MusicXML schema.
-    /// - Parameter level:             The level element specifies editorial information for different MusicXML elements. It is defined within a group due to its multiple uses within the MusicXML schema.
-    /// - Parameter voice:             A voice is a sequence of musical events (e.g. notes, chords, rests) that proceeds linearly in time. The voice element is used to distinguish between multiple voices in individual parts. It is defined within a group due to its multiple uses within the MusicXML schema.
+    /// - Parameter footnote:          The footnote element specifies editorial information that appears in footnotes in
+    ///                                the printed score. It is defined within a group due to its multiple uses within
+    ///                                the MusicXML schema.
+    /// - Parameter level:             The level element specifies editorial information for different MusicXML
+    ///                                elements. It is defined within a group due to its multiple uses within the
+    ///                                MusicXML schema.
+    /// - Parameter voice:             A voice is a sequence of musical events (e.g. notes, chords, rests) that proceeds
+    ///                                linearly in time. The voice element is used to distinguish between multiple
+    ///                                voices in individual parts. It is defined within a group due to its multiple uses
+    ///                                within the MusicXML schema.
     /// - Parameter kind:              The graphic note type (e.g. quarter, eighth), if specified.
-    /// - Parameter dot:               One dot element is used for each dot of prolongation. The placement attribute is used to specify whether the dot should appear above or below the staff line. It is ignored for notes that appear on a staff space.
+    /// - Parameter dot:               One dot element is used for each dot of prolongation. The placement attribute is
+    ///                                used to specify whether the dot should appear above or below the staff line. It
+    ///                                is ignored for notes that appear on a staff space.
     /// - Parameter accidental:        The accidental to be displayed for this note, if any.
     /// - Parameter timeModification:  The time modification (e.g. for tuplets) applied to this note, if any.
     /// - Parameter stem:              The direction of the stem for this note, if any.
     /// - Parameter notehead:          The notehead shape used for this note, if any.
     /// - Parameter noteheadText:      The text displayed inside the notehead, if any.
-    /// - Parameter staff:             The staff element is defined within a group due to its use by both notes and direction elements.
+    /// - Parameter staff:             The staff element is defined within a group due to its use by both notes and
+    ///                                direction elements.
     /// - Parameter beam:              The beam markings associated with this note.
     /// - Parameter notations:         The notations (e.g. articulations, ornaments) associated with this note.
     /// - Parameter lyric:             The lyrics associated with this note.
     /// - Parameter play:              Playback information associated with this note, if any.
     /// - Parameter listen:            Listening information associated with this note, if any.
-    /// - Parameter xPosition:         The x-position attribute group is used for elements like notes where specifying x position is common, but specifying y position is rare.
-    /// - Parameter font:              The font attribute group gathers together attributes for determining the font within a credit or direction. They are based on the text styles for Cascading Style Sheets. The font-family is a comma-separated list of font names.The font-style can be normal or italic. The font-size can be one of the CSS sizes or a numeric point size. The font-weight can be normal or bold. The default is application-dependent, but is a text font vs. a music font.
+    /// - Parameter xPosition:         The x-position attribute group is used for elements like notes where specifying x
+    ///                                position is common, but specifying y position is rare.
+    /// - Parameter font:              The font attribute group gathers together attributes for determining the font
+    ///                                within a credit or direction. They are based on the text styles for Cascading
+    ///                                Style Sheets. The font-family is a comma-separated list of font names. The
+    ///                                font-style can be normal or italic. The font-size can be one of the CSS sizes or
+    ///                                a numeric point size. The font-weight can be normal or bold. The default is
+    ///                                application-dependent, but is a text font vs. a music font.
     /// - Parameter color:             The color attribute group indicates the color of an element.
-    /// - Parameter printout:          The printout attribute group collects the different controls over printing an object (e.g. a note or rest) and its parts, including augmentation dots and lyrics. This is especially useful for notes that overlap in different voices, or for chord sheets that contain lyrics and chords but no melody.
-    /// - Parameter printsLeger:       A Boolean value indicating whether leger lines are printed. Notes without leger lines indicate indeterminate high and low notes. Defaults to `true`; ignored for rests.
-    /// - Parameter dynamics:          The Note On velocity, corresponding to MIDI 1.0’s Note On velocity, expressed as a percentage of the default forte value (90 for MIDI 1.0).
-    /// - Parameter endDynamics:       The Note Off velocity, corresponding to MIDI 1.0’s Note Off velocity, expressed as a percentage of the default forte value (90 for MIDI 1.0).
-    /// - Parameter attack:            Alters the starting time of the note from when it would otherwise occur, expressed in divisions. A note that stops a tie should not have an attack attribute.
-    /// - Parameter release:           Alters the stopping time of the note from when it would otherwise occur, expressed in divisions. A note that starts a tie should not have a release attribute.
-    /// - Parameter timeOnly:          Indicates which times through a repeat this note is played, if only particular times.
-    /// - Parameter isPizzicato:       A Boolean value indicating whether just this note is sounded pizzicato, as opposed to the pizzicato element, which changes overall playback between pizzicato and arco.
+    /// - Parameter printout:          The printout attribute group collects the different controls over printing an
+    ///                                object (e.g. a note or rest) and its parts, including augmentation dots and
+    ///                                lyrics. This is especially useful for notes that overlap in different voices, or
+    ///                                for chord sheets that contain lyrics and chords but no melody.
+    /// - Parameter printsLeger:       A Boolean value indicating whether leger lines are printed. Notes without leger
+    ///                                lines indicate indeterminate high and low notes. Defaults to `true`; ignored for
+    ///                                rests.
+    /// - Parameter dynamics:          The Note On velocity, corresponding to MIDI 1.0’s Note On velocity, expressed as
+    ///                                a percentage of the default forte value (90 for MIDI 1.0).
+    /// - Parameter endDynamics:       The Note Off velocity, corresponding to MIDI 1.0’s Note Off velocity, expressed
+    ///                                as a percentage of the default forte value (90 for MIDI 1.0).
+    /// - Parameter attack:            Alters the starting time of the note from when it would otherwise occur,
+    ///                                expressed in divisions. A note that stops a tie should not have an attack
+    ///                                attribute.
+    /// - Parameter release:           Alters the stopping time of the note from when it would otherwise occur,
+    ///                                expressed in divisions. A note that starts a tie should not have a release
+    ///                                attribute.
+    /// - Parameter timeOnly:          Indicates which times through a repeat this note is played, if only particular
+    ///                                times.
+    /// - Parameter isPizzicato:       A Boolean value indicating whether just this note is sounded pizzicato, as
+    ///                                opposed to the pizzicato element, which changes overall playback between
+    ///                                pizzicato and arco.
     public init(id: String? = nil,
                 content: Content,
                 instrument: [MXLInstrument] = [],
@@ -206,11 +238,11 @@ public struct MXLNote {
     /// Maps to the MusicXML `end-dynamics` attribute.
     public let endDynamics: MXLNonNegativeDecimal?
 
-    /// The font attribute group gathers together attributes for determining the font within a credit or direction.
-    /// They are based on the text styles for Cascading Style Sheets. The font-family is a comma-separated list of
-    /// font names.The font-style can be normal or italic. The font-size can be one of the CSS sizes or a numeric
-    /// point size. The font-weight can be normal or bold. The default is application-dependent, but is a text font
-    /// vs. a music font.
+    /// The font attribute group gathers together attributes for determining the font within a credit or direction. They
+    /// are based on the text styles for Cascading Style Sheets. The font-family is a comma-separated list of font
+    /// names. The font-style can be normal or italic. The font-size can be one of the CSS sizes or a numeric point
+    /// size. The font-weight can be normal or bold. The default is application-dependent, but is a text font vs. a
+    /// music font.
     public let font: MXLFont
 
     /// The footnote element specifies editorial information that appears in footnotes in the printed score. It is
@@ -313,7 +345,7 @@ public struct MXLNote {
     /// Maps to a nested MusicXML `<time-modification>` element.
     public let timeModification: MXLTimeModification?
 
-    /// Indicates which times through a repeat this note is played, if only particular times.
+    /// The times through a repeat this note is played, if only particular times.
     ///
     /// Maps to the MusicXML `time-only` attribute.
     public let timeOnly: MXLTimeOnly?

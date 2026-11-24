@@ -9,8 +9,8 @@ extension MXLLyric.Content.SyllabicGroup {
 
         /// Creates a new `MXLLyric.Content.SyllabicGroup.Group`.
         ///
-        /// - Parameter elision: The elision symbol connecting this syllable to the following text.
-        /// - Parameter syllabic: The syllable hyphenation type for the text that follows the elision, if any.
+        /// - Parameter elision:   The elision symbol connecting this syllable to the following text.
+        /// - Parameter syllabic:  The syllable hyphenation type for the text that follows the elision, if any.
         public init(elision: MXLElision,
                     syllabic: MXLSyllabic? = nil) {
             self.elision = elision

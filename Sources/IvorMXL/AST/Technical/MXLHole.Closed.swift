@@ -22,7 +22,7 @@ extension MXLHole {
 
         // MARK: Public Instance Properties
 
-        /// Indicates which portion of the hole is filled in when the value is half.
+        /// The portion of the hole that is filled in when the value is half.
         ///
         /// Maps to the MusicXML `location` attribute.
         public let location: MXLHole.Closed.Location?

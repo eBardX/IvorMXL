@@ -12,10 +12,11 @@ extension MXLMetronome.Note {
 
         /// Creates a new `MXLMetronome.Note.Tuplet`.
         ///
-        /// - Parameter timeModification: The metronome-tuplet type uses the same element structure as the time-modification element along with some attributes from the tuplet element.
-        /// - Parameter kind: Whether this element marks the start or the stop of the tuplet.
-        /// - Parameter hasBracket: A Boolean value indicating whether to draw a bracket for the tuplet.
-        /// - Parameter showNumber: Controls whether to show the actual, both, or neither of the tuplet numbers.
+        /// - Parameter timeModification:  The metronome-tuplet type uses the same element structure as the
+        ///                                time-modification element along with some attributes from the tuplet element.
+        /// - Parameter kind:              Whether this element marks the start or the stop of the tuplet.
+        /// - Parameter hasBracket:        A Boolean value indicating whether to draw a bracket for the tuplet.
+        /// - Parameter showNumber:        Controls whether to show the actual, both, or neither of the tuplet numbers.
         public init(timeModification: MXLTimeModification,
                     kind: MXLStartStop,
                     hasBracket: Bool? = nil,

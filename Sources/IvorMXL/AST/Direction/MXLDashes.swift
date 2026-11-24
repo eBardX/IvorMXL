@@ -9,13 +9,19 @@ public struct MXLDashes {
 
     /// Creates a new `MXLDashes`.
     ///
-    /// - Parameter id: The optional-unique-id attribute group allows an element to optionally specify an ID that is unique to the entire document. This attribute group is not used for a required id attribute, or for an id attribute that specifies an id reference.
-    /// - Parameter kind:  Whether this is the start, stop, or continuation of the dashes.
-    /// - Parameter number:  Distinguishes this set of dashes from other dashes that might be active at the same time.
-    /// - Parameter dashLength:  The length, in tenths, of the dashes in a dashed line. Ignored if the corresponding line-type attribute is not dashed.
-    /// - Parameter spaceLength:  The length, in tenths, of the spaces in a dashed line. Ignored if the corresponding line-type attribute is not dashed.
-    /// - Parameter position: For most elements, any program will compute a default x and y position. The position attributes let this be changed two ways.
-    /// - Parameter color: The color attribute group indicates the color of an element.
+    /// - Parameter id:           The optional-unique-id attribute group allows an element to optionally specify an ID
+    ///                           that is unique to the entire document. This attribute group is not used for a required
+    ///                           id attribute, or for an id attribute that specifies an id reference.
+    /// - Parameter kind:         Whether this is the start, stop, or continuation of the dashes.
+    /// - Parameter number:       Distinguishes this set of dashes from other dashes that might be active at the same
+    ///                           time.
+    /// - Parameter dashLength:   The length, in tenths, of the dashes in a dashed line. Ignored if the corresponding
+    ///                           line-type attribute is not dashed.
+    /// - Parameter spaceLength:  The length, in tenths, of the spaces in a dashed line. Ignored if the corresponding
+    ///                           line-type attribute is not dashed.
+    /// - Parameter position:     For most elements, any program will compute a default x and y position. The position
+    ///                           attributes let this be changed two ways.
+    /// - Parameter color:        The color attribute group indicates the color of an element.
     public init(id: String? = nil,
                 kind: MXLStartStopContinue,
                 number: MXLNumberLevel? = nil,

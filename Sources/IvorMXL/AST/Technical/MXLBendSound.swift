@@ -13,7 +13,8 @@ public struct MXLBendSound {
     /// Creates a new `MXLBendSound`.
     ///
     /// - Parameter accelerates:  A Boolean value indicating whether the bend or slide accelerates through its beats.
-    /// - Parameter beats:        The number of discrete elements (like MIDI pitch bends) used to represent a continuous bend or slide.
+    /// - Parameter beats:        The number of discrete elements (like MIDI pitch bends) used to represent a continuous
+    ///                           bend or slide.
     /// - Parameter firstBeat:    The percentage of the duration for starting the bend.
     /// - Parameter lastBeat:     The percentage of the duration for ending the bend or slide.
     public init(accelerates: Bool? = nil,

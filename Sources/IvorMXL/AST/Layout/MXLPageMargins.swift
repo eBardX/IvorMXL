@@ -12,7 +12,8 @@ public struct MXLPageMargins {
     /// Creates a new `MXLPageMargins`.
     ///
     /// - Parameter allMargins:  The all-margins group specifies both horizontal and vertical margins in tenths.
-    /// - Parameter kind:        Indicates whether the margins apply to odd pages, even pages, or both. Defaults to `both` if not specified.
+    /// - Parameter kind:        Indicates whether the margins apply to odd pages, even pages, or both. Defaults to
+    ///                          `both` if not specified.
     public init(allMargins: MXLAllMargins,
                 kind: Kind? = nil) {
         self.allMargins = allMargins
@@ -24,7 +25,7 @@ public struct MXLPageMargins {
     /// The all-margins group specifies both horizontal and vertical margins in tenths.
     public let allMargins: MXLAllMargins
 
-    /// Indicates whether the margins apply to odd pages, even pages, or both. Defaults to `both` if not specified.
+    /// The pages the margins apply to: odd pages, even pages, or both. Defaults to `both` if not specified.
     ///
     /// Maps to the MusicXML `type` attribute.
     public let kind: Kind

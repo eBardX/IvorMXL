@@ -12,10 +12,13 @@ public struct MXLRepeat {
 
     /// Creates a new `MXLRepeat`.
     ///
-    /// - Parameter direction: Whether this repeat mark represents the start (forward) or end (backward) of the repeated section.
-    /// - Parameter times: The number of times the repeated section is played. Only used with backward repeats that are not part of an ending.
-    /// - Parameter isAfterJump: A Boolean value indicating whether the repeats are played after a jump due to a da capo or dal segno.
-    /// - Parameter winged: The style of the repeat sign’s wings, if any.
+    /// - Parameter direction:    Whether this repeat mark represents the start (forward) or end (backward) of the
+    ///                           repeated section.
+    /// - Parameter times:        The number of times the repeated section is played. Only used with backward repeats
+    ///                           that are not part of an ending.
+    /// - Parameter isAfterJump:  A Boolean value indicating whether the repeats are played after a jump due to a da
+    ///                           capo or dal segno.
+    /// - Parameter winged:       The style of the repeat sign’s wings, if any.
     public init(direction: Direction,
                 times: Int? = nil,
                 isAfterJump: Bool? = nil,

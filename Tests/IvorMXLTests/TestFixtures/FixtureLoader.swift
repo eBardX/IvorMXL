@@ -4,9 +4,10 @@ import Foundation
 @testable import IvorMXL
 import Testing
 
-// The corpus lives in `Tests/IvorMXLTests/Fixtures/` and is copied into
-// the test bundle wholesale by `Package.swift`, so subdirectory structure is
-// preserved and every fixture is addressed by its group and file name.
+// The corpus lives in `Tests/IvorMXLTests/TestFixtures/RealWorld/` and
+// `Tests/IvorMXLTests/TestFixtures/Synthetic/`, each copied into the test
+// bundle wholesale by `Package.swift`, so every fixture is addressed by its
+// group and file name.
 internal enum FixtureLoader {
 
     // MARK: Internal Type Properties
@@ -332,16 +333,16 @@ extension FixtureLoader {
     // MARK: Internal Type Methods
 
     internal static func load(_ fixture: Fixture) throws -> Data {
-        let url = try #require(Bundle.module.url(forResource: "Fixtures/\(fixture.group.directoryName)/\(fixture.name)",
+        let url = try #require(Bundle.module.url(forResource: "\(fixture.group.directoryName)/\(fixture.name)",
                                                  withExtension: nil))
 
         return try Data(contentsOf: url)
     }
 
-    // This backstops `allFixtures`: a file added to `Fixtures/` but not to
+    // This backstops `allFixtures`: a file added to a group directory but not to
     // the list above shows up as a mismatch rather than going untested.
     internal static func namesOnDisk(in group: Fixture.Group) throws -> Set<String> {
-        let url = try #require(Bundle.module.url(forResource: "Fixtures/\(group.directoryName)",
+        let url = try #require(Bundle.module.url(forResource: group.directoryName,
                                                  withExtension: nil))
 
         return try Set(FileManager.default.contentsOfDirectory(atPath: url.path))

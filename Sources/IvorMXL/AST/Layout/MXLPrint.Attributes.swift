@@ -21,10 +21,20 @@ extension MXLPrint {
 
         /// Creates a new `MXLPrint.Attributes`.
         ///
-        /// - Parameter staffSpacing:     The spacing between multiple staves, in tenths of staff space. Deprecated as of Version 1.1 in favor of the staff-layout element; if both are present, the staff-layout values take priority.
-        /// - Parameter startsNewSystem:  A Boolean value indicating whether to force a system break, or to force the current music onto the same system as the preceding music, normally the first music data within a measure. In multi-part music this should be placed in the same position within each part, or the results are undefined.
-        /// - Parameter startsNewPage:    A Boolean value indicating whether to force a page break, or to force the current music onto the same page as the preceding music, normally the first music data within a measure. In multi-part music this should be placed in the same position within each part, or the results are undefined.
-        /// - Parameter blankPage:        The number of blank pages to insert before the current measure. Ignored if `newPage` is not `true`. Blank pages have no music, but may have text or images specified by the credit element.
+        /// - Parameter staffSpacing:     The spacing between multiple staves, in tenths of staff space. Deprecated as
+        ///                               of Version 1.1 in favor of the staff-layout element; if both are present, the
+        ///                               staff-layout values take priority.
+        /// - Parameter startsNewSystem:  A Boolean value indicating whether to force a system break, or to force the
+        ///                               current music onto the same system as the preceding music, normally the first
+        ///                               music data within a measure. In multi-part music this should be placed in the
+        ///                               same position within each part, or the results are undefined.
+        /// - Parameter startsNewPage:    A Boolean value indicating whether to force a page break, or to force the
+        ///                               current music onto the same page as the preceding music, normally the first
+        ///                               music data within a measure. In multi-part music this should be placed in the
+        ///                               same position within each part, or the results are undefined.
+        /// - Parameter blankPage:        The number of blank pages to insert before the current measure. Ignored if
+        ///                               `newPage` is not `true`. Blank pages have no music, but may have text or
+        ///                               images specified by the credit element.
         /// - Parameter pageNumber:       The number of a new page. Ignored if `newPage` is not `true`.
         public init(staffSpacing: MXLTenths? = nil,
                     startsNewSystem: Bool? = nil,

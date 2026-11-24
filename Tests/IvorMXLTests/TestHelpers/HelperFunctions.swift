@@ -23,6 +23,21 @@ func articulationsXML(_ articulations: String) -> String {
     """)
 }
 
+func ornamentsXML(_ ornaments: String) -> String {
+    measureXML("""
+    <note>
+      <pitch>
+        <step>C</step>
+        <octave>4</octave>
+      </pitch>
+      <duration>1</duration>
+      <notations>
+        <ornaments>\(ornaments)</ornaments>
+      </notations>
+    </note>
+    """)
+}
+
 func diagnostics(for xml: String) throws -> [MXLParser.Diagnostic] {
     try MXLParser().parse(Data(xml.utf8),
                           compressed: false).1
@@ -205,6 +220,13 @@ func measureXML(_ items: String) -> String {
 
 func musicItems(_ score: MXLScorePartwise) -> [MXLMusicItem] {
     score.parts.flatMap { $0.measures.flatMap(\.items) }
+}
+
+// Parses a fragment of MusicXML into the node the parser's element-level
+// functions take. The parser discards whitespace-only text between elements,
+// so a long fragment may be laid out across several lines.
+func node(_ xml: String) throws -> MXLParser.Node {
+    try MXLParser.BaseParser().parse(Data(xml.utf8)).root
 }
 
 func normalize(_ name: String) throws -> (MXLScorePartwise, [MXLNormalizer.Change]) {
@@ -391,6 +413,36 @@ func verify(_ document: MXLDocument,
     default:
         Issue.record("\(fixture.testDescription) parsed as an unexpected root kind")
     }
+}
+
+// The element a writer function emits, for functions that emit exactly one.
+func writtenNode(_ write: (inout MXLFormatter.Writer) -> Void) -> MXLFormatter.Node {
+    var writer = MXLFormatter.Writer()
+
+    write(&writer)
+
+    return writer.document.root
+}
+
+// The element a writer function's output is wrapped in, for functions that
+// write an element's content rather than the element itself.
+func writtenNode(in element: MXLElementName,
+                 _ write: (inout MXLFormatter.Writer) -> Void) -> MXLFormatter.Node {
+    var writer = MXLFormatter.Writer()
+
+    writer.openElement(element)
+
+    write(&writer)
+
+    writer.closeElement()
+
+    return writer.document.root
+}
+
+// Every element a writer function emits, for functions that may emit any
+// number of siblings; they are collected under a throwaway `<measure>`.
+func writtenNodes(_ write: (inout MXLFormatter.Writer) -> Void) -> [MXLFormatter.Node] {
+    writtenNode(in: .measure, write).children ?? []
 }
 
 func xml(_ opus: MXLOpus) throws -> String {

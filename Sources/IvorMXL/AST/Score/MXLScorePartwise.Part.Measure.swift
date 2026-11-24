@@ -2,6 +2,8 @@
 
 extension MXLScorePartwise.Part {
 
+    /// A measure within a part of a part-wise score.
+    ///
     /// Maps the MusicXML `<measure>` element.
     public struct Measure {
 
@@ -9,13 +11,28 @@ extension MXLScorePartwise.Part {
 
         /// Creates a new `MXLScorePartwise.Part.Measure`.
         ///
-        /// - Parameter id: The optional-unique-id attribute group allows an element to optionally specify an ID that is unique to the entire document. This attribute group is not used for a required id attribute, or for an id attribute that specifies an id reference.
-        /// - Parameter number:          The measure number. In partwise files, this should be the same for measures in different parts that share the same left barline. Often numeric, but not required to be; non-numeric values are typically combined with `implicit` or `nonControlling` set to `true`. For a pickup measure, this is typically `"0"` with `implicit` set to `true`.
-        /// - Parameter isImplicit:        A Boolean value indicating whether the measure number should never appear, such as for pickup measures and the last half of mid-measure repeats. Defaults to `false` if not specified.
-        /// - Parameter isNonControlling:  A Boolean value indicating whether the left barline in this measure does not coincide with the left barline of measures in other parts, as in multimetric music like the Don Giovanni minuet. Defaults to `false` if not specified.
-        /// - Parameter text:            The displayed measure number, when different from the value of `number`. Ignored when `implicit` is `true`.
-        /// - Parameter width:           The width of the measure, in tenths, from barline or system start to barline or system end. These are the global tenths defined by the scaling element, not local tenths as modified by the staff-size element.
-        /// - Parameter items: The music-data group that contains the basic musical data associated with this measure.
+        /// - Parameter id:                The optional-unique-id attribute group allows an element to optionally
+        ///                                specify an ID that is unique to the entire document. This attribute group is
+        ///                                not used for a required id attribute, or for an id attribute that specifies
+        ///                                an id reference.
+        /// - Parameter number:            The measure number. In partwise files, this should be the same for measures
+        ///                                in different parts that share the same left barline. Often numeric, but not
+        ///                                required to be; non-numeric values are typically combined with `implicit` or
+        ///                                `nonControlling` set to `true`. For a pickup measure, this is typically `"0"`
+        ///                                with `implicit` set to `true`.
+        /// - Parameter isImplicit:        A Boolean value indicating whether the measure number should never appear,
+        ///                                such as for pickup measures and the last half of mid-measure repeats.
+        ///                                Defaults to `false` if not specified.
+        /// - Parameter isNonControlling:  A Boolean value indicating whether the left barline in this measure does not
+        ///                                coincide with the left barline of measures in other parts, as in multimetric
+        ///                                music like the Don Giovanni minuet. Defaults to `false` if not specified.
+        /// - Parameter text:              The displayed measure number, when different from the value of `number`.
+        ///                                Ignored when `implicit` is `true`.
+        /// - Parameter width:             The width of the measure, in tenths, from barline or system start to barline
+        ///                                or system end. These are the global tenths defined by the scaling element,
+        ///                                not local tenths as modified by the staff-size element.
+        /// - Parameter items:             The music-data group that contains the basic musical data associated with
+        ///                                this measure.
         public init(id: String? = nil,
                     number: String,
                     isImplicit: Bool? = nil,

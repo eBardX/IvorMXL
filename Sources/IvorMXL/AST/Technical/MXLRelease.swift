@@ -12,7 +12,10 @@ public struct MXLRelease {
 
     /// Creates a new `MXLRelease`.
     ///
-    /// - Parameter offset:  The release type indicates that a bend is a release rather than a normal bend or pre-bend. The offset attribute specifies where the release starts in terms of divisions relative to the current note. The first-beat and last-beat attributes of the parent bend element are relative to the original note position, not this offset value.
+    /// - Parameter offset:  The release type indicates that a bend is a release rather than a normal bend or pre-bend.
+    ///                      The offset attribute specifies where the release starts in terms of divisions relative to
+    ///                      the current note. The first-beat and last-beat attributes of the parent bend element are
+    ///                      relative to the original note position, not this offset value.
     public init(offset: MXLDivisions? = nil) {
         self.offset = offset
     }

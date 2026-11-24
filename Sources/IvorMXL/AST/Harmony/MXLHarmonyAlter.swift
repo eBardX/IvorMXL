@@ -13,12 +13,20 @@ public struct MXLHarmonyAlter {
 
     /// Creates a new `MXLHarmonyAlter`.
     ///
-    /// - Parameter value: The value of this element.
-    /// - Parameter printsObject: A Boolean value indicating whether to print an object (e.g. a note or a rest). Defaults to `true` if not specified.
-    /// - Parameter position: For most elements, any program will compute a default x and y position. The position attributes let this be changed two ways.
-    /// - Parameter font: The font attribute group gathers together attributes for determining the font within a credit or direction. They are based on the text styles for Cascading Style Sheets. The font-family is a comma-separated list of font names.The font-style can be normal or italic. The font-size can be one of the CSS sizes or a numeric point size. The font-weight can be normal or bold. The default is application-dependent, but is a text font vs. a music font.
-    /// - Parameter color: The color attribute group indicates the color of an element.
-    /// - Parameter location: Indicates whether the alteration should appear to the left or the right of the preceding element.
+    /// - Parameter value:         The value of this element.
+    /// - Parameter printsObject:  A Boolean value indicating whether to print an object (e.g. a note or a rest).
+    ///                            Defaults to `true` if not specified.
+    /// - Parameter position:      For most elements, any program will compute a default x and y position. The position
+    ///                            attributes let this be changed two ways.
+    /// - Parameter font:          The font attribute group gathers together attributes for determining the font within
+    ///                            a credit or direction. They are based on the text styles for Cascading Style Sheets.
+    ///                            The font-family is a comma-separated list of font names. The font-style can be normal
+    ///                            or italic. The font-size can be one of the CSS sizes or a numeric point size. The
+    ///                            font-weight can be normal or bold. The default is application-dependent, but is a
+    ///                            text font vs. a music font.
+    /// - Parameter color:         The color attribute group indicates the color of an element.
+    /// - Parameter location:      Indicates whether the alteration should appear to the left or the right of the
+    ///                            preceding element.
     public init(value: Double,
                 printsObject: Bool? = nil,
                 position: MXLPosition = MXLPosition(),
@@ -38,14 +46,14 @@ public struct MXLHarmonyAlter {
     /// The color attribute group indicates the color of an element.
     public let color: MXLColor?
 
-    /// The font attribute group gathers together attributes for determining the font within a credit or direction.
-    /// They are based on the text styles for Cascading Style Sheets. The font-family is a comma-separated list of
-    /// font names.The font-style can be normal or italic. The font-size can be one of the CSS sizes or a numeric
-    /// point size. The font-weight can be normal or bold. The default is application-dependent, but is a text font
-    /// vs. a music font.
+    /// The font attribute group gathers together attributes for determining the font within a credit or direction. They
+    /// are based on the text styles for Cascading Style Sheets. The font-family is a comma-separated list of font
+    /// names. The font-style can be normal or italic. The font-size can be one of the CSS sizes or a numeric point
+    /// size. The font-weight can be normal or bold. The default is application-dependent, but is a text font vs. a
+    /// music font.
     public let font: MXLFont
 
-    /// Indicates whether the alteration should appear to the left or the right of the preceding element.
+    /// The side of the preceding element, left or right, on which the alteration should appear.
     ///
     /// Maps to the MusicXML `location` attribute.
     public let location: MXLLeftRight?

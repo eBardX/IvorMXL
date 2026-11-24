@@ -12,10 +12,10 @@ extension MXLFrame {
 
         /// Creates a new `MXLFrame.Note`.
         ///
-        /// - Parameter string:  The string this note is played on.
-        /// - Parameter fret:  The fret this note is played on. A fret value of 0 indicates an open string.
+        /// - Parameter string:     The string this note is played on.
+        /// - Parameter fret:       The fret this note is played on. A fret value of 0 indicates an open string.
         /// - Parameter fingering:  The fingering used for this note.
-        /// - Parameter barre:  A barre placed at this note’s fret and string.
+        /// - Parameter barre:      A barre placed at this note’s fret and string.
         public init(string: MXLString,
                     fret: MXLFret,
                     fingering: MXLFingering? = nil,

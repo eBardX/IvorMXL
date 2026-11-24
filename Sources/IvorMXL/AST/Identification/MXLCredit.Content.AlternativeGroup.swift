@@ -10,9 +10,9 @@ extension MXLCredit.Content {
 
         /// Creates a new `MXLCredit.Content.AlternativeGroup`.
         ///
-        /// - Parameter link:  The link elements interspersed within the alternating credit content.
+        /// - Parameter link:      The link elements interspersed within the alternating credit content.
         /// - Parameter bookmark:  The bookmark elements interspersed within the alternating credit content.
-        /// - Parameter content: One of the alternatives for AlternativeGroup.
+        /// - Parameter content:   One of the alternatives for AlternativeGroup.
         public init(link: [MXLLink] = [],
                     bookmark: [MXLBookmark] = [],
                     content: Content) {

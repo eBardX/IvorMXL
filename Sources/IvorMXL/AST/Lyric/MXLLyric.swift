@@ -19,20 +19,38 @@ public struct MXLLyric {
 
     /// Creates a new `MXLLyric`.
     ///
-    /// - Parameter id: The optional-unique-id attribute group allows an element to optionally specify an ID that is unique to the entire document. This attribute group is not used for a required id attribute, or for an id attribute that specifies an id reference.
-    /// - Parameter content: One of the alternatives for Lyric.
-    /// - Parameter endsLine: A Boolean value indicating whether this lyric ends a line, per RP-017 for Standard MIDI File Lyric meta-events. Used to facilitate lyric display for Karaoke and similar applications.
-    /// - Parameter endsParagraph: A Boolean value indicating whether this lyric ends a paragraph, per RP-017 for Standard MIDI File Lyric meta-events. Used to facilitate lyric display for Karaoke and similar applications.
-    /// - Parameter footnote: The footnote element specifies editorial information that appears in footnotes in the printed score. It is defined within a group due to its multiple uses within the MusicXML schema.
-    /// - Parameter level: The level element specifies editorial information for different MusicXML elements. It is defined within a group due to its multiple uses within the MusicXML schema.
-    /// - Parameter number: Identifies this lyric among multiple lines, such as when the same lyric applies to both a stem-up and a stem-down voice.
-    /// - Parameter name: An alternative to `number` for identifying this lyric among multiple lines. Common values are verse and chorus.
-    /// - Parameter justify: The justify attribute is used to indicate left, center, or right justification. The default value varies for different elements. For elements where the justify attribute is present but the halign attribute is not, the justify attribute indicates horizontal alignment as well as justification.
-    /// - Parameter position: For most elements, any program will compute a default x and y position. The position attributes let this be changed two ways.
-    /// - Parameter placement: The placement attribute indicates whether something is above or below another element, such as a note or a notation.
-    /// - Parameter color: The color attribute group indicates the color of an element.
-    /// - Parameter printsObject: A Boolean value indicating whether to print an object (e.g. a note or a rest). Defaults to `true` if not specified.
-    /// - Parameter timeOnly: Restricts the element to apply to a specific set of times through a repeated section.
+    /// - Parameter id:             The optional-unique-id attribute group allows an element to optionally specify an ID
+    ///                             that is unique to the entire document. This attribute group is not used for a
+    ///                             required id attribute, or for an id attribute that specifies an id reference.
+    /// - Parameter content:        One of the alternatives for Lyric.
+    /// - Parameter endsLine:       A Boolean value indicating whether this lyric ends a line, per RP-017 for Standard
+    ///                             MIDI File Lyric meta-events. Used to facilitate lyric display for Karaoke and
+    ///                             similar applications.
+    /// - Parameter endsParagraph:  A Boolean value indicating whether this lyric ends a paragraph, per RP-017 for
+    ///                             Standard MIDI File Lyric meta-events. Used to facilitate lyric display for Karaoke
+    ///                             and similar applications.
+    /// - Parameter footnote:       The footnote element specifies editorial information that appears in footnotes in
+    ///                             the printed score. It is defined within a group due to its multiple uses within the
+    ///                             MusicXML schema.
+    /// - Parameter level:          The level element specifies editorial information for different MusicXML elements.
+    ///                             It is defined within a group due to its multiple uses within the MusicXML schema.
+    /// - Parameter number:         Identifies this lyric among multiple lines, such as when the same lyric applies to
+    ///                             both a stem-up and a stem-down voice.
+    /// - Parameter name:           An alternative to `number` for identifying this lyric among multiple lines. Common
+    ///                             values are verse and chorus.
+    /// - Parameter justify:        The justify attribute is used to indicate left, center, or right justification. The
+    ///                             default value varies for different elements. For elements where the justify
+    ///                             attribute is present but the halign attribute is not, the justify attribute
+    ///                             indicates horizontal alignment as well as justification.
+    /// - Parameter position:       For most elements, any program will compute a default x and y position. The position
+    ///                             attributes let this be changed two ways.
+    /// - Parameter placement:      The placement attribute indicates whether something is above or below another
+    ///                             element, such as a note or a notation.
+    /// - Parameter color:          The color attribute group indicates the color of an element.
+    /// - Parameter printsObject:   A Boolean value indicating whether to print an object (e.g. a note or a rest).
+    ///                             Defaults to `true` if not specified.
+    /// - Parameter timeOnly:       Restricts the element to apply to a specific set of times through a repeated
+    ///                             section.
     public init(id: String? = nil,
                 content: Content,
                 endsLine: Bool,

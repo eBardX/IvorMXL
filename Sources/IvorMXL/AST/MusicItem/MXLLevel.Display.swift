@@ -11,9 +11,11 @@ extension MXLLevel {
 
         /// Creates a new `MXLLevel.Display`.
         ///
-        /// - Parameter hasParentheses:  A Boolean value indicating whether the symbol is enclosed in parentheses. Left to application defaults if not specified.
-        /// - Parameter hasBracket:      A Boolean value indicating whether the symbol is enclosed in square brackets. Left to application defaults if not specified.
-        /// - Parameter size:         The size of the symbol. Left to application defaults if not specified.
+        /// - Parameter hasParentheses:  A Boolean value indicating whether the symbol is enclosed in parentheses. Left
+        ///                              to application defaults if not specified.
+        /// - Parameter hasBracket:      A Boolean value indicating whether the symbol is enclosed in square brackets.
+        ///                              Left to application defaults if not specified.
+        /// - Parameter size:            The size of the symbol. Left to application defaults if not specified.
         public init(hasParentheses: Bool? = nil,
                     hasBracket: Bool? = nil,
                     size: MXLSymbolSize? = nil) {

@@ -10,9 +10,10 @@ public struct MXLExtend {
 
     /// Creates a new `MXLExtend`.
     ///
-    /// - Parameter kind:  Whether this is the start, stop, or continuation of the extend line.
-    /// - Parameter position: For most elements, any program will compute a default x and y position. The position attributes let this be changed two ways.
-    /// - Parameter color: The color attribute group indicates the color of an element.
+    /// - Parameter kind:      Whether this is the start, stop, or continuation of the extend line.
+    /// - Parameter position:  For most elements, any program will compute a default x and y position. The position
+    ///                        attributes let this be changed two ways.
+    /// - Parameter color:     The color attribute group indicates the color of an element.
     public init(kind: MXLStartStopContinue? = nil,
                 position: MXLPosition = MXLPosition(),
                 color: MXLColor? = nil) {

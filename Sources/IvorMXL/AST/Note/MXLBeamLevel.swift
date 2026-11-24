@@ -5,7 +5,7 @@ public import XestiTools
 /// The MusicXML format supports six levels of beaming, up to 1024th notes. Unlike the number-level type, the
 /// beam-level type identifies concurrent beams in a beam group. It does not distinguish overlapping beams such as
 /// grace notes within regular notes, or beams used in different voices.
-public struct MXLBeamLevel: UIntRepresentable {
+public struct MXLBeamLevel {
 
     // MARK: Public Initializers
 
@@ -37,9 +37,14 @@ extension MXLBeamLevel {
     ///
     /// - Parameter uintValue:  The unsigned integer value to check for validity.
     ///
-    /// - Returns: `true` when the provided unsigned integer value is between `1` and `8`, inclusive; `false`
-    ///            otherwise.
+    /// - Returns:  `true` when the provided unsigned integer value is between `1` and `8`, inclusive; `false`
+    ///             otherwise.
     public static func isValid(_ uintValue: UInt) -> Bool {
         (1...8).contains(uintValue)
     }
+}
+
+// MARK: - UIntRepresentable
+
+extension MXLBeamLevel: UIntRepresentable {
 }

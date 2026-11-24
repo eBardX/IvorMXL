@@ -12,9 +12,15 @@ public struct MXLBass {
 
     /// Creates a new `MXLBass`.
     ///
-    /// - Parameter separator: The optional bass-separator element indicates that text, rather than a line or slash, separates the bass from what precedes it.
-    /// - Parameter step:  The pitch step of the bass of the current chord.
-    /// - Parameter alter: The bass-alter element represents the chromatic alteration of the bass of the current chord within the harmony element. In some chord styles, the text for the bass-step element may include bass-alter information. In that case, the print-object attribute of the bass-alter element can be set to no. The location attribute indicates whether the alteration should appear to the left or the right of the bass-step; it is right if not specified.
+    /// - Parameter separator:    The optional bass-separator element indicates that text, rather than a line or slash,
+    ///                           separates the bass from what precedes it.
+    /// - Parameter step:         The pitch step of the bass of the current chord.
+    /// - Parameter alter:        The bass-alter element represents the chromatic alteration of the bass of the current
+    ///                           chord within the harmony element. In some chord styles, the text for the bass-step
+    ///                           element may include bass-alter information. In that case, the print-object attribute
+    ///                           of the bass-alter element can be set to no. The location attribute indicates whether
+    ///                           the alteration should appear to the left or the right of the bass-step; it is right if
+    ///                           not specified.
     /// - Parameter arrangement:  Specifies where the bass is displayed relative to what precedes it.
     public init(separator: MXLStyleText? = nil,
                 step: Step,
@@ -36,7 +42,7 @@ public struct MXLBass {
     /// Maps to a nested MusicXML `<bass-alter>` element.
     public let alter: MXLHarmonyAlter?
 
-    /// Specifies where the bass is displayed relative to what precedes it.
+    /// Where the bass is displayed relative to what precedes it.
     ///
     /// Maps to the MusicXML `arrangement` attribute.
     public let arrangement: MXLHarmonyArrangement?

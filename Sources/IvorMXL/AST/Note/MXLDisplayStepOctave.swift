@@ -10,8 +10,12 @@ public struct MXLDisplayStepOctave {
 
     /// Creates a new `MXLDisplayStepOctave`.
     ///
-    /// - Parameter displayStep:    The pitch step used to visually position a rest or unpitched element on the staff, following the current clef. If a percussion clef is in use, this is interpreted as if in treble clef.
-    /// - Parameter displayOctave:  The octave used to visually position a rest or unpitched element on the staff, following the current clef. If a percussion clef is in use, this is interpreted as if in treble clef, with a G in octave 4 on line 2.
+    /// - Parameter displayStep:    The pitch step used to visually position a rest or unpitched element on the staff,
+    ///                             following the current clef. If a percussion clef is in use, this is interpreted as
+    ///                             if in treble clef.
+    /// - Parameter displayOctave:  The octave used to visually position a rest or unpitched element on the staff,
+    ///                             following the current clef. If a percussion clef is in use, this is interpreted as
+    ///                             if in treble clef, with a G in octave 4 on line 2.
     public init(displayStep: MXLStep,
                 displayOctave: MXLOctave) {
         self.displayOctave = displayOctave

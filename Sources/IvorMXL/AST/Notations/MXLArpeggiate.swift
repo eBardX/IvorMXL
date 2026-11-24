@@ -15,13 +15,19 @@ public struct MXLArpeggiate {
 
     /// Creates a new `MXLArpeggiate`.
     ///
-    /// - Parameter id: The optional-unique-id attribute group allows an element to optionally specify an ID that is unique to the entire document. This attribute group is not used for a required id attribute, or for an id attribute that specifies an id reference.
-    /// - Parameter number:  Distinguishes between two simultaneous chords arpeggiated separately (different numbers) or together (same number).
-    /// - Parameter direction:  The direction of the arrow on the arpeggio sign, if present.
-    /// - Parameter isUnbroken:  A Boolean value indicating whether the arpeggio continues onto another staff within the part.
-    /// - Parameter position: For most elements, any program will compute a default x and y position. The position attributes let this be changed two ways.
-    /// - Parameter placement: The placement attribute indicates whether something is above or below another element, such as a note or a notation.
-    /// - Parameter color: The color attribute group indicates the color of an element.
+    /// - Parameter id:          The optional-unique-id attribute group allows an element to optionally specify an ID
+    ///                          that is unique to the entire document. This attribute group is not used for a required
+    ///                          id attribute, or for an id attribute that specifies an id reference.
+    /// - Parameter number:      Distinguishes between two simultaneous chords arpeggiated separately (different
+    ///                          numbers) or together (same number).
+    /// - Parameter direction:   The direction of the arrow on the arpeggio sign, if present.
+    /// - Parameter isUnbroken:  A Boolean value indicating whether the arpeggio continues onto another staff within the
+    ///                          part.
+    /// - Parameter position:    For most elements, any program will compute a default x and y position. The position
+    ///                          attributes let this be changed two ways.
+    /// - Parameter placement:   The placement attribute indicates whether something is above or below another element,
+    ///                          such as a note or a notation.
+    /// - Parameter color:       The color attribute group indicates the color of an element.
     public init(id: String? = nil,
                 number: MXLNumberLevel? = nil,
                 direction: MXLUpDown? = nil,

@@ -13,8 +13,8 @@ public struct MXLFifths {
 
     /// Creates a new `MXLFifths` with the provided integer value.
     ///
-    /// - Parameter intValue: Negative values indicate flats and positive values indicate sharps, reflecting the
-    ///                       key’s placement within the circle of fifths.
+    /// - Parameter intValue:  Negative values indicate flats and positive values indicate sharps, reflecting the key’s
+    ///                        placement within the circle of fifths.
     public init?(intValue: Int) {
         self.intValue = intValue
     }

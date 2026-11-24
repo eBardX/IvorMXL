@@ -11,15 +11,20 @@ public struct MXLScoreTimewise {
 
     /// Creates a new `MXLScoreTimewise`.
     ///
-    /// - Parameter version:      The document-attributes attribute group used to specify the attributes for an entire MusicXML document. Defaults to `1.0` if not specified.
+    /// - Parameter version:         The document-attributes attribute group used to specify the attributes for an
+    ///                              entire MusicXML document. Defaults to `1.0` if not specified.
     /// - Parameter work:            The work that identifies the piece, optionally including its number and title.
     /// - Parameter movementNumber:  The movement-number element specifies the number of a movement.
-    /// - Parameter movementTitle:   The movement-title element specifies the title of a movement, not including its number.
-    /// - Parameter identification:  The identification metadata for the score, such as creators, rights, source, and relation information.
+    /// - Parameter movementTitle:   The movement-title element specifies the title of a movement, not including its
+    ///                              number.
+    /// - Parameter identification:  The identification metadata for the score, such as creators, rights, source, and
+    ///                              relation information.
     /// - Parameter defaults:        The score-wide defaults for scaling, layout, and default font and language values.
-    /// - Parameter credit:          The credits — such as title, composer, and copyright notices — that appear on the first or following pages of the score.
-    /// - Parameter partList:        The list of parts that make up the score, along with the part-group elements that indicate braces and brackets between them.
-    /// - Parameter measures:     The measures that make up the score, in the same order as they appear in the score.
+    /// - Parameter credit:          The credits — such as title, composer, and copyright notices — that appear on the
+    ///                              first or following pages of the score.
+    /// - Parameter partList:        The list of parts that make up the score, along with the part-group elements that
+    ///                              indicate braces and brackets between them.
+    /// - Parameter measures:        The measures that make up the score, in the same order as they appear in the score.
     public init(version: MXLDocument.Version? = nil,
                 work: MXLWork? = nil,
                 movementNumber: String? = nil,

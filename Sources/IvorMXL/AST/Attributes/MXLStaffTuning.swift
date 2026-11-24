@@ -9,8 +9,9 @@ public struct MXLStaffTuning {
 
     /// Creates a new `MXLStaffTuning`.
     ///
-    /// - Parameter tuning: The tuning group contains the sequence of elements common to the staff-tuning and accord elements.
-    /// - Parameter line: The staff line number, counted from the bottom of the staff, to which this tuning applies.
+    /// - Parameter tuning:  The tuning group contains the sequence of elements common to the staff-tuning and accord
+    ///                      elements.
+    /// - Parameter line:    The staff line number, counted from the bottom of the staff, to which this tuning applies.
     public init(tuning: MXLTuning,
                 line: MXLStaffLine) {
         self.line = line

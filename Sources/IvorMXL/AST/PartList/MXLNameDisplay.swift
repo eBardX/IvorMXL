@@ -13,8 +13,9 @@ public struct MXLNameDisplay {
 
     /// Creates a new `MXLNameDisplay`.
     ///
-    /// - Parameter items: One of the alternatives for NameDisplay.
-    /// - Parameter printsObject: A Boolean value indicating whether to print an object (e.g. a note or a rest). Defaults to `true` if not specified.
+    /// - Parameter items:         One of the alternatives for NameDisplay.
+    /// - Parameter printsObject:  A Boolean value indicating whether to print an object (e.g. a note or a rest).
+    ///                            Defaults to `true` if not specified.
     public init(items: [Item] = [],
                 printsObject: Bool? = nil) {
         self.items = items

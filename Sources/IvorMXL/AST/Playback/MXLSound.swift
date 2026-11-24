@@ -58,27 +58,50 @@ public struct MXLSound {
 
     /// Creates a new `MXLSound`.
     ///
-    /// - Parameter id:                    The optional-unique-id attribute group allows an element to optionally specify an ID that is unique to the entire document. This attribute group is not used for a required id attribute, or for an id attribute that specifies an id reference.
-    /// - Parameter group:                 The instrument changes, MIDI device and instrument assignments, and playback techniques associated with this sound element, grouped by instrument.
+    /// - Parameter id:                    The optional-unique-id attribute group allows an element to optionally
+    ///                                    specify an ID that is unique to the entire document. This attribute group is
+    ///                                    not used for a required id attribute, or for an id attribute that specifies
+    ///                                    an id reference.
+    /// - Parameter group:                 The instrument changes, MIDI device and instrument assignments, and playback
+    ///                                    techniques associated with this sound element, grouped by instrument.
     /// - Parameter swing:                 Specifies playback as swung rather than even notes.
     /// - Parameter offset:                Indicates that the sound takes place offset from the current score position.
-    /// - Parameter tempo:                 The tempo, expressed in quarter notes per minute. A value of `0` indicates the sound-generating program should prompt the user when compiling a sound file.
-    /// - Parameter dynamics:              The dynamics (or MIDI velocity), expressed as a percentage of the default forte value (90 for MIDI 1.0).
-    /// - Parameter isDaCapo:              A Boolean value indicating whether to go back to the beginning of the movement.
-    /// - Parameter segno:                 Names a segno sign for a backward jump, used to distinguish between multiple jumps.
-    /// - Parameter dalsegno:              Names the segno sign to jump back to, used to distinguish between multiple jumps.
-    /// - Parameter coda:                  Names a coda sign for a forward jump, used to distinguish between multiple jumps.
-    /// - Parameter tocoda:                Names the coda sign to jump forward to, used to distinguish between multiple jumps.
-    /// - Parameter divisions:             The number of divisions per quarter note, used together with the segno or coda attributes.
-    /// - Parameter impliesForwardRepeat:  A Boolean value indicating whether a forward repeat sign is implied but not displayed.
-    /// - Parameter fine:                  Follows the final note or rest in a movement with a da capo or dal segno direction. If numeric, represents the actual duration of the final note or rest.
-    /// - Parameter timeOnly:              Indicates which times through a repeat this sound element applies to, if only particular times.
-    /// - Parameter isPizzicato:           A Boolean value indicating whether following notes are played pizzicato (`true`) or arco (`false`).
-    /// - Parameter pan:                   Deprecated in favor of the pan element in midi-instrument. Specifies placement of sound in a 3-D space relative to the listener, in degrees.
-    /// - Parameter elevation:             Deprecated in favor of the elevation element in midi-instrument. Specifies placement of sound in a 3-D space relative to the listener, in degrees.
-    /// - Parameter damperPedal:           Controls playback of the damper pedal. A numeric value from 0 to 100 may be used for half pedaling.
-    /// - Parameter softPedal:             Controls playback of the soft pedal. A numeric value from 0 to 100 may be used for half pedaling.
-    /// - Parameter sostenutoPedal:        Controls playback of the sostenuto pedal. A numeric value from 0 to 100 may be used for half pedaling.
+    /// - Parameter tempo:                 The tempo, expressed in quarter notes per minute. A value of `0` indicates
+    ///                                    the sound-generating program should prompt the user when compiling a sound
+    ///                                    file.
+    /// - Parameter dynamics:              The dynamics (or MIDI velocity), expressed as a percentage of the default
+    ///                                    forte value (90 for MIDI 1.0).
+    /// - Parameter isDaCapo:              A Boolean value indicating whether to go back to the beginning of the
+    ///                                    movement.
+    /// - Parameter segno:                 Names a segno sign for a backward jump, used to distinguish between multiple
+    ///                                    jumps.
+    /// - Parameter dalsegno:              Names the segno sign to jump back to, used to distinguish between multiple
+    ///                                    jumps.
+    /// - Parameter coda:                  Names a coda sign for a forward jump, used to distinguish between multiple
+    ///                                    jumps.
+    /// - Parameter tocoda:                Names the coda sign to jump forward to, used to distinguish between multiple
+    ///                                    jumps.
+    /// - Parameter divisions:             The number of divisions per quarter note, used together with the segno or
+    ///                                    coda attributes.
+    /// - Parameter impliesForwardRepeat:  A Boolean value indicating whether a forward repeat sign is implied but not
+    ///                                    displayed.
+    /// - Parameter fine:                  Follows the final note or rest in a movement with a da capo or dal segno
+    ///                                    direction. If numeric, represents the actual duration of the final note or
+    ///                                    rest.
+    /// - Parameter timeOnly:              Indicates which times through a repeat this sound element applies to, if only
+    ///                                    particular times.
+    /// - Parameter isPizzicato:           A Boolean value indicating whether following notes are played pizzicato
+    ///                                    (`true`) or arco (`false`).
+    /// - Parameter pan:                   Deprecated in favor of the pan element in midi-instrument. Specifies
+    ///                                    placement of sound in a 3-D space relative to the listener, in degrees.
+    /// - Parameter elevation:             Deprecated in favor of the elevation element in midi-instrument. Specifies
+    ///                                    placement of sound in a 3-D space relative to the listener, in degrees.
+    /// - Parameter damperPedal:           Controls playback of the damper pedal. A numeric value from 0 to 100 may be
+    ///                                    used for half pedaling.
+    /// - Parameter softPedal:             Controls playback of the soft pedal. A numeric value from 0 to 100 may be
+    ///                                    used for half pedaling.
+    /// - Parameter sostenutoPedal:        Controls playback of the sostenuto pedal. A numeric value from 0 to 100 may
+    ///                                    be used for half pedaling.
     public init(id: String? = nil,
                 group: [Group] = [],
                 swing: MXLSwing? = nil,
@@ -188,7 +211,7 @@ public struct MXLSound {
     /// Maps to the MusicXML `pizzicato` attribute.
     public let isPizzicato: Bool?
 
-    /// Indicates that the sound takes place offset from the current score position.
+    /// The offset of the sound from the current score position.
     ///
     /// Maps to a nested MusicXML `<offset>` element.
     public let offset: MXLOffset?
@@ -214,7 +237,7 @@ public struct MXLSound {
     /// Maps to the MusicXML `sostenuto-pedal` attribute.
     public let sostenutoPedal: MXLYesNoNumber?
 
-    /// Specifies playback as swung rather than even notes.
+    /// The swing to apply in playback, so that notes are played swung rather than even.
     ///
     /// Maps to a nested MusicXML `<swing>` element.
     public let swing: MXLSwing?
@@ -225,7 +248,7 @@ public struct MXLSound {
     /// Maps to the MusicXML `tempo` attribute.
     public let tempo: MXLNonNegativeDecimal?
 
-    /// Indicates which times through a repeat this sound element applies to, if only particular times.
+    /// The times through a repeat this sound element applies to, if only particular times.
     ///
     /// Maps to the MusicXML `time-only` attribute.
     public let timeOnly: MXLTimeOnly?

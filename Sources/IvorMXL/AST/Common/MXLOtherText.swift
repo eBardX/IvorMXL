@@ -11,8 +11,10 @@ public struct MXLOtherText {
 
     /// Creates a new `MXLOtherText`.
     ///
-    /// - Parameter value: The value of this element.
-    /// - Parameter smufl: The smufl attribute group is used to indicate a particular Standard Music Font Layout (SMuFL) character. Sometimes this is a formatting choice, and sometimes this is a refinement of the semantic meaning of an element.
+    /// - Parameter value:  The value of this element.
+    /// - Parameter smufl:  The smufl attribute group is used to indicate a particular Standard Music Font Layout
+    ///                     (SMuFL) character. Sometimes this is a formatting choice, and sometimes this is a refinement
+    ///                     of the semantic meaning of an element.
     public init(value: String,
                 smufl: MXLSmuflGlyphName? = nil) {
         self.smufl = smufl

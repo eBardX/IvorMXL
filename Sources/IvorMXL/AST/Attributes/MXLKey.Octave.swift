@@ -16,9 +16,13 @@ extension MXLKey {
 
         /// Creates a new `MXLKey.Octave`.
         ///
-        /// - Parameter value: The value of this element.
-        /// - Parameter number: A positive integer that refers to the key signature element in left-to-right order.
-        /// - Parameter isCancelling: A Boolean value indicating whether this number refers to the canceling key signature specified by the cancel element in the parent key element, rather than to the new key signature. Cannot be `true` if there is no corresponding cancel element within the parent key element.
+        /// - Parameter value:         The value of this element.
+        /// - Parameter number:        A positive integer that refers to the key signature element in left-to-right
+        ///                            order.
+        /// - Parameter isCancelling:  A Boolean value indicating whether this number refers to the canceling key
+        ///                            signature specified by the cancel element in the parent key element, rather than
+        ///                            to the new key signature. Cannot be `true` if there is no corresponding cancel
+        ///                            element within the parent key element.
         public init(value: Int,
                     number: Int,
                     isCancelling: Bool? = nil) {

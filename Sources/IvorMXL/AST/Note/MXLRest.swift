@@ -11,7 +11,12 @@ public struct MXLRest {
 
     /// Creates a new `MXLRest`.
     ///
-    /// - Parameter displayStepOctave:  The display-step-octave group contains the sequence of elements used by both the rest and unpitched elements. This group is used to place rests and unpitched elements on the staff without implying that these elements have pitch. Positioning follows the current clef. If percussion clef is used, the display-step and display-octave elements are interpreted as if in treble clef, with a G in octave 4 on line 2.
+    /// - Parameter displayStepOctave:  The display-step-octave group contains the sequence of elements used by both the
+    ///                                 rest and unpitched elements. This group is used to place rests and unpitched
+    ///                                 elements on the staff without implying that these elements have pitch.
+    ///                                 Positioning follows the current clef. If percussion clef is used, the
+    ///                                 display-step and display-octave elements are interpreted as if in treble clef,
+    ///                                 with a G in octave 4 on line 2.
     /// - Parameter measure:            A Boolean value indicating whether this represents a complete measure rest.
     public init(displayStepOctave: MXLDisplayStepOctave? = nil,
                 measure: Bool? = nil) {

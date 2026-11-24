@@ -14,8 +14,10 @@ public struct MXLAssess {
 
     /// Creates a new `MXLAssess`.
     ///
-    /// - Parameter shouldAssess:  A Boolean value indicating whether the note should (`true`) or should not (`false`) be assessed.
-    /// - Parameter player:        References the id attribute of a player element defined within the matching score-part, restricting the assessment to that player.
+    /// - Parameter shouldAssess:  A Boolean value indicating whether the note should (`true`) or should not (`false`)
+    ///                            be assessed.
+    /// - Parameter player:        References the id attribute of a player element defined within the matching
+    ///                            score-part, restricting the assessment to that player.
     /// - Parameter timeOnly:      Restricts the assessment to a set of times through a repeated section.
     public init(shouldAssess: Bool,
                 player: String? = nil,

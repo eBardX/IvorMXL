@@ -21,22 +21,43 @@ public struct MXLHarmony {
 
     /// Creates a new `MXLHarmony`.
     ///
-    /// - Parameter id: The optional-unique-id attribute group allows an element to optionally specify an ID that is unique to the entire document. This attribute group is not used for a required id attribute, or for an id attribute that specifies an id reference.
-    /// - Parameter chord: A harmony element can contain many stacked chords (e.g. V of II). A sequence of harmony-chord groups is used for this type of secondary function, where V of II would be represented by a harmony-chord with a 5 numeral followed by a harmony-chord with a 2 numeral.
-    /// - Parameter frame: A fretboard diagram to be printed with this harmony.
-    /// - Parameter offset: Indicates where this harmony will appear relative to the current musical location, in divisions.
-    /// - Parameter footnote: The footnote element specifies editorial information that appears in footnotes in the printed score. It is defined within a group due to its multiple uses within the MusicXML schema.
-    /// - Parameter level: The level element specifies editorial information for different MusicXML elements. It is defined within a group due to its multiple uses within the MusicXML schema.
-    /// - Parameter staff: The staff element is defined within a group due to its use by both notes and direction elements.
-    /// - Parameter kind: Differentiates whether this harmony is explicit, implied, or an alternate analysis, when alternate harmonies are possible.
-    /// - Parameter printsObject: A Boolean value indicating whether to print an object (e.g. a note or a rest). Defaults to `true` if not specified.
-    /// - Parameter printsFrame: A Boolean value indicating whether to print a frame or fretboard diagram for this harmony.
-    /// - Parameter arrangement: Specifies how multiple harmony-chord groups are arranged relative to each other.
-    /// - Parameter position: For most elements, any program will compute a default x and y position. The position attributes let this be changed two ways.
-    /// - Parameter font: The font attribute group gathers together attributes for determining the font within a credit or direction. They are based on the text styles for Cascading Style Sheets. The font-family is a comma-separated list of font names.The font-style can be normal or italic. The font-size can be one of the CSS sizes or a numeric point size. The font-weight can be normal or bold. The default is application-dependent, but is a text font vs. a music font.
-    /// - Parameter color: The color attribute group indicates the color of an element.
-    /// - Parameter placement: The placement attribute indicates whether something is above or below another element, such as a note or a notation.
-    /// - Parameter system: The system-relation attribute group distinguishes elements that are associated with a system rather than the particular part where the element appears.
+    /// - Parameter id:            The optional-unique-id attribute group allows an element to optionally specify an ID
+    ///                            that is unique to the entire document. This attribute group is not used for a
+    ///                            required id attribute, or for an id attribute that specifies an id reference.
+    /// - Parameter chord:         A harmony element can contain many stacked chords (e.g. V of II). A sequence of
+    ///                            harmony-chord groups is used for this type of secondary function, where V of II would
+    ///                            be represented by a harmony-chord with a 5 numeral followed by a harmony-chord with a
+    ///                            2 numeral.
+    /// - Parameter frame:         A fretboard diagram to be printed with this harmony.
+    /// - Parameter offset:        Indicates where this harmony will appear relative to the current musical location, in
+    ///                            divisions.
+    /// - Parameter footnote:      The footnote element specifies editorial information that appears in footnotes in the
+    ///                            printed score. It is defined within a group due to its multiple uses within the
+    ///                            MusicXML schema.
+    /// - Parameter level:         The level element specifies editorial information for different MusicXML elements. It
+    ///                            is defined within a group due to its multiple uses within the MusicXML schema.
+    /// - Parameter staff:         The staff element is defined within a group due to its use by both notes and
+    ///                            direction elements.
+    /// - Parameter kind:          Differentiates whether this harmony is explicit, implied, or an alternate analysis,
+    ///                            when alternate harmonies are possible.
+    /// - Parameter printsObject:  A Boolean value indicating whether to print an object (e.g. a note or a rest).
+    ///                            Defaults to `true` if not specified.
+    /// - Parameter printsFrame:   A Boolean value indicating whether to print a frame or fretboard diagram for this
+    ///                            harmony.
+    /// - Parameter arrangement:   Specifies how multiple harmony-chord groups are arranged relative to each other.
+    /// - Parameter position:      For most elements, any program will compute a default x and y position. The position
+    ///                            attributes let this be changed two ways.
+    /// - Parameter font:          The font attribute group gathers together attributes for determining the font within
+    ///                            a credit or direction. They are based on the text styles for Cascading Style Sheets.
+    ///                            The font-family is a comma-separated list of font names. The font-style can be normal
+    ///                            or italic. The font-size can be one of the CSS sizes or a numeric point size. The
+    ///                            font-weight can be normal or bold. The default is application-dependent, but is a
+    ///                            text font vs. a music font.
+    /// - Parameter color:         The color attribute group indicates the color of an element.
+    /// - Parameter placement:     The placement attribute indicates whether something is above or below another
+    ///                            element, such as a note or a notation.
+    /// - Parameter system:        The system-relation attribute group distinguishes elements that are associated with a
+    ///                            system rather than the particular part where the element appears.
     public init(id: String? = nil,
                 chord: [Chord] = [],
                 frame: MXLFrame? = nil,
@@ -73,7 +94,7 @@ public struct MXLHarmony {
 
     // MARK: Public Instance Properties
 
-    /// Specifies how multiple harmony-chord groups are arranged relative to each other.
+    /// How multiple harmony-chord groups are arranged relative to each other.
     ///
     /// Maps to the MusicXML `arrangement` attribute.
     public let arrangement: MXLHarmonyArrangement?
@@ -93,11 +114,11 @@ public struct MXLHarmony {
     /// The color attribute group indicates the color of an element.
     public let color: MXLColor?
 
-    /// The font attribute group gathers together attributes for determining the font within a credit or direction.
-    /// They are based on the text styles for Cascading Style Sheets. The font-family is a comma-separated list of
-    /// font names.The font-style can be normal or italic. The font-size can be one of the CSS sizes or a numeric
-    /// point size. The font-weight can be normal or bold. The default is application-dependent, but is a text font
-    /// vs. a music font.
+    /// The font attribute group gathers together attributes for determining the font within a credit or direction. They
+    /// are based on the text styles for Cascading Style Sheets. The font-family is a comma-separated list of font
+    /// names. The font-style can be normal or italic. The font-size can be one of the CSS sizes or a numeric point
+    /// size. The font-weight can be normal or bold. The default is application-dependent, but is a text font vs. a
+    /// music font.
     public let font: MXLFont
 
     /// The footnote element specifies editorial information that appears in footnotes in the printed score. It is
@@ -130,7 +151,7 @@ public struct MXLHarmony {
     /// Maps to a nested MusicXML `<level>` element.
     public let level: MXLLevel?
 
-    /// Indicates where this harmony will appear relative to the current musical location, in divisions.
+    /// The position of this harmony relative to the current musical location, in divisions.
     ///
     /// Maps to a nested MusicXML `<offset>` element.
     public let offset: MXLOffset?

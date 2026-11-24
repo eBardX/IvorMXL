@@ -35,24 +35,25 @@ extension MXLParser {
                        departure: node.valueOfOptionalAttribute(.departure, parseAboveBelow))
     }
 
+    // Each ornament starts an entry, and the accidental marks after it belong
+    // to it; an accidental mark before any ornament is out of place.
     internal static func parseOrnaments(_ node: Node) throws -> MXLOrnaments {
-        try MXLOrnaments(id: node.valueOfOptionalAttribute(.id),
-                         content: node.requiredChildElement([.delayedInvertedTurn,
-                                                             .delayedTurn,
-                                                             .haydn,
-                                                             .invertedMordent,
-                                                             .invertedTurn,
-                                                             .invertedVerticalTurn,
-                                                             .mordent,
-                                                             .otherOrnament,
-                                                             .schleifer,
-                                                             .shake,
-                                                             .tremolo,
-                                                             .trillMark,
-                                                             .turn,
-                                                             .verticalTurn,
-                                                             .wavyLine], parseOrnamentsContent),
-                         accidentalMark: node.optionalChildElements(.accidentalMark, parseAccidentalMark))
+        var entries: [MXLOrnaments.Entry] = []
+
+        for child in try node.optionalChildElements(ornamentElements + [.accidentalMark], { $0 }) {
+            if child.element == .accidentalMark {
+                guard let last = entries.popLast()
+                else { try node.unexpectedElement(.accidentalMark) }
+
+                try entries.append(MXLOrnaments.Entry(content: last.content,
+                                                      accidentalMarks: last.accidentalMarks + [parseAccidentalMark(child)]))
+            } else {
+                try entries.append(MXLOrnaments.Entry(content: parseOrnamentsContent(child)))
+            }
+        }
+
+        return try MXLOrnaments(id: node.valueOfOptionalAttribute(.id),
+                                entries: entries)
     }
 
     internal static func parseOrnamentsContent(_ node: Node) throws -> MXLOrnaments.Content {
@@ -212,4 +213,22 @@ extension MXLParser {
                         color: parseColor(node),
                         trillSound: parseTrillSound(node))
     }
+
+    // MARK: Private Type Properties
+
+    private static let ornamentElements: [MXLElementName] = [.delayedInvertedTurn,
+                                                             .delayedTurn,
+                                                             .haydn,
+                                                             .invertedMordent,
+                                                             .invertedTurn,
+                                                             .invertedVerticalTurn,
+                                                             .mordent,
+                                                             .otherOrnament,
+                                                             .schleifer,
+                                                             .shake,
+                                                             .tremolo,
+                                                             .trillMark,
+                                                             .turn,
+                                                             .verticalTurn,
+                                                             .wavyLine]
 }

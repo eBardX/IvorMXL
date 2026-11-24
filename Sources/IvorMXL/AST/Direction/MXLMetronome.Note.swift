@@ -11,11 +11,16 @@ extension MXLMetronome {
 
         /// Creates a new `MXLMetronome.Note`.
         ///
-        /// - Parameter kind: The metronome-type element works like the type element in defining metric relationships.
-        /// - Parameter dot: The number of augmentation dots, working like the dot element in defining metric relationships.
-        /// - Parameter beam: The metronome-beam elements defining beaming for this metronome note, working like the beam element in defining metric relationships.
-        /// - Parameter tied: The metronome-tied element indicating the presence of a tie to another metronome note, if any.
-        /// - Parameter tuplet: The metronome-tuplet element, if any, using the same element structure as the time-modification element along with some attributes from the tuplet element.
+        /// - Parameter kind:    The metronome-type element works like the type element in defining metric
+        ///                      relationships.
+        /// - Parameter dot:     The number of augmentation dots, working like the dot element in defining metric
+        ///                      relationships.
+        /// - Parameter beam:    The metronome-beam elements defining beaming for this metronome note, working like the
+        ///                      beam element in defining metric relationships.
+        /// - Parameter tied:    The metronome-tied element indicating the presence of a tie to another metronome note,
+        ///                      if any.
+        /// - Parameter tuplet:  The metronome-tuplet element, if any, using the same element structure as the
+        ///                      time-modification element along with some attributes from the tuplet element.
         public init(kind: MXLNoteKindValue,
                     dot: Int,
                     beam: [Beam] = [],

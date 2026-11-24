@@ -13,7 +13,7 @@ public struct MXLCancel {
 
     /// Creates a new `MXLCancel`.
     ///
-    /// - Parameter value: The value of this element.
+    /// - Parameter value:     The value of this element.
     /// - Parameter location:  Where the cancellation appears relative to the new key signature.
     public init(value: Int,
                 location: Location? = nil) {

@@ -23,17 +23,29 @@ public struct MXLEnding {
 
     /// Creates a new `MXLEnding`.
     ///
-    /// - Parameter value: The value of this element.
-    /// - Parameter number:  Indicates which times the ending is played, similar to the time-only attribute used by other elements.
-    /// - Parameter kind:  Whether this ending starts, stops, or discontinues, determining which barline it is associated with and whether a downward jog is drawn.
-    /// - Parameter printsObject: A Boolean value indicating whether to print an object (e.g. a note or a rest). Defaults to `true` if not specified.
-    /// - Parameter position: For most elements, any program will compute a default x and y position. The position attributes let this be changed two ways.
-    /// - Parameter font: The font attribute group gathers together attributes for determining the font within a credit or direction. They are based on the text styles for Cascading Style Sheets. The font-family is a comma-separated list of font names.The font-style can be normal or italic. The font-size can be one of the CSS sizes or a numeric point size. The font-weight can be normal or bold. The default is application-dependent, but is a text font vs. a music font.
-    /// - Parameter color: The color attribute group indicates the color of an element.
-    /// - Parameter system: The system-relation attribute group distinguishes elements that are associated with a system rather than the particular part where the element appears.
-    /// - Parameter endLength:  The length of the downward jog at the end of the ending line.
-    /// - Parameter textX:  The horizontal offset specifying where the baseline of the start of the ending text appears, relative to the start of the ending line.
-    /// - Parameter textY:  The vertical offset specifying where the baseline of the start of the ending text appears, relative to the start of the ending line.
+    /// - Parameter value:         The value of this element.
+    /// - Parameter number:        Indicates which times the ending is played, similar to the time-only attribute used
+    ///                            by other elements.
+    /// - Parameter kind:          Whether this ending starts, stops, or discontinues, determining which barline it is
+    ///                            associated with and whether a downward jog is drawn.
+    /// - Parameter printsObject:  A Boolean value indicating whether to print an object (e.g. a note or a rest).
+    ///                            Defaults to `true` if not specified.
+    /// - Parameter position:      For most elements, any program will compute a default x and y position. The position
+    ///                            attributes let this be changed two ways.
+    /// - Parameter font:          The font attribute group gathers together attributes for determining the font within
+    ///                            a credit or direction. They are based on the text styles for Cascading Style Sheets.
+    ///                            The font-family is a comma-separated list of font names. The font-style can be normal
+    ///                            or italic. The font-size can be one of the CSS sizes or a numeric point size. The
+    ///                            font-weight can be normal or bold. The default is application-dependent, but is a
+    ///                            text font vs. a music font.
+    /// - Parameter color:         The color attribute group indicates the color of an element.
+    /// - Parameter system:        The system-relation attribute group distinguishes elements that are associated with a
+    ///                            system rather than the particular part where the element appears.
+    /// - Parameter endLength:     The length of the downward jog at the end of the ending line.
+    /// - Parameter textX:         The horizontal offset specifying where the baseline of the start of the ending text
+    ///                            appears, relative to the start of the ending line.
+    /// - Parameter textY:         The vertical offset specifying where the baseline of the start of the ending text
+    ///                            appears, relative to the start of the ending line.
     public init(value: String,
                 number: Number,
                 kind: MXLStartStopDiscontinue,
@@ -68,11 +80,11 @@ public struct MXLEnding {
     /// Maps to the MusicXML `end-length` attribute.
     public let endLength: MXLTenths?
 
-    /// The font attribute group gathers together attributes for determining the font within a credit or direction.
-    /// They are based on the text styles for Cascading Style Sheets. The font-family is a comma-separated list of
-    /// font names.The font-style can be normal or italic. The font-size can be one of the CSS sizes or a numeric
-    /// point size. The font-weight can be normal or bold. The default is application-dependent, but is a text font
-    /// vs. a music font.
+    /// The font attribute group gathers together attributes for determining the font within a credit or direction. They
+    /// are based on the text styles for Cascading Style Sheets. The font-family is a comma-separated list of font
+    /// names. The font-style can be normal or italic. The font-size can be one of the CSS sizes or a numeric point
+    /// size. The font-weight can be normal or bold. The default is application-dependent, but is a text font vs. a
+    /// music font.
     public let font: MXLFont
 
     /// Whether this ending starts, stops, or discontinues, determining which barline it is associated with and
@@ -81,7 +93,7 @@ public struct MXLEnding {
     /// Maps to the MusicXML `type` attribute.
     public let kind: MXLStartStopDiscontinue
 
-    /// Indicates which times the ending is played, similar to the time-only attribute used by other elements.
+    /// The times the ending is played, similar to the time-only attribute used by other elements.
     ///
     /// Maps to the MusicXML `number` attribute.
     public let number: Number

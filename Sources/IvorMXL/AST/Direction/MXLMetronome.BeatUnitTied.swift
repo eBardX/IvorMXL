@@ -13,8 +13,10 @@ extension MXLMetronome {
 
         /// Creates a new `MXLMetronome.BeatUnitTied`.
         ///
-        /// - Parameter beatUnit: The beat-unit element indicates the graphical note type to use in a metronome mark.
-        /// - Parameter beatUnitDot: The number of augmentation dots to apply to the beat-unit note in a metronome mark.
+        /// - Parameter beatUnit:     The beat-unit element indicates the graphical note type to use in a metronome
+        ///                           mark.
+        /// - Parameter beatUnitDot:  The number of augmentation dots to apply to the beat-unit note in a metronome
+        ///                           mark.
         public init(beatUnit: MXLNoteKindValue,
                     beatUnitDot: Int) {
             self.beatUnit = beatUnit

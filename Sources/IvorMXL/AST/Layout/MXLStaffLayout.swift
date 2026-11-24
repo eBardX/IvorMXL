@@ -14,8 +14,10 @@ public struct MXLStaffLayout {
 
     /// Creates a new `MXLStaffLayout`.
     ///
-    /// - Parameter staffDistance:  The vertical distance from the bottom line of the previous staff in this system to the top line of this staff, in tenths.
-    /// - Parameter number:         The staff number, from top to bottom on the system, that this element applies to. A value of `1` is used if not present.
+    /// - Parameter staffDistance:  The vertical distance from the bottom line of the previous staff in this system to
+    ///                             the top line of this staff, in tenths.
+    /// - Parameter number:         The staff number, from top to bottom on the system, that this element applies to. A
+    ///                             value of `1` is used if not present.
     public init(staffDistance: MXLTenths? = nil,
                 number: MXLStaffNumber? = nil) {
         self.number = number

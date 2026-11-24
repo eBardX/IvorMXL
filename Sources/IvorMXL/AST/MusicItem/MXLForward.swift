@@ -11,11 +11,19 @@ public struct MXLForward {
 
     /// Creates a new `MXLForward`.
     ///
-    /// - Parameter duration: The duration element is defined within a group due to its uses within the note, figured-bass, backup, and forward elements.
-    /// - Parameter footnote: The footnote element specifies editorial information that appears in footnotes in the printed score. It is defined within a group due to its multiple uses within the MusicXML schema.
-    /// - Parameter level: The level element specifies editorial information for different MusicXML elements. It is defined within a group due to its multiple uses within the MusicXML schema.
-    /// - Parameter voice: A voice is a sequence of musical events (e.g. notes, chords, rests) that proceeds linearly in time. The voice element is used to distinguish between multiple voices in individual parts. It is defined within a group due to its multiple uses within the MusicXML schema.
-    /// - Parameter staff: The staff element is defined within a group due to its use by both notes and direction elements.
+    /// - Parameter duration:  The duration element is defined within a group due to its uses within the note,
+    ///                        figured-bass, backup, and forward elements.
+    /// - Parameter footnote:  The footnote element specifies editorial information that appears in footnotes in the
+    ///                        printed score. It is defined within a group due to its multiple uses within the MusicXML
+    ///                        schema.
+    /// - Parameter level:     The level element specifies editorial information for different MusicXML elements. It is
+    ///                        defined within a group due to its multiple uses within the MusicXML schema.
+    /// - Parameter voice:     A voice is a sequence of musical events (e.g. notes, chords, rests) that proceeds
+    ///                        linearly in time. The voice element is used to distinguish between multiple voices in
+    ///                        individual parts. It is defined within a group due to its multiple uses within the
+    ///                        MusicXML schema.
+    /// - Parameter staff:     The staff element is defined within a group due to its use by both notes and direction
+    ///                        elements.
     public init(duration: MXLPositiveDivisions,
                 footnote: MXLFormattedText? = nil,
                 level: MXLLevel? = nil,

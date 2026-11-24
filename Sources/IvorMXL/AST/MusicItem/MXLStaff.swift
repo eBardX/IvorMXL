@@ -13,7 +13,9 @@ public struct MXLStaff {
     ///
     /// If the provided unsigned integer value is determined to be invalid, this initializer returns `nil`.
     ///
-    /// - Parameter uintValue: Staff assignment is only needed for music notated on multiple staves. Used by both notes and directions. Staff values are numbers, with 1 referring to the top-most staff in a part.
+    /// - Parameter uintValue:  Staff assignment is only needed for music notated on multiple staves. Used by both notes
+    ///                         and directions. Staff values are numbers, with 1 referring to the top-most staff in a
+    ///                         part.
     public init?(uintValue: UInt) {
         guard Self.isValid(uintValue)
         else { return nil }
@@ -36,9 +38,9 @@ extension MXLStaff {
 
     /// Determines if the provided unsigned integer value is a valid representation for a `MXLStaff`.
     ///
-    /// - Parameter uintValue: The unsigned integer value to check for validity.
+    /// - Parameter uintValue:  The unsigned integer value to check for validity.
     ///
-    /// - Returns: `true` when the provided unsigned integer value is greater than zero; `false` otherwise.
+    /// - Returns:  `true` when the provided unsigned integer value is greater than zero; `false` otherwise.
     public static func isValid(_ uintValue: UInt) -> Bool {
         uintValue > 0
     }

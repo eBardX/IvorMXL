@@ -1,7 +1,7 @@
 // © 2026 John Gary Pusey (see LICENSE.md)
 
 /// Wavy lines are one way to indicate trills and vibrato. When used with a barline element, they should always
-/// have type="continue" set. The smufl attribute specifies a particular wavy line glyph from the SMuFL Multi-
+/// have `type="continue"` set. The smufl attribute specifies a particular wavy line glyph from the SMuFL Multi-
 /// segment lines range.
 ///
 /// Maps the MusicXML `<wavy-line>` element.
@@ -11,13 +11,17 @@ public struct MXLWavyLine {
 
     /// Creates a new `MXLWavyLine`.
     ///
-    /// - Parameter kind: Whether this element marks the start, stop, or continuation of the wavy line.
-    /// - Parameter number: Distinguishes this wavy line from other wavy lines that might be active at the same time.
-    /// - Parameter smufl: The SMuFL canonical glyph name used to specify a particular wavy line character.
-    /// - Parameter position: For most elements, any program will compute a default x and y position. The position attributes let this be changed two ways.
-    /// - Parameter placement: The placement attribute indicates whether something is above or below another element, such as a note or a notation.
-    /// - Parameter color: The color attribute group indicates the color of an element.
-    /// - Parameter trillSound: The trill-sound attribute group includes attributes used to guide the sound of trills, mordents, turns, shakes, and wavy lines. The default choices are:
+    /// - Parameter kind:        Whether this element marks the start, stop, or continuation of the wavy line.
+    /// - Parameter number:      Distinguishes this wavy line from other wavy lines that might be active at the same
+    ///                          time.
+    /// - Parameter smufl:       The SMuFL canonical glyph name used to specify a particular wavy line character.
+    /// - Parameter position:    For most elements, any program will compute a default x and y position. The position
+    ///                          attributes let this be changed two ways.
+    /// - Parameter placement:   The placement attribute indicates whether something is above or below another element,
+    ///                          such as a note or a notation.
+    /// - Parameter color:       The color attribute group indicates the color of an element.
+    /// - Parameter trillSound:  The trill-sound attribute group includes attributes used to guide the sound of trills,
+    ///                          mordents, turns, shakes, and wavy lines. The default choices are:
     public init(kind: MXLStartStopContinue,
                 number: MXLNumberLevel? = nil,
                 smufl: MXLSmuflWavyLineGlyphName? = nil,
@@ -106,15 +110,15 @@ public struct MXLWavyLine {
     /// The trill-sound attribute group includes attributes used to guide the sound of trills, mordents, turns,
     /// shakes, and wavy lines. The default choices are:
     ///
-    /// start-note = "upper" trill-step = "whole" two-note-turn = "none" accelerate = "no" beats = "4".
+    /// start-note = “upper” trill-step = “whole” two-note-turn = “none” accelerate = “no” beats = “4”.
     ///
     /// Second-beat and last-beat are percentages for landing on the indicated beat, with defaults of 25 and 75
     /// respectively.
     ///
     /// For mordent and inverted-mordent elements, the defaults are different:
     ///
-    /// The default start-note is "main", not "upper". The default for beats is "3", not "4". The default for second-
-    /// beat is "12", not "25". The default for last-beat is "24", not "75".
+    /// The default start-note is “main”, not “upper”. The default for beats is “3”, not “4”. The default for second-
+    /// beat is “12”, not “25”. The default for last-beat is “24”, not “75”.
     public let trillSound: MXLTrillSound
 }
 

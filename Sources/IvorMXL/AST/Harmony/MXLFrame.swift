@@ -12,18 +12,26 @@ public struct MXLFrame {
 
     /// Creates a new `MXLFrame`.
     ///
-    /// - Parameter id: The optional-unique-id attribute group allows an element to optionally specify an ID that is unique to the entire document. This attribute group is not used for a required id attribute, or for an id attribute that specifies an id reference.
-    /// - Parameter strings: The frame-strings element gives the overall size of the frame in vertical lines (strings).
-    /// - Parameter frets: The frame-frets element gives the overall size of the frame in horizontal spaces (frets).
+    /// - Parameter id:         The optional-unique-id attribute group allows an element to optionally specify an ID
+    ///                         that is unique to the entire document. This attribute group is not used for a required
+    ///                         id attribute, or for an id attribute that specifies an id reference.
+    /// - Parameter strings:    The frame-strings element gives the overall size of the frame in vertical lines
+    ///                         (strings).
+    /// - Parameter frets:      The frame-frets element gives the overall size of the frame in horizontal spaces
+    ///                         (frets).
     /// - Parameter firstFret:  The fret shown in the top space of the frame. Fret 1 if not present.
-    /// - Parameter note:  The individual notes included in the frame.
-    /// - Parameter position: For most elements, any program will compute a default x and y position. The position attributes let this be changed two ways.
-    /// - Parameter color: The color attribute group indicates the color of an element.
-    /// - Parameter halign: In cases where text extends over more than one line, horizontal alignment and justify values can be different. The most typical case is for credits, such as:
-    /// - Parameter valign: The valign-image attribute is used to indicate vertical alignment for images and graphics, so it removes the baseline value. Defaults are implementation-dependent.
-    /// - Parameter height:  The height of the frame diagram.
-    /// - Parameter width:  The width of the frame diagram.
-    /// - Parameter unplayed:  Indicates what to display above a string that has no associated frame-note element. Typical values are `x` and the empty string. Application-defined if not present.
+    /// - Parameter note:       The individual notes included in the frame.
+    /// - Parameter position:   For most elements, any program will compute a default x and y position. The position
+    ///                         attributes let this be changed two ways.
+    /// - Parameter color:      The color attribute group indicates the color of an element.
+    /// - Parameter halign:     In cases where text extends over more than one line, horizontal alignment and justify
+    ///                         values can be different.
+    /// - Parameter valign:     The valign-image attribute is used to indicate vertical alignment for images and
+    ///                         graphics, so it removes the baseline value. Defaults are implementation-dependent.
+    /// - Parameter height:     The height of the frame diagram.
+    /// - Parameter width:      The width of the frame diagram.
+    /// - Parameter unplayed:   Indicates what to display above a string that has no associated frame-note element.
+    ///                         Typical values are `x` and the empty string. Application-defined if not present.
     public init(id: String? = nil,
                 strings: Int,
                 frets: Int,
@@ -145,8 +153,8 @@ public struct MXLFrame {
     /// Maps to a nested MusicXML `<frame-strings>` element.
     public let strings: Int
 
-    /// Indicates what to display above a string that has no associated frame-note element. Typical values are `x`
-    /// and the empty string. Application-defined if not present.
+    /// The text to display above a string that has no associated frame-note element. Typical values are `x` and the
+    /// empty string. Application-defined if not present.
     ///
     /// Maps to the MusicXML `unplayed` attribute.
     public let unplayed: String?

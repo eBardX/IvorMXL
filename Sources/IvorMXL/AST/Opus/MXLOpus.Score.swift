@@ -14,8 +14,11 @@ extension MXLOpus {
 
         /// Creates a new `MXLOpus.Score`.
         ///
-        /// - Parameter newPage: A Boolean value indicating whether the first page of the score is different from the last page of the previous score. The default value is implementation-dependent.
-        /// - Parameter xlink: The link-attributes group includes all the simple XLink attributes supported in the MusicXML format. It is also used to connect a MusicXML score with MusicXML parts or a MusicXML opus.
+        /// - Parameter newPage:  A Boolean value indicating whether the first page of the score is different from the
+        ///                       last page of the previous score. The default value is implementation-dependent.
+        /// - Parameter xlink:    The link-attributes group includes all the simple XLink attributes supported in the
+        ///                       MusicXML format. It is also used to connect a MusicXML score with MusicXML parts or a
+        ///                       MusicXML opus.
         public init(newPage: Bool? = nil,
                     xlink: MXLXLink) {
             self.newPage = newPage

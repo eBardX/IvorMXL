@@ -13,7 +13,8 @@ public struct MXLOpus {
     /// Creates a new `MXLOpus`.
     ///
     /// - Parameter version:  The document-attributes version this opus conforms to. Defaults to `1.0` if not specified.
-    /// - Parameter title:    The title element specifies the title of an opus document. It is optional in every version of the specification.
+    /// - Parameter title:    The title element specifies the title of an opus document. It is optional in every version
+    ///                       of the specification.
     /// - Parameter items:    One of the alternatives for Opus.
     public init(version: MXLDocument.Version? = nil,
                 title: String? = nil,

@@ -33,17 +33,32 @@ extension MXLHarmony.Chord {
 
         /// Creates a new `MXLHarmony.Chord.Kind`.
         ///
-        /// - Parameter value: The value of this element.
-        /// - Parameter usesSymbols: A Boolean value indicating whether the kind should be represented when possible with harmony symbols rather than letters and numbers.
-        /// - Parameter text: Describes how the kind should be spelled in a score. If `usesSymbols` is `true`, the value of `text` follows the symbol.
-        /// - Parameter areDegreesStacked: A Boolean value indicating whether the degree elements should be stacked above each other.
-        /// - Parameter areDegreesInParentheses: A Boolean value indicating whether all the degrees should be in parentheses.
-        /// - Parameter areDegreesBracketed: A Boolean value indicating whether all the degrees should be in a bracket.
-        /// - Parameter position: For most elements, any program will compute a default x and y position. The position attributes let this be changed two ways.
-        /// - Parameter font: The font attribute group gathers together attributes for determining the font within a credit or direction. They are based on the text styles for Cascading Style Sheets. The font-family is a comma-separated list of font names.The font-style can be normal or italic. The font-size can be one of the CSS sizes or a numeric point size. The font-weight can be normal or bold. The default is application-dependent, but is a text font vs. a music font.
-        /// - Parameter color: The color attribute group indicates the color of an element.
-        /// - Parameter halign: In cases where text extends over more than one line, horizontal alignment and justify values can be different. The most typical case is for credits, such as:
-        /// - Parameter valign: The valign attribute is used to indicate vertical alignment to the top, middle, bottom, or baseline of the text. Defaults are implementation-dependent.
+        /// - Parameter value:                    The value of this element.
+        /// - Parameter usesSymbols:              A Boolean value indicating whether the kind should be represented when
+        ///                                       possible with harmony symbols rather than letters and numbers.
+        /// - Parameter text:                     Describes how the kind should be spelled in a score. If `usesSymbols`
+        ///                                       is `true`, the value of `text` follows the symbol.
+        /// - Parameter areDegreesStacked:        A Boolean value indicating whether the degree elements should be
+        ///                                       stacked above each other.
+        /// - Parameter areDegreesInParentheses:  A Boolean value indicating whether all the degrees should be in
+        ///                                       parentheses.
+        /// - Parameter areDegreesBracketed:      A Boolean value indicating whether all the degrees should be in a
+        ///                                       bracket.
+        /// - Parameter position:                 For most elements, any program will compute a default x and y
+        ///                                       position. The position attributes let this be changed two ways.
+        /// - Parameter font:                     The font attribute group gathers together attributes for determining
+        ///                                       the font within a credit or direction. They are based on the text
+        ///                                       styles for Cascading Style Sheets. The font-family is a
+        ///                                       comma-separated list of font names. The font-style can be normal or
+        ///                                       italic. The font-size can be one of the CSS sizes or a numeric point
+        ///                                       size. The font-weight can be normal or bold. The default is
+        ///                                       application-dependent, but is a text font vs. a music font.
+        /// - Parameter color:                    The color attribute group indicates the color of an element.
+        /// - Parameter halign:                   In cases where text extends over more than one line, horizontal
+        ///                                       alignment and justify values can be different.
+        /// - Parameter valign:                   The valign attribute is used to indicate vertical alignment to the
+        ///                                       top, middle, bottom, or baseline of the text. Defaults are
+        ///                                       implementation-dependent.
         public init(value: Value,
                     usesSymbols: Bool? = nil,
                     text: String? = nil,
@@ -90,13 +105,13 @@ extension MXLHarmony.Chord {
 
         /// The font attribute group gathers together attributes for determining the font within a credit or direction.
         /// They are based on the text styles for Cascading Style Sheets. The font-family is a comma-separated list of
-        /// font names.The font-style can be normal or italic. The font-size can be one of the CSS sizes or a numeric
+        /// font names. The font-style can be normal or italic. The font-size can be one of the CSS sizes or a numeric
         /// point size. The font-weight can be normal or bold. The default is application-dependent, but is a text font
         /// vs. a music font.
         public let font: MXLFont
 
-        /// In cases where text extends over more than one line, horizontal alignment and justify values can be different.
-        /// The most typical case is for credits, such as:
+        /// In cases where text extends over more than one line, horizontal alignment and justify values can be
+        /// different. The most typical case is for credits, such as:
         ///
         /// Words and music by Pat Songwriter
         ///
@@ -113,9 +128,9 @@ extension MXLHarmony.Chord {
         /// For most elements, any program will compute a default x and y position. The position attributes let this be
         /// changed two ways.
         ///
-        /// The default-x and default-y attributes change the computation of the default position. For most elements, the
-        /// origin is changed relative to the left-hand side of the note or the musical position within the bar (x) and
-        /// the top line of the staff (y).
+        /// The default-x and default-y attributes change the computation of the default position. For most elements,
+        /// the origin is changed relative to the left-hand side of the note or the musical position within the bar (x)
+        /// and the top line of the staff (y).
         ///
         /// For the following elements, the default-x value changes the origin relative to the start of the current
         /// measure:
@@ -143,18 +158,18 @@ extension MXLHarmony.Chord {
         /// interline space. For stems, positive relative-y lengthens a stem while negative relative-y shortens it.
         ///
         /// The default-x and default-y position attributes provide higher-resolution positioning data than related
-        /// features such as the placement attribute and the offset element. Applications reading a MusicXML file that can
-        /// understand both features should generally rely on the default-x and default-y attributes for their greater
-        /// accuracy. For the relative-x and relative-y attributes, the offset element, placement attribute, and directive
-        /// attribute provide context for the relative position information, so the two features should be interpreted
-        /// together.
+        /// features such as the placement attribute and the offset element. Applications reading a MusicXML file that
+        /// can understand both features should generally rely on the default-x and default-y attributes for their
+        /// greater accuracy. For the relative-x and relative-y attributes, the offset element, placement attribute, and
+        /// directive attribute provide context for the relative position information, so the two features should be
+        /// interpreted together.
         ///
         /// As elsewhere in the MusicXML format, tenths are the global tenths defined by the scaling element, not the
         /// local tenths of a staff resized by the staff-size element.
         public let position: MXLPosition
 
-        /// Describes how the kind should be spelled in a score. If `usesSymbols` is `true`, the value of `text`
-        /// follows the symbol.
+        /// How the kind should be spelled in a score. If `usesSymbols` is `true`, the value of `text` follows the
+        /// symbol.
         ///
         /// Maps to the MusicXML `text` attribute.
         public let text: String?

@@ -12,9 +12,13 @@ public struct MXLBackup {
 
     /// Creates a new `MXLBackup`.
     ///
-    /// - Parameter duration: The duration element is defined within a group due to its uses within the note, figured-bass, backup, and forward elements.
-    /// - Parameter footnote: The footnote element specifies editorial information that appears in footnotes in the printed score. It is defined within a group due to its multiple uses within the MusicXML schema.
-    /// - Parameter level: The level element specifies editorial information for different MusicXML elements. It is defined within a group due to its multiple uses within the MusicXML schema.
+    /// - Parameter duration:  The duration element is defined within a group due to its uses within the note,
+    ///                        figured-bass, backup, and forward elements.
+    /// - Parameter footnote:  The footnote element specifies editorial information that appears in footnotes in the
+    ///                        printed score. It is defined within a group due to its multiple uses within the MusicXML
+    ///                        schema.
+    /// - Parameter level:     The level element specifies editorial information for different MusicXML elements. It is
+    ///                        defined within a group due to its multiple uses within the MusicXML schema.
     public init(duration: MXLPositiveDivisions,
                 footnote: MXLFormattedText? = nil,
                 level: MXLLevel? = nil) {

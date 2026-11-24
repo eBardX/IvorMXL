@@ -97,7 +97,7 @@ extension MXLParser {
         }
     }
 
-internal static func parsePartGroup(_ node: Node) throws -> MXLPartGroup {
+    internal static func parsePartGroup(_ node: Node) throws -> MXLPartGroup {
         try MXLPartGroup(name: node.optionalChildElement(.groupName, parseGroupName),
                          nameDisplay: node.optionalChildElement(.groupNameDisplay, parseNameDisplay),
                          abbreviation: node.optionalChildElement(.groupAbbreviation, parseGroupName),

@@ -14,11 +14,14 @@ public struct MXLPartSymbol {
 
     /// Creates a new `MXLPartSymbol`.
     ///
-    /// - Parameter value: The value of this element.
-    /// - Parameter topStaff: The staff number of the topmost staff spanned by the symbol, used when the symbol does not extend across the entire part.
-    /// - Parameter bottomStaff: The staff number of the bottommost staff spanned by the symbol, used when the symbol does not extend across the entire part.
-    /// - Parameter position: For most elements, any program will compute a default x and y position. The position attributes let this be changed two ways.
-    /// - Parameter color: The color attribute group indicates the color of an element.
+    /// - Parameter value:        The value of this element.
+    /// - Parameter topStaff:     The staff number of the topmost staff spanned by the symbol, used when the symbol does
+    ///                           not extend across the entire part.
+    /// - Parameter bottomStaff:  The staff number of the bottommost staff spanned by the symbol, used when the symbol
+    ///                           does not extend across the entire part.
+    /// - Parameter position:     For most elements, any program will compute a default x and y position. The position
+    ///                           attributes let this be changed two ways.
+    /// - Parameter color:        The color attribute group indicates the color of an element.
     public init(value: MXLGroupSymbolValue,
                 topStaff: MXLStaffNumber? = nil,
                 bottomStaff: MXLStaffNumber? = nil,

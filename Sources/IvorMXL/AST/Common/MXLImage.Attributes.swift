@@ -14,13 +14,21 @@ extension MXLImage {
 
         /// Creates a new `MXLImage.Attributes`.
         ///
-        /// - Parameter source: The URL for the image file.
-        /// - Parameter kind:   The MIME type for the image file format (e.g. `application/postscript`, `image/gif`, `image/jpeg`, `image/png`, or `image/tiff`).
-        /// - Parameter height: The height used to size and scale the image. If both `height` and `width` are specified, the image is scaled independently in each dimension; if only one is specified, the image is scaled proportionally to fit that dimension.
-        /// - Parameter width:  The width used to size and scale the image. If both `width` and `height` are specified, the image is scaled independently in each dimension; if only one is specified, the image is scaled proportionally to fit that dimension.
-        /// - Parameter position: For most elements, any program will compute a default x and y position. The position attributes let this be changed two ways.
-        /// - Parameter halign: In cases where text extends over more than one line, horizontal alignment and justify values can be different. The most typical case is for credits, such as:
-        /// - Parameter valign: The valign-image attribute is used to indicate vertical alignment for images and graphics, so it removes the baseline value. Defaults are implementation-dependent.
+        /// - Parameter source:    The URL for the image file.
+        /// - Parameter kind:      The MIME type for the image file format (e.g. `application/postscript`, `image/gif`,
+        ///                        `image/jpeg`, `image/png`, or `image/tiff`).
+        /// - Parameter height:    The height used to size and scale the image. If both `height` and `width` are
+        ///                        specified, the image is scaled independently in each dimension; if only one is
+        ///                        specified, the image is scaled proportionally to fit that dimension.
+        /// - Parameter width:     The width used to size and scale the image. If both `width` and `height` are
+        ///                        specified, the image is scaled independently in each dimension; if only one is
+        ///                        specified, the image is scaled proportionally to fit that dimension.
+        /// - Parameter position:  For most elements, any program will compute a default x and y position. The position
+        ///                        attributes let this be changed two ways.
+        /// - Parameter halign:    In cases where text extends over more than one line, horizontal alignment and justify
+        ///                        values can be different.
+        /// - Parameter valign:    The valign-image attribute is used to indicate vertical alignment for images and
+        ///                        graphics, so it removes the baseline value. Defaults are implementation-dependent.
         public init(source: String,
                     kind: String,
                     height: MXLTenths? = nil,
@@ -39,8 +47,8 @@ extension MXLImage {
 
         // MARK: Public Instance Properties
 
-        /// In cases where text extends over more than one line, horizontal alignment and justify values can be different.
-        /// The most typical case is for credits, such as:
+        /// In cases where text extends over more than one line, horizontal alignment and justify values can be
+        /// different. The most typical case is for credits, such as:
         ///
         /// Words and music by Pat Songwriter
         ///
@@ -70,9 +78,9 @@ extension MXLImage {
         /// For most elements, any program will compute a default x and y position. The position attributes let this be
         /// changed two ways.
         ///
-        /// The default-x and default-y attributes change the computation of the default position. For most elements, the
-        /// origin is changed relative to the left-hand side of the note or the musical position within the bar (x) and
-        /// the top line of the staff (y).
+        /// The default-x and default-y attributes change the computation of the default position. For most elements,
+        /// the origin is changed relative to the left-hand side of the note or the musical position within the bar (x)
+        /// and the top line of the staff (y).
         ///
         /// For the following elements, the default-x value changes the origin relative to the start of the current
         /// measure:
@@ -100,11 +108,11 @@ extension MXLImage {
         /// interline space. For stems, positive relative-y lengthens a stem while negative relative-y shortens it.
         ///
         /// The default-x and default-y position attributes provide higher-resolution positioning data than related
-        /// features such as the placement attribute and the offset element. Applications reading a MusicXML file that can
-        /// understand both features should generally rely on the default-x and default-y attributes for their greater
-        /// accuracy. For the relative-x and relative-y attributes, the offset element, placement attribute, and directive
-        /// attribute provide context for the relative position information, so the two features should be interpreted
-        /// together.
+        /// features such as the placement attribute and the offset element. Applications reading a MusicXML file that
+        /// can understand both features should generally rely on the default-x and default-y attributes for their
+        /// greater accuracy. For the relative-x and relative-y attributes, the offset element, placement attribute, and
+        /// directive attribute provide context for the relative position information, so the two features should be
+        /// interpreted together.
         ///
         /// As elsewhere in the MusicXML format, tenths are the global tenths defined by the scaling element, not the
         /// local tenths of a staff resized by the staff-size element.

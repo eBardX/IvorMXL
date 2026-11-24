@@ -12,8 +12,8 @@ public struct MXLStaffNumber {
     ///
     /// If the provided unsigned integer value is determined to be invalid, this initializer returns `nil`.
     ///
-    /// - Parameter uintValue: Staff numbers within a multi-staff part are numbered from top to bottom, with 1 being
-    ///                        the top staff on a part.
+    /// - Parameter uintValue:  Staff numbers within a multi-staff part are numbered from top to bottom, with 1 being
+    ///                         the top staff on a part.
     public init?(uintValue: UInt) {
         guard Self.isValid(uintValue)
         else { return nil }
@@ -36,9 +36,9 @@ extension MXLStaffNumber {
 
     /// Determines if the provided unsigned integer value is a valid representation for a `MXLStaffNumber`.
     ///
-    /// - Parameter uintValue: The unsigned integer value to check for validity.
+    /// - Parameter uintValue:  The unsigned integer value to check for validity.
     ///
-    /// - Returns: `true` when the provided unsigned integer value is greater than zero; `false` otherwise.
+    /// - Returns:  `true` when the provided unsigned integer value is greater than zero; `false` otherwise.
     public static func isValid(_ uintValue: UInt) -> Bool {
         uintValue > 0
     }

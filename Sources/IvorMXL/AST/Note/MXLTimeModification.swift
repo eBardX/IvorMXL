@@ -12,9 +12,12 @@ public struct MXLTimeModification {
 
     /// Creates a new `MXLTimeModification`.
     ///
-    /// - Parameter actualNotes:  The actual-notes element describes how many notes are played in the time usually occupied by the number in the normal-notes element.
-    /// - Parameter normalNotes:  The normal-notes element describes how many notes are usually played in the time occupied by the number in the actual-notes element.
-    /// - Parameter group:        The graphic note type and augmentation dots for the normal-notes portion of this time modification, when they differ from the notated type of the current note.
+    /// - Parameter actualNotes:  The actual-notes element describes how many notes are played in the time usually
+    ///                           occupied by the number in the normal-notes element.
+    /// - Parameter normalNotes:  The normal-notes element describes how many notes are usually played in the time
+    ///                           occupied by the number in the actual-notes element.
+    /// - Parameter group:        The graphic note type and augmentation dots for the normal-notes portion of this time
+    ///                           modification, when they differ from the notated type of the current note.
     public init(actualNotes: Int,
                 normalNotes: Int,
                 group: Group? = nil) {

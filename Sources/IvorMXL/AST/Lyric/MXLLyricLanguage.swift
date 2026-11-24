@@ -9,9 +9,9 @@ public struct MXLLyricLanguage {
 
     /// Creates a new `MXLLyricLanguage`.
     ///
-    /// - Parameter number: The lyric number that this default language applies to.
-    /// - Parameter name: The lyric name that this default language applies to.
-    /// - Parameter xmlLang: The xml:lang attribute value.
+    /// - Parameter number:   The lyric number that this default language applies to.
+    /// - Parameter name:     The lyric name that this default language applies to.
+    /// - Parameter xmlLang:  The xml:lang attribute value.
     public init(number: String? = nil,
                 name: String? = nil,
                 xmlLang: String? = nil) {

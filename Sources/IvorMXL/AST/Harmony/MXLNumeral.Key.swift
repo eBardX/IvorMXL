@@ -13,9 +13,11 @@ extension MXLNumeral {
 
         /// Creates a new `MXLNumeral.Key`.
         ///
-        /// - Parameter fifths: Specifies the key in the same way as the fifths element.
-        /// - Parameter mode: Specifies the mode, similar to the mode element, but with a restricted set of values.
-        /// - Parameter printsObject: A Boolean value indicating whether to print an object (e.g. a note or a rest). Defaults to `true` if not specified.
+        /// - Parameter fifths:        Specifies the key in the same way as the fifths element.
+        /// - Parameter mode:          Specifies the mode, similar to the mode element, but with a restricted set of
+        ///                            values.
+        /// - Parameter printsObject:  A Boolean value indicating whether to print an object (e.g. a note or a rest).
+        ///                            Defaults to `true` if not specified.
         public init(fifths: MXLFifths,
                     mode: Mode,
                     printsObject: Bool? = nil) {
@@ -26,12 +28,12 @@ extension MXLNumeral {
 
         // MARK: Public Instance Properties
 
-        /// Specifies the key in the same way as the fifths element.
+        /// The key, specified in the same way as the fifths element.
         ///
         /// Maps to a nested MusicXML `<numeral-fifths>` element.
         public let fifths: MXLFifths
 
-        /// Specifies the mode, similar to the mode element, but with a restricted set of values.
+        /// The mode, similar to the mode element, but with a restricted set of values.
         ///
         /// Maps to a nested MusicXML `<numeral-mode>` element.
         public let mode: Mode

@@ -10,8 +10,10 @@ public struct MXLEmptyPrintObjectStyleAlign {
 
     /// Creates a new `MXLEmptyPrintObjectStyleAlign`.
     ///
-    /// - Parameter printsObject: A Boolean value indicating whether to print an object (e.g. a note or a rest). Defaults to `true` if not specified.
-    /// - Parameter printStyleAlign: The print-style-align attribute group adds the halign and valign attributes to the position, font, and color attributes.
+    /// - Parameter printsObject:     A Boolean value indicating whether to print an object (e.g. a note or a rest).
+    ///                               Defaults to `true` if not specified.
+    /// - Parameter printStyleAlign:  The print-style-align attribute group adds the halign and valign attributes to the
+    ///                               position, font, and color attributes.
     public init(printsObject: Bool? = nil,
                 printStyleAlign: MXLPrintStyleAlign) {
         self.printStyleAlign = printStyleAlign

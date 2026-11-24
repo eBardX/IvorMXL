@@ -4,6 +4,9 @@
 /// content is represented the same as an accidental element, but with a different name to reflect the different
 /// musical meaning.
 ///
+/// One `<ornaments>` element can hold several ornaments, each followed by its own accidental marks — a trill mark
+/// and the start of its wavy line, say. Each is one ``Entry``, in document order.
+///
 /// Maps the MusicXML `<ornaments>` element.
 public struct MXLOrnaments {
 
@@ -11,27 +14,21 @@ public struct MXLOrnaments {
 
     /// Creates a new `MXLOrnaments`.
     ///
-    /// - Parameter id: The optional-unique-id attribute group allows an element to optionally specify an ID that is unique to the entire document. This attribute group is not used for a required id attribute, or for an id attribute that specifies an id reference.
-    /// - Parameter content: One of the alternatives for Ornaments.
-    /// - Parameter accidentalMark: The accidentals associated with the ornaments, represented the same way as an accidental element but with a different name to reflect the different musical meaning.
+    /// - Parameter id:       The optional-unique-id attribute group allows an element to optionally specify an ID that
+    ///                       is unique to the entire document. This attribute group is not used for a required id
+    ///                       attribute, or for an id attribute that specifies an id reference.
+    /// - Parameter entries:  The ornaments, each with the accidental marks that follow it, in document order. Defaults
+    ///                       to none.
     public init(id: String? = nil,
-                content: Content,
-                accidentalMark: [MXLAccidentalMark] = []) {
-        self.accidentalMark = accidentalMark
-        self.content = content
+                entries: [Entry] = []) {
+        self.entries = entries
         self.id = id
     }
 
     // MARK: Public Instance Properties
 
-    /// The accidentals associated with the ornaments, represented the same way as an accidental element but with a
-    /// different name to reflect the different musical meaning.
-    ///
-    /// Maps to nested MusicXML `<accidental-mark>` elements.
-    public let accidentalMark: [MXLAccidentalMark]
-
-    /// One of the alternatives for Ornaments.
-    public let content: Content
+    /// The ornaments, each with the accidental marks that follow it, in document order.
+    public let entries: [Entry]
 
     /// The optional-unique-id attribute group allows an element to optionally specify an ID that is unique to the
     /// entire document. This attribute group is not used for a required id attribute, or for an id attribute that

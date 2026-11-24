@@ -47,10 +47,18 @@ public struct MXLPosition {
 
     /// Creates a new `MXLPosition`.
     ///
-    /// - Parameter defaultX:   The default horizontal position, in tenths, changing the computation of the default position relative to the left-hand side of the note or the musical position within the measure.
-    /// - Parameter defaultY:   The default vertical position, in tenths, changing the computation of the default position relative to the top line of the staff.
-    /// - Parameter relativeX:  The horizontal position, in tenths, relative to the default position, either as computed by the application or as overridden by `defaultX`. Positive values are to the right, negative values to the left.
-    /// - Parameter relativeY:  The vertical position, in tenths, relative to the default position, either as computed by the application or as overridden by `defaultY`. Positive values are up, negative values down; for stems, a positive value lengthens the stem while a negative value shortens it.
+    /// - Parameter defaultX:   The default horizontal position, in tenths, changing the computation of the default
+    ///                         position relative to the left-hand side of the note or the musical position within the
+    ///                         measure.
+    /// - Parameter defaultY:   The default vertical position, in tenths, changing the computation of the default
+    ///                         position relative to the top line of the staff.
+    /// - Parameter relativeX:  The horizontal position, in tenths, relative to the default position, either as computed
+    ///                         by the application or as overridden by `defaultX`. Positive values are to the right,
+    ///                         negative values to the left.
+    /// - Parameter relativeY:  The vertical position, in tenths, relative to the default position, either as computed
+    ///                         by the application or as overridden by `defaultY`. Positive values are up, negative
+    ///                         values down; for stems, a positive value lengthens the stem while a negative value
+    ///                         shortens it.
     public init(defaultX: MXLTenths? = nil,
                 defaultY: MXLTenths? = nil,
                 relativeX: MXLTenths? = nil,

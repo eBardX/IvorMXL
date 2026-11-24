@@ -7,9 +7,12 @@ public struct MXLTuning {
 
     /// Creates a new `MXLTuning`.
     ///
-    /// - Parameter step: The tuning-step element is represented like the step element, with a different name to reflect its different function in string tuning.
-    /// - Parameter alter: The tuning-alter element is represented like the alter element, with a different name to reflect its different function in string tuning.
-    /// - Parameter octave: The tuning-octave element is represented like the octave element, with a different name to reflect its different function in string tuning.
+    /// - Parameter step:    The tuning-step element is represented like the step element, with a different name to
+    ///                      reflect its different function in string tuning.
+    /// - Parameter alter:   The tuning-alter element is represented like the alter element, with a different name to
+    ///                      reflect its different function in string tuning.
+    /// - Parameter octave:  The tuning-octave element is represented like the octave element, with a different name to
+    ///                      reflect its different function in string tuning.
     public init(step: MXLStep,
                 alter: MXLSemitones? = nil,
                 octave: MXLOctave) {

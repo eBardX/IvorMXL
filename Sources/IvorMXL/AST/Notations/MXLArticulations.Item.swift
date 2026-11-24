@@ -16,8 +16,8 @@ extension MXLArticulations {
         /// The detached-legato element indicates the combination of a tenuto line and staccato dot symbol.
         case detachedLegato(position: MXLPosition, font: MXLFont, color: MXLColor?, placement: MXLAboveBelow?)
 
-        /// The doit element is an indeterminate slide attached to a single note. The doit appears after the main note and
-        /// goes above the main pitch.
+        /// The doit element is an indeterminate slide attached to a single note. The doit appears after the main note
+        /// and goes above the main pitch.
         case doit(MXLEmptyLine)
 
         /// The falloff element is an indeterminate slide attached to a single note. The falloff appears after the main
@@ -26,16 +26,17 @@ extension MXLArticulations {
 
         /// The other-articulation element is used to define any articulations not yet in the MusicXML format. The smufl
         /// attribute can be used to specify a particular articulation, allowing application interoperability without
-        /// requiring every SMuFL articulation to have a MusicXML element equivalent. Using the other-articulation element
-        /// without the smufl attribute allows for extended representation, though without application interoperability.
+        /// requiring every SMuFL articulation to have a MusicXML element equivalent. Using the other-articulation
+        /// element without the smufl attribute allows for extended representation, though without application
+        /// interoperability.
         case otherArticulation(MXLOtherPlacementText)
 
         /// The plop element is an indeterminate slide attached to a single note. The plop appears before the main note
         /// and comes from above the main pitch.
         case plop(MXLEmptyLine)
 
-        /// The scoop element is an indeterminate slide attached to a single note. The scoop appears before the main note
-        /// and comes from below the main pitch.
+        /// The scoop element is an indeterminate slide attached to a single note. The scoop appears before the main
+        /// note and comes from below the main pitch.
         case scoop(MXLEmptyLine)
 
         /// The soft-accent element indicates a soft accent that is not as heavy as a normal accent. It is often notated

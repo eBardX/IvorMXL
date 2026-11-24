@@ -13,7 +13,7 @@ extension MXLMetronome.Note {
 
         /// Creates a new `MXLMetronome.Note.Tied`.
         ///
-        /// - Parameter kind: Whether this element marks the start or the stop of the tie.
+        /// - Parameter kind:  Whether this element marks the start or the stop of the tie.
         public init(kind: MXLStartStop) {
             self.kind = kind
         }

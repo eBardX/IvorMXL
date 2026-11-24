@@ -13,8 +13,8 @@ public struct MXLStaffLinePosition {
 
     /// Creates a new `MXLStaffLinePosition` with the provided integer value.
     ///
-    /// - Parameter intValue: Staff lines are numbered from bottom to top, with 1 being the bottom line on a staff.
-    ///                       This value can extend beyond the range of the lines on the current staff.
+    /// - Parameter intValue:  Staff lines are numbered from bottom to top, with 1 being the bottom line on a staff.
+    ///                        This value can extend beyond the range of the lines on the current staff.
     public init?(intValue: Int) {
         self.intValue = intValue
     }

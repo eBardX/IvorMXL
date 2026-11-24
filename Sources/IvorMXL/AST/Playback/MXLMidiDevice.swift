@@ -13,9 +13,11 @@ public struct MXLMidiDevice {
 
     /// Creates a new `MXLMidiDevice`.
     ///
-    /// - Parameter id:     The score-instrument assigned to this device. If missing, the device assignment affects all score-instrument elements in the score-part.
+    /// - Parameter id:     The score-instrument assigned to this device. If missing, the device assignment affects all
+    ///                     score-instrument elements in the score-part.
     /// - Parameter value:  The value of this element.
-    /// - Parameter port:   The MIDI 1.0 port (or cable) number, from 1 to 16, for use with the unofficial MIDI 1.0 port meta event.
+    /// - Parameter port:   The MIDI 1.0 port (or cable) number, from 1 to 16, for use with the unofficial MIDI 1.0 port
+    ///                     meta event.
     public init(id: String? = nil,
                 value: String,
                 port: MXLMidi16? = nil) {

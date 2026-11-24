@@ -10,8 +10,8 @@ extension MXLDocument {
         /// Creates a new version number with the provided major and minor
         /// components.
         ///
-        /// - Parameter major: The major version number.
-        /// - Parameter minor: The minor version number.
+        /// - Parameter major:  The major version number.
+        /// - Parameter minor:  The minor version number.
         public init(major: UInt,
                     minor: UInt) {
             self.major = major

@@ -14,8 +14,10 @@ public struct MXLGrace {
     /// Creates a new `MXLGrace`.
     ///
     /// - Parameter stealTimePrevious:   The percentage of time to steal from the previous note for the grace note.
-    /// - Parameter stealTimeFollowing:  The percentage of time to steal from the following note for the grace note, as for appoggiaturas.
-    /// - Parameter makeTime:            Indicates to make time, not steal time, for the grace note. Units are in real-time divisions.
+    /// - Parameter stealTimeFollowing:  The percentage of time to steal from the following note for the grace note, as
+    ///                                  for appoggiaturas.
+    /// - Parameter makeTime:            Indicates to make time, not steal time, for the grace note. Units are in
+    ///                                  real-time divisions.
     /// - Parameter isSlashed:           A Boolean value indicating whether this is a slashed grace note.
     public init(stealTimePrevious: MXLPercent? = nil,
                 stealTimeFollowing: MXLPercent? = nil,
@@ -34,7 +36,7 @@ public struct MXLGrace {
     /// Maps to the MusicXML `slash` attribute.
     public let isSlashed: Bool?
 
-    /// Indicates to make time, not steal time, for the grace note. Units are in real-time divisions.
+    /// The time to make, rather than steal, for the grace note. Units are in real-time divisions.
     ///
     /// Maps to the MusicXML `make-time` attribute.
     public let makeTime: MXLDivisions?

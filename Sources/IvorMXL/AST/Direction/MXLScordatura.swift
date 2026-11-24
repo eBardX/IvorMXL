@@ -10,8 +10,10 @@ public struct MXLScordatura {
 
     /// Creates a new `MXLScordatura`.
     ///
-    /// - Parameter id: The optional-unique-id attribute group allows an element to optionally specify an ID that is unique to the entire document. This attribute group is not used for a required id attribute, or for an id attribute that specifies an id reference.
-    /// - Parameter accord: The string tunings for the scordatura, ordered from high to low.
+    /// - Parameter id:      The optional-unique-id attribute group allows an element to optionally specify an ID that
+    ///                      is unique to the entire document. This attribute group is not used for a required id
+    ///                      attribute, or for an id attribute that specifies an id reference.
+    /// - Parameter accord:  The string tunings for the scordatura, ordered from high to low.
     public init(id: String? = nil,
                 accord: [MXLAccord] = []) {
         self.accord = accord

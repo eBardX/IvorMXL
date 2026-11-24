@@ -11,11 +11,13 @@ public struct MXLStick {
 
     /// Creates a new `MXLStick`.
     ///
-    /// - Parameter kind: The type of stick, mallet, or beater.
-    /// - Parameter material: The material of the stick, mallet, or beater.
-    /// - Parameter tip: The direction that the tip of the stick, mallet, or beater points.
-    /// - Parameter hasParentheses: A Boolean value indicating whether the pictogram is enclosed in parentheses. Defaults to `false` if not present.
-    /// - Parameter hasDashedCircle: A Boolean value indicating whether the pictogram is enclosed in a dashed circle. Defaults to `false` if not present.
+    /// - Parameter kind:             The type of stick, mallet, or beater.
+    /// - Parameter material:         The material of the stick, mallet, or beater.
+    /// - Parameter tip:              The direction that the tip of the stick, mallet, or beater points.
+    /// - Parameter hasParentheses:   A Boolean value indicating whether the pictogram is enclosed in parentheses.
+    ///                               Defaults to `false` if not present.
+    /// - Parameter hasDashedCircle:  A Boolean value indicating whether the pictogram is enclosed in a dashed circle.
+    ///                               Defaults to `false` if not present.
     public init(kind: Kind,
                 material: Material,
                 tip: MXLTipDirection? = nil,

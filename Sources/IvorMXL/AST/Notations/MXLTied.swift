@@ -7,15 +7,15 @@
 /// complex tied notation situations.
 ///
 /// Ties that join two notes of the same pitch together should be represented with a tied element on the first
-/// note with type="start" and a tied element on the second note with type="stop". This can also be done if the
+/// note with `type="start"` and a tied element on the second note with `type="stop"`. This can also be done if the
 /// two notes being tied are enharmonically equivalent, but have different step values. It is not recommended to
 /// use tied elements to join two notes with enharmonically inequivalent pitches.
 ///
 /// Ties that indicate that an instrument should be undamped are specified with a single tied element with
-/// type="let-ring".
+/// `type="let-ring"`.
 ///
 /// Ties that are visually attached to only one note, other than undamped ties, should be specified with two tied
-/// elements on the same note, first type="start" then type="stop". This can be used to represent ties into or out
+/// elements on the same note, first `type="start"` then `type="stop"`. This can be used to represent ties into or out
 /// of repeated sections or codas.
 ///
 /// Maps the MusicXML `<tied>` element.
@@ -25,22 +25,40 @@ public struct MXLTied {
 
     /// Creates a new `MXLTied`.
     ///
-    /// - Parameter id: The optional-unique-id attribute group allows an element to optionally specify an ID that is unique to the entire document. This attribute group is not used for a required id attribute, or for an id attribute that specifies an id reference.
-    /// - Parameter kind: Whether this element marks the start, stop, or continuation of the tie, or indicates that the note should be undamped.
-    /// - Parameter number: Distinguishes this tie from other ties that might be active at the same time.
-    /// - Parameter lineKind: The line-type attribute distinguishes between solid, dashed, dotted, and wavy lines.
-    /// - Parameter dashLength:  The length, in tenths, of the dashes in a dashed line. Ignored if the corresponding line-type attribute is not dashed.
-    /// - Parameter spaceLength:  The length, in tenths, of the spaces in a dashed line. Ignored if the corresponding line-type attribute is not dashed.
-    /// - Parameter position: For most elements, any program will compute a default x and y position. The position attributes let this be changed two ways.
-    /// - Parameter placement: The placement attribute indicates whether something is above or below another element, such as a note or a notation.
-    /// - Parameter orientation: The orientation attribute indicates whether slurs and ties are overhand (tips down) or underhand (tips up). This is distinct from the placement attribute used by any notation type.
-    /// - Parameter bezierX: The x-coordinate, in tenths relative to any position settings, of the outgoing bezier control point for a slur or tie with a start type, or the incoming control point for one with a stop or continue type.
-    /// - Parameter bezierY: The y-coordinate, in tenths relative to any position settings, of the outgoing bezier control point for a slur or tie with a start type, or the incoming control point for one with a stop or continue type.
-    /// - Parameter bezierX2: The x-coordinate, in tenths, of the outgoing bezier control point for a slur with a continue type.
-    /// - Parameter bezierY2: The y-coordinate, in tenths, of the outgoing bezier control point for a slur with a continue type.
-    /// - Parameter bezierOffset: The outgoing bezier control point offset, in musical divisions, for a slur or tie with a start type, or the incoming control point offset for one with a stop or continue type. Deprecated as of MusicXML 3.1 in favor of `bezierX`.
-    /// - Parameter bezierOffset2: The outgoing bezier control point offset, in musical divisions, for a slur with a continue type. Deprecated as of MusicXML 3.1 in favor of `bezierX2`.
-    /// - Parameter color: The color attribute group indicates the color of an element.
+    /// - Parameter id:             The optional-unique-id attribute group allows an element to optionally specify an ID
+    ///                             that is unique to the entire document. This attribute group is not used for a
+    ///                             required id attribute, or for an id attribute that specifies an id reference.
+    /// - Parameter kind:           Whether this element marks the start, stop, or continuation of the tie, or indicates
+    ///                             that the note should be undamped.
+    /// - Parameter number:         Distinguishes this tie from other ties that might be active at the same time.
+    /// - Parameter lineKind:       The line-type attribute distinguishes between solid, dashed, dotted, and wavy lines.
+    /// - Parameter dashLength:     The length, in tenths, of the dashes in a dashed line. Ignored if the corresponding
+    ///                             line-type attribute is not dashed.
+    /// - Parameter spaceLength:    The length, in tenths, of the spaces in a dashed line. Ignored if the corresponding
+    ///                             line-type attribute is not dashed.
+    /// - Parameter position:       For most elements, any program will compute a default x and y position. The position
+    ///                             attributes let this be changed two ways.
+    /// - Parameter placement:      The placement attribute indicates whether something is above or below another
+    ///                             element, such as a note or a notation.
+    /// - Parameter orientation:    The orientation attribute indicates whether slurs and ties are overhand (tips down)
+    ///                             or underhand (tips up). This is distinct from the placement attribute used by any
+    ///                             notation type.
+    /// - Parameter bezierX:        The x-coordinate, in tenths relative to any position settings, of the outgoing
+    ///                             bezier control point for a slur or tie with a start type, or the incoming control
+    ///                             point for one with a stop or continue type.
+    /// - Parameter bezierY:        The y-coordinate, in tenths relative to any position settings, of the outgoing
+    ///                             bezier control point for a slur or tie with a start type, or the incoming control
+    ///                             point for one with a stop or continue type.
+    /// - Parameter bezierX2:       The x-coordinate, in tenths, of the outgoing bezier control point for a slur with a
+    ///                             continue type.
+    /// - Parameter bezierY2:       The y-coordinate, in tenths, of the outgoing bezier control point for a slur with a
+    ///                             continue type.
+    /// - Parameter bezierOffset:   The outgoing bezier control point offset, in musical divisions, for a slur or tie
+    ///                             with a start type, or the incoming control point offset for one with a stop or
+    ///                             continue type. Deprecated as of MusicXML 3.1 in favor of `bezierX`.
+    /// - Parameter bezierOffset2:  The outgoing bezier control point offset, in musical divisions, for a slur with a
+    ///                             continue type. Deprecated as of MusicXML 3.1 in favor of `bezierX2`.
+    /// - Parameter color:          The color attribute group indicates the color of an element.
     public init(id: String? = nil,
                 kind: Kind,
                 number: MXLNumberLevel? = nil,

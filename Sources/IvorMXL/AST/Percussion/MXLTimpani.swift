@@ -10,7 +10,7 @@ public struct MXLTimpani {
 
     /// Creates a new `MXLTimpani`.
     ///
-    /// - Parameter smufl: Distinguishes different SMuFL stylistic alternates for this timpani pictogram.
+    /// - Parameter smufl:  Distinguishes different SMuFL stylistic alternates for this timpani pictogram.
     public init(smufl: MXLSmuflPictogramGlyphName? = nil) {
         self.smufl = smufl
     }

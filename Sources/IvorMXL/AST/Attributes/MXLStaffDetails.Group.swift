@@ -9,8 +9,10 @@ extension MXLStaffDetails {
 
         /// Creates a new `MXLStaffDetails.Group`.
         ///
-        /// - Parameter staffLines: The staff-lines element specifies the number of lines and is usually used for a non 5-line staff. If the staff-lines element is present, the appearance of each line may be individually specified with a line-detail element.
-        /// - Parameter lineDetail: Specifies the appearance of each line individually, when present.
+        /// - Parameter staffLines:  The staff-lines element specifies the number of lines and is usually used for a non
+        ///                          5-line staff. If the staff-lines element is present, the appearance of each line
+        ///                          may be individually specified with a line-detail element.
+        /// - Parameter lineDetail:  Specifies the appearance of each line individually, when present.
         public init(staffLines: Int,
                     lineDetail: [MXLLineDetail] = []) {
             self.lineDetail = lineDetail
@@ -19,7 +21,7 @@ extension MXLStaffDetails {
 
         // MARK: Public Instance Properties
 
-        /// Specifies the appearance of each line individually, when present.
+        /// The appearance of each individual staff line, when present.
         ///
         /// Maps to nested MusicXML `<line-detail>` elements.
         public let lineDetail: [MXLLineDetail]

@@ -9,8 +9,9 @@ extension MXLSlashContent {
 
         /// Creates a new `MXLSlashContent.Group`.
         ///
-        /// - Parameter slashKind: The slash-type element indicates the graphical note type to use for the display of repetition marks.
-        /// - Parameter slashDot: The number of augmentation dots in the note type used to display repetition marks.
+        /// - Parameter slashKind:  The slash-type element indicates the graphical note type to use for the display of
+        ///                         repetition marks.
+        /// - Parameter slashDot:   The number of augmentation dots in the note type used to display repetition marks.
         public init(slashKind: MXLNoteKindValue,
                     slashDot: Int) {
             self.slashDot = slashDot

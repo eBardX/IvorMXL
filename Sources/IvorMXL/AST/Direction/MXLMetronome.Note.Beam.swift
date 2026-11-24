@@ -14,8 +14,8 @@ extension MXLMetronome.Note {
 
         /// Creates a new `MXLMetronome.Note.Beam`.
         ///
-        /// - Parameter value: The value of this element.
-        /// - Parameter number: Defaults to `1`.
+        /// - Parameter value:   The value of this element.
+        /// - Parameter number:  Defaults to `1`.
         public init(value: MXLBeamValue,
                     number: MXLBeamLevel? = nil) {
             self.number = number ?? 1

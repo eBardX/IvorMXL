@@ -22,16 +22,31 @@ public struct MXLClef {
 
     /// Creates a new `MXLClef`.
     ///
-    /// - Parameter id: The optional-unique-id attribute group allows an element to optionally specify an ID that is unique to the entire document. This attribute group is not used for a required id attribute, or for an id attribute that specifies an id reference.
-    /// - Parameter content: Clefs are represented by a combination of sign, line, and clef-octave-change elements.
-    /// - Parameter number:  The staff number within the part that this element applies to. A value of 1 is assumed if not present.
-    /// - Parameter isAdditional:  A Boolean value indicating whether this clef is in a non-standard line position, such as for a cue passage or when multiple clefs are present on one staff simultaneously.
-    /// - Parameter size:  The size of the clef, used when `additional` is `true`, typically to indicate cue clefs.
-    /// - Parameter isAfterBarline:  A Boolean value indicating whether this clef appears after the barline rather than before it, as for cues or after a repeated section.
-    /// - Parameter position: For most elements, any program will compute a default x and y position. The position attributes let this be changed two ways.
-    /// - Parameter font: The font attribute group gathers together attributes for determining the font within a credit or direction. They are based on the text styles for Cascading Style Sheets. The font-family is a comma-separated list of font names. The font-style can be normal or italic. The font-size can be one of the CSS sizes or a numeric point size. The font-weight can be normal or bold. The default is application-dependent, but is a text font vs. a music font.
-    /// - Parameter color: The color attribute group indicates the color of an element.
-    /// - Parameter printsObject: A Boolean value indicating whether to print an object (e.g. a note or a rest). Defaults to `true` if not specified.
+    /// - Parameter id:              The optional-unique-id attribute group allows an element to optionally specify an
+    ///                              ID that is unique to the entire document. This attribute group is not used for a
+    ///                              required id attribute, or for an id attribute that specifies an id reference.
+    /// - Parameter content:         Clefs are represented by a combination of sign, line, and clef-octave-change
+    ///                              elements.
+    /// - Parameter number:          The staff number within the part that this element applies to. A value of 1 is
+    ///                              assumed if not present.
+    /// - Parameter isAdditional:    A Boolean value indicating whether this clef is in a non-standard line position,
+    ///                              such as for a cue passage or when multiple clefs are present on one staff
+    ///                              simultaneously.
+    /// - Parameter size:            The size of the clef, used when `additional` is `true`, typically to indicate cue
+    ///                              clefs.
+    /// - Parameter isAfterBarline:  A Boolean value indicating whether this clef appears after the barline rather than
+    ///                              before it, as for cues or after a repeated section.
+    /// - Parameter position:        For most elements, any program will compute a default x and y position. The
+    ///                              position attributes let this be changed two ways.
+    /// - Parameter font:            The font attribute group gathers together attributes for determining the font
+    ///                              within a credit or direction. They are based on the text styles for Cascading Style
+    ///                              Sheets. The font-family is a comma-separated list of font names. The font-style can
+    ///                              be normal or italic. The font-size can be one of the CSS sizes or a numeric point
+    ///                              size. The font-weight can be normal or bold. The default is application-dependent,
+    ///                              but is a text font vs. a music font.
+    /// - Parameter color:           The color attribute group indicates the color of an element.
+    /// - Parameter printsObject:    A Boolean value indicating whether to print an object (e.g. a note or a rest).
+    ///                              Defaults to `true` if not specified.
     public init(id: String? = nil,
                 content: Content,
                 number: MXLStaffNumber? = nil,

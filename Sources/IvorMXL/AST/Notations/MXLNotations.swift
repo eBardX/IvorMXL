@@ -11,11 +11,17 @@ public struct MXLNotations {
 
     /// Creates a new `MXLNotations`.
     ///
-    /// - Parameter id: The optional-unique-id attribute group allows an element to optionally specify an ID that is unique to the entire document. This attribute group is not used for a required id attribute, or for an id attribute that specifies an id reference.
-    /// - Parameter footnote: The footnote element specifies editorial information that appears in footnotes in the printed score. It is defined within a group due to its multiple uses within the MusicXML schema.
-    /// - Parameter level: The level element specifies editorial information for different MusicXML elements. It is defined within a group due to its multiple uses within the MusicXML schema.
-    /// - Parameter items: One of the alternatives for Notations.
-    /// - Parameter printsObject: A Boolean value indicating whether to print an object (e.g. a note or a rest). Defaults to `true` if not specified.
+    /// - Parameter id:            The optional-unique-id attribute group allows an element to optionally specify an ID
+    ///                            that is unique to the entire document. This attribute group is not used for a
+    ///                            required id attribute, or for an id attribute that specifies an id reference.
+    /// - Parameter footnote:      The footnote element specifies editorial information that appears in footnotes in the
+    ///                            printed score. It is defined within a group due to its multiple uses within the
+    ///                            MusicXML schema.
+    /// - Parameter level:         The level element specifies editorial information for different MusicXML elements. It
+    ///                            is defined within a group due to its multiple uses within the MusicXML schema.
+    /// - Parameter items:         One of the alternatives for Notations.
+    /// - Parameter printsObject:  A Boolean value indicating whether to print an object (e.g. a note or a rest).
+    ///                            Defaults to `true` if not specified.
     public init(id: String? = nil,
                 footnote: MXLFormattedText? = nil,
                 level: MXLLevel? = nil,

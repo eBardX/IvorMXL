@@ -13,22 +13,39 @@ public struct MXLSlur {
 
     /// Creates a new `MXLSlur`.
     ///
-    /// - Parameter id: The optional-unique-id attribute group allows an element to optionally specify an ID that is unique to the entire document. This attribute group is not used for a required id attribute, or for an id attribute that specifies an id reference.
-    /// - Parameter kind: Whether this element marks the start, stop, or continuation of the slur.
-    /// - Parameter number: Defaults to `1`.
-    /// - Parameter lineKind: The line-type attribute distinguishes between solid, dashed, dotted, and wavy lines.
-    /// - Parameter dashLength:  The length, in tenths, of the dashes in a dashed line. Ignored if the corresponding line-type attribute is not dashed.
-    /// - Parameter spaceLength:  The length, in tenths, of the spaces in a dashed line. Ignored if the corresponding line-type attribute is not dashed.
-    /// - Parameter position: For most elements, any program will compute a default x and y position. The position attributes let this be changed two ways.
-    /// - Parameter placement: The placement attribute indicates whether something is above or below another element, such as a note or a notation.
-    /// - Parameter orientation: The orientation attribute indicates whether slurs and ties are overhand (tips down) or underhand (tips up). This is distinct from the placement attribute used by any notation type.
-    /// - Parameter bezierX: The x-coordinate, in tenths relative to any position settings, of the outgoing bezier control point for a slur or tie with a start type, or the incoming control point for one with a stop or continue type.
-    /// - Parameter bezierY: The y-coordinate, in tenths relative to any position settings, of the outgoing bezier control point for a slur or tie with a start type, or the incoming control point for one with a stop or continue type.
-    /// - Parameter bezierX2: The x-coordinate, in tenths, of the outgoing bezier control point for a slur with a continue type.
-    /// - Parameter bezierY2: The y-coordinate, in tenths, of the outgoing bezier control point for a slur with a continue type.
-    /// - Parameter bezierOffset: The outgoing bezier control point offset, in musical divisions, for a slur or tie with a start type, or the incoming control point offset for one with a stop or continue type. Deprecated as of MusicXML 3.1 in favor of `bezierX`.
-    /// - Parameter bezierOffset2: The outgoing bezier control point offset, in musical divisions, for a slur with a continue type. Deprecated as of MusicXML 3.1 in favor of `bezierX2`.
-    /// - Parameter color: The color attribute group indicates the color of an element.
+    /// - Parameter id:             The optional-unique-id attribute group allows an element to optionally specify an ID
+    ///                             that is unique to the entire document. This attribute group is not used for a
+    ///                             required id attribute, or for an id attribute that specifies an id reference.
+    /// - Parameter kind:           Whether this element marks the start, stop, or continuation of the slur.
+    /// - Parameter number:         Defaults to `1`.
+    /// - Parameter lineKind:       The line-type attribute distinguishes between solid, dashed, dotted, and wavy lines.
+    /// - Parameter dashLength:     The length, in tenths, of the dashes in a dashed line. Ignored if the corresponding
+    ///                             line-type attribute is not dashed.
+    /// - Parameter spaceLength:    The length, in tenths, of the spaces in a dashed line. Ignored if the corresponding
+    ///                             line-type attribute is not dashed.
+    /// - Parameter position:       For most elements, any program will compute a default x and y position. The position
+    ///                             attributes let this be changed two ways.
+    /// - Parameter placement:      The placement attribute indicates whether something is above or below another
+    ///                             element, such as a note or a notation.
+    /// - Parameter orientation:    The orientation attribute indicates whether slurs and ties are overhand (tips down)
+    ///                             or underhand (tips up). This is distinct from the placement attribute used by any
+    ///                             notation type.
+    /// - Parameter bezierX:        The x-coordinate, in tenths relative to any position settings, of the outgoing
+    ///                             bezier control point for a slur or tie with a start type, or the incoming control
+    ///                             point for one with a stop or continue type.
+    /// - Parameter bezierY:        The y-coordinate, in tenths relative to any position settings, of the outgoing
+    ///                             bezier control point for a slur or tie with a start type, or the incoming control
+    ///                             point for one with a stop or continue type.
+    /// - Parameter bezierX2:       The x-coordinate, in tenths, of the outgoing bezier control point for a slur with a
+    ///                             continue type.
+    /// - Parameter bezierY2:       The y-coordinate, in tenths, of the outgoing bezier control point for a slur with a
+    ///                             continue type.
+    /// - Parameter bezierOffset:   The outgoing bezier control point offset, in musical divisions, for a slur or tie
+    ///                             with a start type, or the incoming control point offset for one with a stop or
+    ///                             continue type. Deprecated as of MusicXML 3.1 in favor of `bezierX`.
+    /// - Parameter bezierOffset2:  The outgoing bezier control point offset, in musical divisions, for a slur with a
+    ///                             continue type. Deprecated as of MusicXML 3.1 in favor of `bezierX2`.
+    /// - Parameter color:          The color attribute group indicates the color of an element.
     public init(id: String? = nil,
                 kind: MXLStartStopContinue,
                 number: MXLNumberLevel? = nil,

@@ -15,13 +15,32 @@ public struct MXLPrint {
 
     /// Creates a new `MXLPrint`.
     ///
-    /// - Parameter id:                       The optional-unique-id attribute group allows an element to optionally specify an ID that is unique to the entire document. This attribute group is not used for a required id attribute, or for an id attribute that specifies an id reference.
-    /// - Parameter layout:                   The layout group specifies the sequence of page, system, and staff layout elements that is common to both the defaults and print elements.
+    /// - Parameter id:                       The optional-unique-id attribute group allows an element to optionally
+    ///                                       specify an ID that is unique to the entire document. This attribute group
+    ///                                       is not used for a required id attribute, or for an id attribute that
+    ///                                       specifies an id reference.
+    /// - Parameter layout:                   The layout group specifies the sequence of page, system, and staff layout
+    ///                                       elements that is common to both the defaults and print elements.
     /// - Parameter measureLayout:            Specifies the horizontal distance from the previous measure, in tenths.
-    /// - Parameter measureNumbering:         Specifies details about measure numbering displayed at this point in the score.
-    /// - Parameter partNameDisplay:          Changes how the part name is displayed, taking effect when the current measure or a succeeding measure starts a new system.
-    /// - Parameter partAbbreviationDisplay:  Changes how the part abbreviation is displayed, taking effect when the current measure or a succeeding measure starts a new system.
-    /// - Parameter attributes:               The print-attributes group is used by the print element. The new-system and new-page attributes indicate whether to force a system or page break, or to force the current music onto the same system or page as the preceding music. Normally this is the first music data within a measure. If used in multi-part music, they should be placed in the same positions within each part, or the results are undefined. The page-number attribute sets the number of a new page; it is ignored if new-page is not “yes”. Version 2.0 adds a blank-page attribute. This is a positive integer value that specifies the number of blank pages to insert before the current measure. It is ignored if new-page is not “yes”. These blank pages have no music, but may have text or images specified by the credit element. This is used to allow a combination of pages that are all text, or all text and images, together with pages of music.
+    /// - Parameter measureNumbering:         Specifies details about measure numbering displayed at this point in the
+    ///                                       score.
+    /// - Parameter partNameDisplay:          Changes how the part name is displayed, taking effect when the current
+    ///                                       measure or a succeeding measure starts a new system.
+    /// - Parameter partAbbreviationDisplay:  Changes how the part abbreviation is displayed, taking effect when the
+    ///                                       current measure or a succeeding measure starts a new system.
+    /// - Parameter attributes:               The print-attributes group is used by the print element. The new-system
+    ///                                       and new-page attributes indicate whether to force a system or page break,
+    ///                                       or to force the current music onto the same system or page as the
+    ///                                       preceding music. Normally this is the first music data within a measure.
+    ///                                       If used in multi-part music, they should be placed in the same positions
+    ///                                       within each part, or the results are undefined. The page-number attribute
+    ///                                       sets the number of a new page; it is ignored if new-page is not “yes”.
+    ///                                       Version 2.0 adds a blank-page attribute. This is a positive integer value
+    ///                                       that specifies the number of blank pages to insert before the current
+    ///                                       measure. It is ignored if new-page is not “yes”. These blank pages have no
+    ///                                       music, but may have text or images specified by the credit element. This
+    ///                                       is used to allow a combination of pages that are all text, or all text and
+    ///                                       images, together with pages of music.
     public init(id: String? = nil,
                 layout: MXLLayout = MXLLayout(),
                 measureLayout: MXLMeasureLayout? = nil,
@@ -66,12 +85,12 @@ public struct MXLPrint {
     /// defaults and print elements.
     public let layout: MXLLayout
 
-    /// Specifies the horizontal distance from the previous measure, in tenths.
+    /// The horizontal distance from the previous measure, in tenths.
     ///
     /// Maps to a nested MusicXML `<measure-layout>` element.
     public let measureLayout: MXLMeasureLayout?
 
-    /// Specifies details about measure numbering displayed at this point in the score.
+    /// Details about measure numbering displayed at this point in the score.
     ///
     /// Maps to a nested MusicXML `<measure-numbering>` element.
     public let measureNumbering: MXLMeasureNumbering?

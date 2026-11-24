@@ -49,11 +49,11 @@ extension MXLTechnical {
         /// The handbell element represents notation for various techniques used in handbell and handchime music.
         case handbell(MXLHandbell)
 
-        /// The harmon-mute element represents the symbols used for harmon mutes in brass notation.
-        case harmonMute(MXLHarmonMute)
-
         /// The harmonic element indicates natural and artificial harmonics.
         case harmonic(MXLHarmonic)
+
+        /// The harmon-mute element represents the symbols used for harmon mutes in brass notation.
+        case harmonMute(MXLHarmonMute)
 
         /// The heel element is used with organ pedals to indicate use of the heel.
         case heel(MXLHeelToe)
@@ -89,9 +89,9 @@ extension MXLTechnical {
         /// The smear element represents the tilde-shaped smear symbol used in brass notation.
         case smear(position: MXLPosition, font: MXLFont, color: MXLColor?, placement: MXLAboveBelow?)
 
-        /// The snap-pizzicato element represents the snap pizzicato symbol. This is a circle with a line, where the line
-        /// comes inside the circle. It is distinct from the thumb-position symbol, where the line does not come inside
-        /// the circle.
+        /// The snap-pizzicato element represents the snap pizzicato symbol. This is a circle with a line, where the
+        /// line comes inside the circle. It is distinct from the thumb-position symbol, where the line does not come
+        /// inside the circle.
         case snapPizzicato(position: MXLPosition, font: MXLFont, color: MXLColor?, placement: MXLAboveBelow?)
 
         /// The stopped element represents the stopped symbol, which looks like a plus sign. The smufl attribute
@@ -106,9 +106,9 @@ extension MXLTechnical {
         /// The tap element indicates a tap on the fretboard.
         case tap(MXLTap)
 
-        /// The thumb-position element represents the thumb position symbol. This is a circle with a line, where the line
-        /// does not come within the circle. It is distinct from the snap pizzicato symbol, where the line comes inside
-        /// the circle.
+        /// The thumb-position element represents the thumb position symbol. This is a circle with a line, where the
+        /// line does not come within the circle. It is distinct from the snap pizzicato symbol, where the line comes
+        /// inside the circle.
         case thumbPosition(position: MXLPosition, font: MXLFont, color: MXLColor?, placement: MXLAboveBelow?)
 
         /// The toe element is used with organ pedals to indicate use of the toe.

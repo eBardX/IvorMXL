@@ -11,8 +11,10 @@ public struct MXLPartName {
 
     /// Creates a new `MXLPartName`.
     ///
-    /// - Parameter value: The value of this element.
-    /// - Parameter text: The part-name-text attribute group is used by the part-name and part-abbreviation elements. The print-style and justify attribute groups are deprecated in MusicXML 2.0 in favor of the new part-name-display and part-abbreviation-display elements.
+    /// - Parameter value:  The value of this element.
+    /// - Parameter text:   The part-name-text attribute group is used by the part-name and part-abbreviation elements.
+    ///                     The print-style and justify attribute groups are deprecated in MusicXML 2.0 in favor of the
+    ///                     new part-name-display and part-abbreviation-display elements.
     public init(value: String,
                 text: Text) {
         self.text = text

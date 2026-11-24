@@ -15,16 +15,24 @@ public struct MXLWedge {
 
     /// Creates a new `MXLWedge`.
     ///
-    /// - Parameter id: The optional-unique-id attribute group allows an element to optionally specify an ID that is unique to the entire document. This attribute group is not used for a required id attribute, or for an id attribute that specifies an id reference.
-    /// - Parameter kind:  Whether this is the start of a crescendo or diminuendo wedge, the end of a wedge, or a continuation of one divided into multiple segments.
-    /// - Parameter number:  Distinguishes this wedge from other wedges that might be active at the same time.
-    /// - Parameter spread:  The spread, in tenths, between the wedge lines at this point. Ignored at the start of a crescendo wedge or the end of a diminuendo wedge.
-    /// - Parameter isNiente:  A Boolean value indicating whether a circle appears at the point of the wedge, indicating a crescendo from nothing or diminuendo to nothing.
-    /// - Parameter lineKind: The line-type attribute distinguishes between solid, dashed, dotted, and wavy lines.
-    /// - Parameter dashLength:  The length, in tenths, of the dashes in a dashed line. Ignored if the corresponding line-type attribute is not dashed.
-    /// - Parameter spaceLength:  The length, in tenths, of the spaces in a dashed line. Ignored if the corresponding line-type attribute is not dashed.
-    /// - Parameter position: For most elements, any program will compute a default x and y position. The position attributes let this be changed two ways.
-    /// - Parameter color: The color attribute group indicates the color of an element.
+    /// - Parameter id:           The optional-unique-id attribute group allows an element to optionally specify an ID
+    ///                           that is unique to the entire document. This attribute group is not used for a required
+    ///                           id attribute, or for an id attribute that specifies an id reference.
+    /// - Parameter kind:         Whether this is the start of a crescendo or diminuendo wedge, the end of a wedge, or a
+    ///                           continuation of one divided into multiple segments.
+    /// - Parameter number:       Distinguishes this wedge from other wedges that might be active at the same time.
+    /// - Parameter spread:       The spread, in tenths, between the wedge lines at this point. Ignored at the start of
+    ///                           a crescendo wedge or the end of a diminuendo wedge.
+    /// - Parameter isNiente:     A Boolean value indicating whether a circle appears at the point of the wedge,
+    ///                           indicating a crescendo from nothing or diminuendo to nothing.
+    /// - Parameter lineKind:     The line-type attribute distinguishes between solid, dashed, dotted, and wavy lines.
+    /// - Parameter dashLength:   The length, in tenths, of the dashes in a dashed line. Ignored if the corresponding
+    ///                           line-type attribute is not dashed.
+    /// - Parameter spaceLength:  The length, in tenths, of the spaces in a dashed line. Ignored if the corresponding
+    ///                           line-type attribute is not dashed.
+    /// - Parameter position:     For most elements, any program will compute a default x and y position. The position
+    ///                           attributes let this be changed two ways.
+    /// - Parameter color:        The color attribute group indicates the color of an element.
     public init(id: String? = nil,
                 kind: Kind,
                 number: MXLNumberLevel? = nil,

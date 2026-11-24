@@ -13,13 +13,24 @@ public struct MXLMidiInstrument {
     ///
     /// - Parameter id:             The score-instrument affected by the change.
     /// - Parameter midiChannel:    The midi-channel element specifies a MIDI 1.0 channel number ranging from 1 to 16.
-    /// - Parameter midiName:       The midi-name element corresponds to a ProgramName meta-event within a Standard MIDI File.
+    /// - Parameter midiName:       The midi-name element corresponds to a ProgramName meta-event within a Standard MIDI
+    ///                             File.
     /// - Parameter midiBank:       The midi-bank element specifies a MIDI 1.0 bank number ranging from 1 to 16,384.
     /// - Parameter midiProgram:    The midi-program element specifies a MIDI 1.0 program number ranging from 1 to 128.
-    /// - Parameter midiUnpitched:  For unpitched instruments, the midi-unpitched element specifies a MIDI 1.0 note number ranging from 1 to 128. It is usually used with MIDI banks for percussion. Note that MIDI 1.0 note numbers are generally specified from 0 to 127 rather than the 1 to 128 numbering used in this element.
-    /// - Parameter volume:         The volume element value is a percentage of the maximum ranging from 0 to 100, with decimal values allowed. This corresponds to a scaling value for the MIDI 1.0 channel volume controller.
-    /// - Parameter pan:            The pan and elevation elements allow placing of sound in a 3-D space relative to the listener. Both are expressed in degrees ranging from -180 to 180. For pan, 0 is straight ahead, -90 is hard left, 90 is hard right, and -180 and 180 are directly behind the listener.
-    /// - Parameter elevation:      The elevation and pan elements allow placing of sound in a 3-D space relative to the listener. Both are expressed in degrees ranging from -180 to 180. For elevation, 0 is level with the listener, 90 is directly above, and -90 is directly below.
+    /// - Parameter midiUnpitched:  For unpitched instruments, the midi-unpitched element specifies a MIDI 1.0 note
+    ///                             number ranging from 1 to 128. It is usually used with MIDI banks for percussion.
+    ///                             Note that MIDI 1.0 note numbers are generally specified from 0 to 127 rather than
+    ///                             the 1 to 128 numbering used in this element.
+    /// - Parameter volume:         The volume element value is a percentage of the maximum ranging from 0 to 100, with
+    ///                             decimal values allowed. This corresponds to a scaling value for the MIDI 1.0 channel
+    ///                             volume controller.
+    /// - Parameter pan:            The pan and elevation elements allow placing of sound in a 3-D space relative to the
+    ///                             listener. Both are expressed in degrees ranging from -180 to 180. For pan, 0 is
+    ///                             straight ahead, -90 is hard left, 90 is hard right, and -180 and 180 are directly
+    ///                             behind the listener.
+    /// - Parameter elevation:      The elevation and pan elements allow placing of sound in a 3-D space relative to the
+    ///                             listener. Both are expressed in degrees ranging from -180 to 180. For elevation, 0
+    ///                             is level with the listener, 90 is directly above, and -90 is directly below.
     public init(id: String,
                 midiChannel: MXLMidi16? = nil,
                 midiName: String? = nil,

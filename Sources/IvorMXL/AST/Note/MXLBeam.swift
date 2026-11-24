@@ -24,10 +24,13 @@ public struct MXLBeam {
 
     /// Creates a new `MXLBeam`.
     ///
-    /// - Parameter id:        The optional-unique-id attribute group allows an element to optionally specify an ID that is unique to the entire document. This attribute group is not used for a required id attribute, or for an id attribute that specifies an id reference.
+    /// - Parameter id:        The optional-unique-id attribute group allows an element to optionally specify an ID that
+    ///                        is unique to the entire document. This attribute group is not used for a required id
+    ///                        attribute, or for an id attribute that specifies an id reference.
     /// - Parameter value:     The value of this element.
     /// - Parameter number:    Defaults to `1`.
-    /// - Parameter repeater:  A Boolean value indicating whether this beam has a repeater, formerly used for tremolos. Deprecated in MusicXML 3.0.
+    /// - Parameter repeater:  A Boolean value indicating whether this beam has a repeater, formerly used for tremolos.
+    ///                        Deprecated in MusicXML 3.0.
     /// - Parameter fan:       Indicates accelerandos and ritardandos using fanned beams, or `none` if not specified.
     /// - Parameter color:     The color attribute group indicates the color of an element.
     public init(id: String? = nil,
@@ -49,7 +52,7 @@ public struct MXLBeam {
     /// The color attribute group indicates the color of an element.
     public let color: MXLColor?
 
-    /// Indicates accelerandos and ritardandos using fanned beams, or `none` if not specified.
+    /// The fanning of the beam, which indicates accelerandos and ritardandos, or `none` if not specified.
     ///
     /// Maps to the MusicXML `fan` attribute.
     public let fan: MXLFan?

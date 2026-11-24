@@ -33,6 +33,7 @@ let package = Package(name: "IvorMXL",
                                         swiftSettings: swiftSettings),
                                 .testTarget(name: "IvorMXLTests",
                                             dependencies: [.target(name: "IvorMXL")],
-                                            resources: [.copy("Fixtures")],
+                                            resources: [.copy("TestFixtures/RealWorld"),
+                                                        .copy("TestFixtures/Synthetic")],
                                             swiftSettings: swiftSettings)],
                       swiftLanguageModes: [.v6])

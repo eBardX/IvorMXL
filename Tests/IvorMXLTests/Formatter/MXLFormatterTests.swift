@@ -11,18 +11,6 @@ struct MXLFormatterTests {
 
 extension MXLFormatterTests {
     @Test
-    func errorMessage_isNotEmpty() {
-        let allCases: [MXLFormatter.Error] = [.notValidated,
-                                              .unsupportedTimewise,
-                                              .writeFailure(nil)]
-
-        for error in allCases {
-            #expect(!error.message.isEmpty)
-            #expect(error.category == Category("IvorMXL"))
-        }
-    }
-
-    @Test
     func format_roundTripsMinimalPartwiseScore() throws {
         let document = partwiseDocument(note: note())
 

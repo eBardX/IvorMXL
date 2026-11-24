@@ -36,7 +36,7 @@ extension MXLNormalizer {
     /// content changes clears
     /// ``MXLDocument/isValidated``, since any prior validation no longer applies.
     ///
-    /// - Parameter document:   The document to normalize.
+    /// - Parameter document:  The document to normalize.
     ///
     /// - Returns:  A tuple of a new ``MXLDocument`` whose
     ///             ``MXLDocument/isNormalized`` is `true`, and an array of

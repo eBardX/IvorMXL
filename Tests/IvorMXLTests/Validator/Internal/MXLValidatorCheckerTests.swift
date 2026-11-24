@@ -13,21 +13,6 @@ struct MXLValidatorCheckerTests {
 
 extension MXLValidatorCheckerTests {
     @Test
-    func message_isNeverEmpty() {
-        let allCases: [MXLValidator.Issue] = [.danglingPartID("P1"),
-                                              .durationBeforeDivisions(part: "P1", measure: "1"),
-                                              .unbalancedPartGroup(number: "1"),
-                                              .unknownInstrumentSound("keyboard.pianoforte"),
-                                              .unmatchedEndingStart(number: 1, part: "P1", measure: "1"),
-                                              .unmatchedEndingStop(number: 1, part: "P1", measure: "1"),
-                                              .unusedScorePart("P1")]
-
-        for issue in allCases {
-            #expect(!issue.message.isEmpty)
-        }
-    }
-
-    @Test
     func validate_acceptsAbsentInstrumentSound() {
         let (validated, issues) = validate(instrumentSound: nil)
 

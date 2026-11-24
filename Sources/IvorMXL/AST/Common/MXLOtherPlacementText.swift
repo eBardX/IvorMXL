@@ -11,10 +11,14 @@ public struct MXLOtherPlacementText {
 
     /// Creates a new `MXLOtherPlacementText`.
     ///
-    /// - Parameter value: The value of this element.
-    /// - Parameter printStyle: The print-style attribute group collects the most popular combination of printing attributes: position, font, and color.
-    /// - Parameter placement: The placement attribute indicates whether something is above or below another element, such as a note or a notation.
-    /// - Parameter smufl: The smufl attribute group is used to indicate a particular Standard Music Font Layout (SMuFL) character. Sometimes this is a formatting choice, and sometimes this is a refinement of the semantic meaning of an element.
+    /// - Parameter value:       The value of this element.
+    /// - Parameter printStyle:  The print-style attribute group collects the most popular combination of printing
+    ///                          attributes: position, font, and color.
+    /// - Parameter placement:   The placement attribute indicates whether something is above or below another element,
+    ///                          such as a note or a notation.
+    /// - Parameter smufl:       The smufl attribute group is used to indicate a particular Standard Music Font Layout
+    ///                          (SMuFL) character. Sometimes this is a formatting choice, and sometimes this is a
+    ///                          refinement of the semantic meaning of an element.
     public init(value: String,
                 printStyle: MXLPrintStyle,
                 placement: MXLAboveBelow? = nil,

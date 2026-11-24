@@ -11,8 +11,8 @@ public struct MXLFirstFret {
 
     /// Creates a new `MXLFirstFret`.
     ///
-    /// - Parameter value: The value of this element.
-    /// - Parameter text:  Indicates how this is represented in the fret diagram.
+    /// - Parameter value:     The value of this element.
+    /// - Parameter text:      Indicates how this is represented in the fret diagram.
     /// - Parameter location:  Indicates whether the text appears to the left or right of the frame.
     public init(value: Int,
                 text: String? = nil,
@@ -24,12 +24,12 @@ public struct MXLFirstFret {
 
     // MARK: Public Instance Properties
 
-    /// Indicates whether the text appears to the left or right of the frame.
+    /// The side of the frame, left or right, on which the text appears.
     ///
     /// Maps to the MusicXML `location` attribute.
     public let location: MXLLeftRight?
 
-    /// Indicates how this is represented in the fret diagram.
+    /// How the first fret is represented in the fret diagram.
     ///
     /// Maps to the MusicXML `text` attribute.
     public let text: String?

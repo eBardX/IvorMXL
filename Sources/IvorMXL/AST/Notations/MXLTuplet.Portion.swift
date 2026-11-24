@@ -13,9 +13,11 @@ extension MXLTuplet {
 
         /// Creates a new `MXLTuplet.Portion`.
         ///
-        /// - Parameter number: The number of notes for this portion of the tuplet, if specified. Based on the time-modification element if absent.
-        /// - Parameter kind: The graphical note type of the notes for this portion of the tuplet, if specified. Based on the time-modification element if absent.
-        /// - Parameter dot: The augmentation dots for the notes of this portion of the tuplet, if dotted.
+        /// - Parameter number:  The number of notes for this portion of the tuplet, if specified. Based on the
+        ///                      time-modification element if absent.
+        /// - Parameter kind:    The graphical note type of the notes for this portion of the tuplet, if specified.
+        ///                      Based on the time-modification element if absent.
+        /// - Parameter dot:     The augmentation dots for the notes of this portion of the tuplet, if dotted.
         public init(number: Number? = nil,
                     kind: Kind? = nil,
                     dot: [Dot] = []) {

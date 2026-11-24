@@ -9,13 +9,22 @@ public struct MXLHole {
 
     /// Creates a new `MXLHole`.
     ///
-    /// - Parameter kind:       The content of the optional hole-type element indicates what the hole symbol represents in terms of instrument fingering or other techniques.
+    /// - Parameter kind:       The content of the optional hole-type element indicates what the hole symbol represents
+    ///                         in terms of instrument fingering or other techniques.
     /// - Parameter closed:     Whether the hole is closed, open, or half-open.
-    /// - Parameter shape:      The optional hole-shape element indicates the shape of the hole symbol; the default is a circle.
-    /// - Parameter position:   For most elements, any program will compute a default x and y position. The position attributes let this be changed two ways.
-    /// - Parameter font:       The font attribute group gathers together attributes for determining the font within a credit or direction. They are based on the text styles for Cascading Style Sheets. The font-family is a comma-separated list of font names. The font-style can be normal or italic. The font-size can be one of the CSS sizes or a numeric point size. The font-weight can be normal or bold. The default is application-dependent, but is a text font vs. a music font.
+    /// - Parameter shape:      The optional hole-shape element indicates the shape of the hole symbol; the default is a
+    ///                         circle.
+    /// - Parameter position:   For most elements, any program will compute a default x and y position. The position
+    ///                         attributes let this be changed two ways.
+    /// - Parameter font:       The font attribute group gathers together attributes for determining the font within a
+    ///                         credit or direction. They are based on the text styles for Cascading Style Sheets. The
+    ///                         font-family is a comma-separated list of font names. The font-style can be normal or
+    ///                         italic. The font-size can be one of the CSS sizes or a numeric point size. The
+    ///                         font-weight can be normal or bold. The default is application-dependent, but is a text
+    ///                         font vs. a music font.
     /// - Parameter color:      The color attribute group indicates the color of an element.
-    /// - Parameter placement:  The placement attribute indicates whether something is above or below another element, such as a note or a notation.
+    /// - Parameter placement:  The placement attribute indicates whether something is above or below another element,
+    ///                         such as a note or a notation.
     public init(kind: String? = nil,
                 closed: Closed,
                 shape: String? = nil,

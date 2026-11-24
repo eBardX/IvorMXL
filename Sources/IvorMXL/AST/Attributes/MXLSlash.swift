@@ -12,10 +12,15 @@ public struct MXLSlash {
 
     /// Creates a new `MXLSlash`.
     ///
-    /// - Parameter content: The slash group combines elements used for more complete specification of the slash and beat-repeat measure-style elements. They have the same values as the type and dot elements, and define what the beat is for the display of repetition marks. If not present, the beat is based on the current time signature.
-    /// - Parameter kind: Whether this element marks the start or the stop of the slash notation style.
-    /// - Parameter usesDots: A Boolean value indicating whether to use dots, working as for the beat-repeat element. Only has effect when `useStems` is `false`.
-    /// - Parameter usesStems: A Boolean value indicating whether to use stems to indicate rhythms rather than pitches. Defaults to `false`, indicating the slash is used on every beat.
+    /// - Parameter content:    The slash group combines elements used for more complete specification of the slash and
+    ///                         beat-repeat measure-style elements. They have the same values as the type and dot
+    ///                         elements, and define what the beat is for the display of repetition marks. If not
+    ///                         present, the beat is based on the current time signature.
+    /// - Parameter kind:       Whether this element marks the start or the stop of the slash notation style.
+    /// - Parameter usesDots:   A Boolean value indicating whether to use dots, working as for the beat-repeat element.
+    ///                         Only has effect when `useStems` is `false`.
+    /// - Parameter usesStems:  A Boolean value indicating whether to use stems to indicate rhythms rather than pitches.
+    ///                         Defaults to `false`, indicating the slash is used on every beat.
     public init(content: MXLSlashContent? = nil,
                 kind: MXLStartStop,
                 usesDots: Bool? = nil,

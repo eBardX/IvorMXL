@@ -8,8 +8,8 @@ public struct MXLBeatUnit {
 
     /// Creates a new `MXLBeatUnit`.
     ///
-    /// - Parameter beatUnit: The beat-unit element indicates the graphical note type to use in a metronome mark.
-    /// - Parameter dot: The number of augmentation dots to apply to the beat-unit note in a metronome mark.
+    /// - Parameter beatUnit:  The beat-unit element indicates the graphical note type to use in a metronome mark.
+    /// - Parameter dot:       The number of augmentation dots to apply to the beat-unit note in a metronome mark.
     public init(beatUnit: MXLNoteKindValue,
                 dot: Int) {
         self.beatUnit = beatUnit

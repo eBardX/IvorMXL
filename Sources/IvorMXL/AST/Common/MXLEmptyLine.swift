@@ -10,12 +10,19 @@ public struct MXLEmptyLine {
 
     /// Creates a new `MXLEmptyLine`.
     ///
-    /// - Parameter shape: The line-shape attribute distinguishes between straight and curved lines.
-    /// - Parameter kind: The line-type attribute distinguishes between solid, dashed, dotted, and wavy lines.
-    /// - Parameter length: The line-length attribute distinguishes between different line lengths for doit, falloff, plop, and scoop articulations.
-    /// - Parameter dashedFormatting: The dashed-formatting entity represents the length of dashes and spaces in a dashed line. Both the dash-length and space-length attributes are represented in tenths. These attributes are ignored if the corresponding line-type attribute is not dashed.
-    /// - Parameter printStyle: The print-style attribute group collects the most popular combination of printing attributes: position, font, and color.
-    /// - Parameter placement: The placement attribute indicates whether something is above or below another element, such as a note or a notation.
+    /// - Parameter shape:             The line-shape attribute distinguishes between straight and curved lines.
+    /// - Parameter kind:              The line-type attribute distinguishes between solid, dashed, dotted, and wavy
+    ///                                lines.
+    /// - Parameter length:            The line-length attribute distinguishes between different line lengths for doit,
+    ///                                falloff, plop, and scoop articulations.
+    /// - Parameter dashedFormatting:  The dashed-formatting entity represents the length of dashes and spaces in a
+    ///                                dashed line. Both the dash-length and space-length attributes are represented in
+    ///                                tenths. These attributes are ignored if the corresponding line-type attribute is
+    ///                                not dashed.
+    /// - Parameter printStyle:        The print-style attribute group collects the most popular combination of printing
+    ///                                attributes: position, font, and color.
+    /// - Parameter placement:         The placement attribute indicates whether something is above or below another
+    ///                                element, such as a note or a notation.
     public init(shape: MXLLineShape? = nil,
                 kind: MXLLineKind? = nil,
                 length: MXLLineLength? = nil,

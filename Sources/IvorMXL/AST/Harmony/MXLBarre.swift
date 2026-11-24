@@ -11,8 +11,8 @@ public struct MXLBarre {
 
     /// Creates a new `MXLBarre`.
     ///
-    /// - Parameter kind:  Whether the barre starts or stops at this string.
-    /// - Parameter color: The color attribute group indicates the color of an element.
+    /// - Parameter kind:   Whether the barre starts or stops at this string.
+    /// - Parameter color:  The color attribute group indicates the color of an element.
     public init(kind: MXLStartStop,
                 color: MXLColor? = nil) {
         self.color = color

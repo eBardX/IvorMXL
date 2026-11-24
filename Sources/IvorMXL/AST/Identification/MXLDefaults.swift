@@ -12,14 +12,18 @@ public struct MXLDefaults {
 
     /// Creates a new `MXLDefaults`.
     ///
-    /// - Parameter scaling:  Specifies how many millimeters are equal to how many tenths, translating tenths to absolute units.
-    /// - Parameter isConcertScore: A Boolean value indicating whether the score is displayed in concert pitch, used for scores that contain parts for transposing instruments.
-    /// - Parameter layout: The layout group specifies the sequence of page, system, and staff layout elements that is common to both the defaults and print elements.
-    /// - Parameter appearance:  The general graphical appearance settings for the score, such as line widths, note sizes, and standard distances.
-    /// - Parameter musicFont:  The default font used for musical symbols.
-    /// - Parameter wordFont:  The default font used for words and other text.
-    /// - Parameter lyricFont:  The default fonts for particular names and numbers of lyric.
-    /// - Parameter lyricLanguage:  The default languages for particular names and numbers of lyric.
+    /// - Parameter scaling:         Specifies how many millimeters are equal to how many tenths, translating tenths to
+    ///                              absolute units.
+    /// - Parameter isConcertScore:  A Boolean value indicating whether the score is displayed in concert pitch, used
+    ///                              for scores that contain parts for transposing instruments.
+    /// - Parameter layout:          The layout group specifies the sequence of page, system, and staff layout elements
+    ///                              that is common to both the defaults and print elements.
+    /// - Parameter appearance:      The general graphical appearance settings for the score, such as line widths, note
+    ///                              sizes, and standard distances.
+    /// - Parameter musicFont:       The default font used for musical symbols.
+    /// - Parameter wordFont:        The default font used for words and other text.
+    /// - Parameter lyricFont:       The default fonts for particular names and numbers of lyric.
+    /// - Parameter lyricLanguage:   The default languages for particular names and numbers of lyric.
     public init(scaling: MXLScaling? = nil,
                 isConcertScore: Bool,
                 layout: MXLLayout = MXLLayout(),
@@ -75,7 +79,7 @@ public struct MXLDefaults {
     /// Maps to a nested MusicXML `<music-font>` element.
     public let musicFont: MXLFont?
 
-    /// Specifies how many millimeters are equal to how many tenths, translating tenths to absolute units.
+    /// How many millimeters are equal to how many tenths, translating tenths to absolute units.
     ///
     /// Maps to a nested MusicXML `<scaling>` element.
     public let scaling: MXLScaling?

@@ -52,9 +52,6 @@ extension MXLValidator.Checker {
         let number = ending.number.first ?? 0
 
         switch ending.kind {
-        case .start:
-            openEndings[number] = measure
-
         case .discontinue,
              .stop:
             if openEndings[number] != nil {
@@ -64,6 +61,9 @@ extension MXLValidator.Checker {
                                                    part: part,
                                                    measure: measure))
             }
+
+        case .start:
+            openEndings[number] = measure
         }
     }
 
@@ -177,13 +177,13 @@ extension MXLValidator.Checker {
 
     private func _isDurational(_ note: MXLNote) -> Bool {
         switch note.content {
-        case .regularNote,
-             .regularNoteCue:
-            true
-
         case .graceNote,
              .graceNoteCue:
             false
+
+        case .regularNote,
+             .regularNoteCue:
+            true
         }
     }
 

@@ -9,8 +9,8 @@ extension MXLScorePart {
 
         /// Creates a new `MXLScorePart.Group2`.
         ///
-        /// - Parameter midiDevice: The MIDI device assignment for this element.
-        /// - Parameter midiInstrument: The MIDI instrument assignment for this element.
+        /// - Parameter midiDevice:      The MIDI device assignment for this element.
+        /// - Parameter midiInstrument:  The MIDI instrument assignment for this element.
         public init(midiDevice: MXLMidiDevice? = nil,
                     midiInstrument: MXLMidiInstrument? = nil) {
             self.midiDevice = midiDevice

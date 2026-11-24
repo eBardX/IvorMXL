@@ -60,11 +60,11 @@ extension MXLMetal {
         /// A pictogram of a handbell.
         case handbell
 
-        /// A pictogram of a hi-hat, without the long vertical line at the bottom.
-        case hiHat
-
         /// A pictogram of high-hat cymbals with the long vertical line at the bottom.
         case highHatCymbals
+
+        /// A pictogram of a hi-hat, without the long vertical line at the bottom.
+        case hiHat
 
         /// A pictogram of a jaw harp.
         case jawHarp

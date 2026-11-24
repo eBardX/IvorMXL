@@ -14,11 +14,20 @@ public struct MXLArrow {
     /// Creates a new `MXLArrow`.
     ///
     /// - Parameter content:    One of the alternatives for Arrow.
-    /// - Parameter position:   For most elements, any program will compute a default x and y position. The position attributes let this be changed two ways.
-    /// - Parameter font:       The font attribute group gathers together attributes for determining the font within a credit or direction. They are based on the text styles for Cascading Style Sheets. The font-family is a comma-separated list of font names. The font-style can be normal or italic. The font-size can be one of the CSS sizes or a numeric point size. The font-weight can be normal or bold. The default is application-dependent, but is a text font vs. a music font.
+    /// - Parameter position:   For most elements, any program will compute a default x and y position. The position
+    ///                         attributes let this be changed two ways.
+    /// - Parameter font:       The font attribute group gathers together attributes for determining the font within a
+    ///                         credit or direction. They are based on the text styles for Cascading Style Sheets. The
+    ///                         font-family is a comma-separated list of font names. The font-style can be normal or
+    ///                         italic. The font-size can be one of the CSS sizes or a numeric point size. The
+    ///                         font-weight can be normal or bold. The default is application-dependent, but is a text
+    ///                         font vs. a music font.
     /// - Parameter color:      The color attribute group indicates the color of an element.
-    /// - Parameter placement:  The placement attribute indicates whether something is above or below another element, such as a note or a notation.
-    /// - Parameter smufl:      The smufl attribute group is used to indicate a particular Standard Music Font Layout (SMuFL) character. Sometimes this is a formatting choice, and sometimes this is a refinement of the semantic meaning of an element.
+    /// - Parameter placement:  The placement attribute indicates whether something is above or below another element,
+    ///                         such as a note or a notation.
+    /// - Parameter smufl:      The smufl attribute group is used to indicate a particular Standard Music Font Layout
+    ///                         (SMuFL) character. Sometimes this is a formatting choice, and sometimes this is a
+    ///                         refinement of the semantic meaning of an element.
     public init(content: Content,
                 position: MXLPosition = MXLPosition(),
                 font: MXLFont = MXLFont(),

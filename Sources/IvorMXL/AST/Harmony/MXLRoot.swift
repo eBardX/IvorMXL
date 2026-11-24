@@ -11,8 +11,12 @@ public struct MXLRoot {
 
     /// Creates a new `MXLRoot`.
     ///
-    /// - Parameter step: The pitch step of the root of the current chord.
-    /// - Parameter alter: The root-alter element represents the chromatic alteration of the root of the current chord within the harmony element. In some chord styles, the text for the root-step element may include root-alter information. In that case, the print-object attribute of the root-alter element can be set to no. The location attribute indicates whether the alteration should appear to the left or the right of the root-step; it is right by default.
+    /// - Parameter step:   The pitch step of the root of the current chord.
+    /// - Parameter alter:  The root-alter element represents the chromatic alteration of the root of the current chord
+    ///                     within the harmony element. In some chord styles, the text for the root-step element may
+    ///                     include root-alter information. In that case, the print-object attribute of the root-alter
+    ///                     element can be set to no. The location attribute indicates whether the alteration should
+    ///                     appear to the left or the right of the root-step; it is right by default.
     public init(step: Step,
                 alter: MXLHarmonyAlter? = nil) {
         self.alter = alter

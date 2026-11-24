@@ -11,12 +11,20 @@ public struct MXLHorizontalTurn {
 
     /// Creates a new `MXLHorizontalTurn`.
     ///
-    /// - Parameter position: For most elements, any program will compute a default x and y position. The position attributes let this be changed two ways.
-    /// - Parameter font: The font attribute group gathers together attributes for determining the font within a credit or direction. They are based on the text styles for Cascading Style Sheets. The font-family is a comma-separated list of font names.The font-style can be normal or italic. The font-size can be one of the CSS sizes or a numeric point size. The font-weight can be normal or bold. The default is application-dependent, but is a text font vs. a music font.
-    /// - Parameter color: The color attribute group indicates the color of an element.
-    /// - Parameter placement: The placement attribute indicates whether something is above or below another element, such as a note or a notation.
-    /// - Parameter trillSound: The trill-sound attribute group includes attributes used to guide the sound of trills, mordents, turns, shakes, and wavy lines. The default choices are:
-    /// - Parameter isSlashed: A Boolean value indicating whether a vertical line is used to slash the turn.
+    /// - Parameter position:    For most elements, any program will compute a default x and y position. The position
+    ///                          attributes let this be changed two ways.
+    /// - Parameter font:        The font attribute group gathers together attributes for determining the font within a
+    ///                          credit or direction. They are based on the text styles for Cascading Style Sheets. The
+    ///                          font-family is a comma-separated list of font names. The font-style can be normal or
+    ///                          italic. The font-size can be one of the CSS sizes or a numeric point size. The
+    ///                          font-weight can be normal or bold. The default is application-dependent, but is a text
+    ///                          font vs. a music font.
+    /// - Parameter color:       The color attribute group indicates the color of an element.
+    /// - Parameter placement:   The placement attribute indicates whether something is above or below another element,
+    ///                          such as a note or a notation.
+    /// - Parameter trillSound:  The trill-sound attribute group includes attributes used to guide the sound of trills,
+    ///                          mordents, turns, shakes, and wavy lines. The default choices are:
+    /// - Parameter isSlashed:   A Boolean value indicating whether a vertical line is used to slash the turn.
     public init(position: MXLPosition = MXLPosition(),
                 font: MXLFont = MXLFont(),
                 color: MXLColor? = nil,
@@ -36,11 +44,11 @@ public struct MXLHorizontalTurn {
     /// The color attribute group indicates the color of an element.
     public let color: MXLColor?
 
-    /// The font attribute group gathers together attributes for determining the font within a credit or direction.
-    /// They are based on the text styles for Cascading Style Sheets. The font-family is a comma-separated list of
-    /// font names.The font-style can be normal or italic. The font-size can be one of the CSS sizes or a numeric
-    /// point size. The font-weight can be normal or bold. The default is application-dependent, but is a text font
-    /// vs. a music font.
+    /// The font attribute group gathers together attributes for determining the font within a credit or direction. They
+    /// are based on the text styles for Cascading Style Sheets. The font-family is a comma-separated list of font
+    /// names. The font-style can be normal or italic. The font-size can be one of the CSS sizes or a numeric point
+    /// size. The font-weight can be normal or bold. The default is application-dependent, but is a text font vs. a
+    /// music font.
     public let font: MXLFont
 
     /// A Boolean value indicating whether a vertical line is used to slash the turn.
@@ -100,15 +108,15 @@ public struct MXLHorizontalTurn {
     /// The trill-sound attribute group includes attributes used to guide the sound of trills, mordents, turns,
     /// shakes, and wavy lines. The default choices are:
     ///
-    /// start-note = "upper" trill-step = "whole" two-note-turn = "none" accelerate = "no" beats = "4".
+    /// start-note = “upper” trill-step = “whole” two-note-turn = “none” accelerate = “no” beats = “4”.
     ///
     /// Second-beat and last-beat are percentages for landing on the indicated beat, with defaults of 25 and 75
     /// respectively.
     ///
     /// For mordent and inverted-mordent elements, the defaults are different:
     ///
-    /// The default start-note is "main", not "upper". The default for beats is "3", not "4". The default for second-
-    /// beat is "12", not "25". The default for last-beat is "24", not "75".
+    /// The default start-note is “main”, not “upper”. The default for beats is “3”, not “4”. The default for second-
+    /// beat is “12”, not “25”. The default for last-beat is “24”, not “75”.
     public let trillSound: MXLTrillSound
 }
 

@@ -20,7 +20,7 @@ public struct MXLHarmonClosed {
 
     // MARK: Public Instance Properties
 
-    /// Indicates which portion of the symbol is filled in when the value is half.
+    /// The portion of the symbol that is filled in when the value is half.
     ///
     /// Maps to the MusicXML `location` attribute.
     public let location: Location?

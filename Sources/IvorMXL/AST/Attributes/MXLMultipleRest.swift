@@ -11,8 +11,9 @@ public struct MXLMultipleRest {
 
     /// Creates a new `MXLMultipleRest`.
     ///
-    /// - Parameter value: The value of this element.
-    /// - Parameter usesSymbols: A Boolean value indicating whether to use the 1-bar / 2-bar / 4-bar rest symbols rather than a single shape. Defaults to `false` if not specified.
+    /// - Parameter value:        The value of this element.
+    /// - Parameter usesSymbols:  A Boolean value indicating whether to use the 1-bar / 2-bar / 4-bar rest symbols
+    ///                           rather than a single shape. Defaults to `false` if not specified.
     public init(value: Int,
                 usesSymbols: Bool? = nil) {
         self.usesSymbols = usesSymbols ?? false
